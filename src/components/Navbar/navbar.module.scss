@@ -1,0 +1,105 @@
+@import '../../app/variables.scss';
+
+// Nav
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 3.06rem;
+  left: 0;
+  top: 54px;
+  position: fixed;
+  z-index: 500;
+  padding: 0 $padding1;
+}
+
+
+
+
+// Left
+.left {
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.03rem;
+  height: 2.03rem;
+  position: relative;
+
+  border-radius: 50%;
+  background: rgb(186, 186, 186, 0.20);
+
+  &::before {
+    @include blur;
+  }
+}
+
+.themeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.03rem;
+  height: 2.03rem;
+  margin: 0 0 0 6px;
+
+  border-radius: 50%;
+  background: rgb(186, 186, 186, 0.20);
+  position: relative;
+
+  &::before {
+    @include blur;
+  }
+
+  svg {
+    width: 0.659rem;
+    height: 0.853rem;
+  }
+}
+
+
+
+// Middle
+.middle {
+  display: flex;
+  align-items: center;
+
+  svg {
+    transform: scale(0.97);
+  }
+}
+
+
+
+// Right
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 4.44rem;
+  height: 1.75rem;
+  position: relative;
+
+  border-radius: 200rem;
+  background: rgb(186, 186, 186, 0.20);
+  
+  &::before {
+    @include blur;
+  }
+
+  h4 {
+    font-size: 0.78rem;
+    font-weight: 400;
+    font-family: $poppins;
+  }
+}

@@ -1,0 +1,31 @@
+@import '../../../app/variables.scss';
+
+.landing {
+  padding: 8.05rem 0 0 0;
+}
+
+// Content
+.content {
+  padding: 0 $padding1 0 $padding1;
+
+  h1 {
+    margin: 0 0 1.65rem 0;
+
+    font-size: 2.38rem;
+    line-height: 111.5%;
+    letter-spacing: -1.225px;
+    white-space: nowrap;
+
+    span {
+      display: block;
+    }
+  }
+}
+
+// Thumbnail
+.thumbnail {
+  margin: 2.78rem 0 0 0;
+  width: 100vw;
+  height: 34vh;
+  position: relative;
+}

@@ -1,0 +1,23 @@
+@import './variables.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $primary;
+  color: $second;
+  font-family: $poppins;
+
+  // Dev only
+  margin-bottom: 5000px;
+  padding: 54px 0 0 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $eiko;
+  font-weight: 300;
+  -webkit-text-stroke: 0.9px $second;
+}

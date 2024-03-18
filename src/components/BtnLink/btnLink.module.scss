@@ -1,0 +1,15 @@
+@import '../../app/variables.scss';
+
+$paddingTop: 0.595rem;
+
+.btnLink {
+  margin: calc($paddingTop/2) 0 0 0;
+  padding: $paddingTop 1.43rem;
+
+  font-size: 0.822rem;
+  font-weight: 400;
+  color: $second;
+  text-decoration: none;
+  border-radius: 50rem;
+  background: greyVariation(0.2);
+}
