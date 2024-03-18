@@ -1,0 +1,34 @@
+@import '../../../app/utils.scss';
+
+.themeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.15rem;
+  height: 2.15rem;
+  margin: 0 0 0 6px;
+
+  border-radius: 50%;
+  background: rgb(186, 186, 186, 0.20);
+  position: relative;
+
+  &::before {
+    @include blur;
+  }
+
+  .moon svg {
+    width: 0.659rem;
+    height: 0.853rem;
+  }
+
+  .sun {
+    width: 0.7813rem;
+    height: 0.7813rem;
+  }
+
+  rect, path {
+    fill: var(--second);
+    transition: var(--theme-transition);
+  }
+}

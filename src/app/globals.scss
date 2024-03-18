@@ -1,23 +1,50 @@
-@import './variables.scss';
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  // Font
+  --poppins: "Poppins", sans-serif;
+  --eiko: "PP Eiko", sans-serif;
+
+  // Color theme
+  --primary: #fff;
+  --second: #000;
+  --accent1: #594CFF;
+  --accent2: #110039;
+  
+  // Sizing
+  --blur: 1.42rem;
+  --padding1: 0.875rem;
+
+  // Transitions
+  --theme-transition: 300ms ease;
+}
+
+// Themes
+body[data-theme='dark'] {
+  --primary: #000;
+  --second: #fff;
+}
+
+// General resets
 body {
-  background: $primary;
-  color: $second;
-  font-family: $poppins;
+  background: var(--primary);
+  color: var(--second);
+  transition: background var(--theme-transition), color var(--theme-transition);
+  font-family: var(--poppins);
 
   // Dev only
   margin-bottom: 5000px;
-  padding: 54px 0 0 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $eiko;
+  font-family: var(--eiko);
   font-weight: 300;
-  -webkit-text-stroke: 0.9px $second;
+}
+
+a {
+  transition: var(--theme-transition);
 }

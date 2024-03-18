@@ -1,20 +1,21 @@
-@import '../../../app/variables.scss';
+@import '../../../app/utils.scss';
 
 .landing {
-  padding: 8.05rem 0 0 0;
+  padding: 8.25rem 0 0 0;
 }
 
 // Content
 .content {
-  padding: 0 $padding1 0 $padding1;
+  padding: 0 var(--padding1) 0 var(--padding1);
 
   h1 {
     margin: 0 0 1.65rem 0;
 
     font-size: 2.38rem;
     line-height: 111.5%;
-    letter-spacing: -1.225px;
+    letter-spacing: -0.0766rem;
     white-space: nowrap;
+    text-shadow: bolder(0.06rem);
 
     span {
       display: block;

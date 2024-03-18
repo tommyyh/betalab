@@ -1,0 +1,22 @@
+// Mixins
+@mixin blur {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  left: 0;
+  top: 0;
+
+  backdrop-filter: blur(var(--blur));
+  border-radius: 200rem;
+}
+
+// Functions
+@function greyVariation($opacity) {
+  @return rgb(186, 186, 186, $opacity);
+}
+
+@function bolder($xOffset) {
+  @return $xOffset 0 currentColor;
+}
