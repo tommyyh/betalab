@@ -2,7 +2,7 @@
   padding: 6.125rem var(--padding1) 0 var(--padding1);
 
   h2 {
-    // font-family: var(--poppins);
+    font-family: var(--poppins);
     font-weight: 300;
     font-size: 1rem;
     color: var(--second);
@@ -11,10 +11,12 @@
   }
 
   p {
+    margin: 1.65rem 0 0 0;
+
     font-size: 1.59rem;
-    font-weight: 100;
+    font-weight: 300;
     color: var(--second);
-    line-height: 147%;
-    letter-spacing: -1px;
+    line-height: 142%;
+    letter-spacing: -0.88px;
   }
 }

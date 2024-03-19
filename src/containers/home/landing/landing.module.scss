@@ -13,9 +13,9 @@
 
     font-size: 2.38rem;
     line-height: 111.5%;
-    letter-spacing: -0.0766rem;
+    letter-spacing: -0.069rem;
     white-space: nowrap;
-    text-shadow: bolder(0.06rem);
+    -webkit-text-stroke: bolderText(0.063rem);
 
     span {
       display: block;

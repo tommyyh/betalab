@@ -17,6 +17,6 @@
   @return rgb(186, 186, 186, $opacity);
 }
 
-@function bolder($xOffset) {
-  @return $xOffset 0 currentColor;
+@function bolderText($thickness) {
+  @return $thickness var(--second);
 }

@@ -8,6 +8,8 @@ import localFont from 'next/font/local';
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--poppins',
+  display: 'swap',
 });
 const eiko = localFont({
   src: [
@@ -22,6 +24,8 @@ const eiko = localFont({
       style: 'normal',
     },
   ],
+  variable: '--eiko',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -35,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${poppins.className} ${eiko.className}`}>
+    <html lang="en" className={`${poppins.variable} ${eiko.variable}`}>
       <body>
         <Navbar />
         {children}
