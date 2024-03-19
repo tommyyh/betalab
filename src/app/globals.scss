@@ -34,14 +34,13 @@ body {
   background: var(--primary);
   color: var(--second);
   transition: background var(--theme-transition), color var(--theme-transition);
-  font-family: var(--poppins);
 
   // Dev only
   margin-bottom: 5000px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--eiko);
+  // font-family: var(--eiko);
   font-weight: 300;
 }
 
