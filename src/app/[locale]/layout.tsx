@@ -12,12 +12,12 @@ const poppins = Poppins({
 const eiko = localFont({
   src: [
     {
-      path: '../../public/font/eiko-thin.otf',
+      path: '../../public/font/eiko-thin.ttf',
       weight: '300',
       style: 'normal',
     },
     {
-      path: '../../public/font/eiko-medium.otf',
+      path: '../../public/font/eiko-medium.ttf',
       weight: '500',
       style: 'normal',
     },

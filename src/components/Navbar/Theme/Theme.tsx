@@ -9,22 +9,25 @@ const Theme = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    const theme = localStorage.getItem('theme');
+    const theme = localStorage.getItem('theme') || 'light';
 
-    // Set theme
-    theme === 'dark' ? setDarkMode(true) : setDarkMode(false);
+    document.body.setAttribute('data-theme', theme);
+
+    setDarkMode(theme === 'dark' ? true : false);
   }, []);
 
-  useEffect(() => {
+  const setTheme = () => {
     // Save changes
-    const theme = darkMode ? 'dark' : 'light';
+    const theme = darkMode ? 'light' : 'dark';
 
     document.body.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
-  }, [darkMode]);
+
+    setDarkMode(!darkMode);
+  };
 
   return (
-    <div className={style.themeToggle} onClick={() => setDarkMode(!darkMode)}>
+    <div className={style.themeToggle} onClick={setTheme}>
       {darkMode ? (
         <Moon className={style.moon} />
       ) : (
