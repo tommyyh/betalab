@@ -8,6 +8,7 @@ import localFont from 'next/font/local';
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--poppins',
 });
 const eiko = localFont({
   src: [
@@ -22,6 +23,8 @@ const eiko = localFont({
       style: 'normal',
     },
   ],
+  variable: '--eiko',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
