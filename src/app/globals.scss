@@ -13,7 +13,7 @@
   
   // Sizing
   --blur: 1.42rem;
-  --padding1: 0.875rem;
+  --padding: 0.875rem;
 
   // Transitions
   --theme-transition: 300ms ease;
@@ -43,4 +43,13 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   transition: var(--theme-transition);
+}
+
+
+
+// Desktop view
+@media all and (min-width: 1024px) {
+  :root {
+    --padding: 1.81rem;
+  }
 }
