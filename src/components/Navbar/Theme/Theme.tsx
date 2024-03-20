@@ -27,12 +27,17 @@ const Theme = () => {
   };
 
   return (
-    <div className={style.themeToggle} onClick={setTheme}>
-      {darkMode ? (
+    <div
+      className={`${style.themeToggle} ${darkMode ? style.darkActive : ''}`}
+      onClick={setTheme}
+    >
+      <div className={style.moonCont}>
         <Moon className={style.moon} />
-      ) : (
+      </div>
+
+      <div className={style.sunCont}>
         <Sun className={style.sun} />
-      )}
+      </div>
     </div>
   );
 };

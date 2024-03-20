@@ -1,13 +1,12 @@
 @import '../../../app/utils.scss';
 
-.themeToggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+$contSize: 2.15rem;
 
-  width: 2.15rem;
-  height: 2.15rem;
+.themeToggle {
+  width: $contSize;
+  height: $contSize;
   margin: 0 0 0 6px;
+  overflow-y: hidden;
 
   border-radius: 50%;
   background: rgb(186, 186, 186, 0.20);
@@ -31,4 +30,29 @@
     fill: var(--second);
     transition: var(--theme-transition);
   }
+  
+  // Icon default
+  .moonCont {
+    margin-top: 0;
+  }
+}
+
+// Active icon
+.darkActive {
+  .moonCont {
+    margin-top: -$contSize;
+  }
+}
+
+// Icons
+.moonCont, .sunCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: $contSize;
+  min-width: $contSize;
+
+  border-radius: 50%;
+  transition: var(--theme-transition);
 }
