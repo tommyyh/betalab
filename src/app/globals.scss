@@ -16,7 +16,7 @@
   --padding: 0.875rem;
 
   // Transitions
-  --theme-transition: 300ms ease;
+  --theme-transition: 250ms ease;
   --transition1: 350ms cubic-bezier(.2,.6,.3,1);
   --transition2: 440ms cubic-bezier(.2,.6,.3,1);
 }
@@ -41,17 +41,23 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--eiko);
   font-weight: 300;
+  color: var(--second);
+  transition: var(--theme-transition);
 }
 
 a {
   transition: var(--theme-transition);
 }
 
-
-
 // Desktop view
 @media all and (min-width: 1024px) {
   :root {
     --padding: 1.81rem;
+    font-size: 16px;
+  }
+
+  // Disable cursor
+  *, html {
+    cursor: none;
   }
 }

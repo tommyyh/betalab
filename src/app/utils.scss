@@ -17,6 +17,14 @@
   @return rgb(186, 186, 186, $opacity);
 }
 
+@function blackVariation($opacity) {
+  @return rgb(from var(--second) r g b / $opacity);
+}
+
 @function bolderText($thickness) {
   @return $thickness var(--second);
+}
+
+@function font($size, $min, $max) {
+  @return min(max($size, $min), $max);
 }

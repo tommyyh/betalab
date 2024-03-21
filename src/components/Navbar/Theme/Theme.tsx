@@ -27,18 +27,19 @@ const Theme = () => {
   };
 
   return (
-    <div
+    <button
       className={`${style.themeToggle} ${darkMode ? style.darkActive : ''}`}
       onClick={setTheme}
+      aria-label="Toggle theme"
     >
-      <div className={style.moonCont}>
-        <Moon className={style.moon} />
-      </div>
-
       <div className={style.sunCont}>
         <Sun className={style.sun} />
       </div>
-    </div>
+
+      <div className={style.moonCont}>
+        <Moon className={style.moon} />
+      </div>
+    </button>
   );
 };
 

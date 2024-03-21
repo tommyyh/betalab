@@ -3,6 +3,7 @@ import { Poppins } from 'next/font/google';
 import '../globals.scss';
 import Navbar from '@/components/Navbar/Navbar';
 import localFont from 'next/font/local';
+import Cursor from '@/components/Cursor/Cursor';
 
 // Font types
 const poppins = Poppins({
@@ -41,6 +42,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${eiko.variable}`}>
       <body>
+        <Cursor />
+
+        {/* Main */}
         <Navbar />
         {children}
       </body>

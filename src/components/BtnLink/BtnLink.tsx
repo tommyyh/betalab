@@ -5,11 +5,12 @@ import { Link } from '@/navigation';
 type PropsType = {
   href: string;
   title: string;
+  customClass?: string;
 };
 
-const BtnLink = ({ href, title }: PropsType) => {
+const BtnLink = ({ href, title, customClass }: PropsType) => {
   return (
-    <Link className={style.btnLink} href={href}>
+    <Link className={`${style.btnLink} ${customClass}`} href={href}>
       {title}
     </Link>
   );

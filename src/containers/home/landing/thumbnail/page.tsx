@@ -4,7 +4,14 @@ import thumbnail from '@/public/home/landing/thumbnail.png';
 
 const Thumbnail = () => {
   return (
-    <Image src={thumbnail} alt="Showcase thumbnail" fill objectFit="cover" />
+    <Image
+      src={thumbnail}
+      alt="Showcase thumbnail"
+      fill
+      priority
+      placeholder="blur"
+      style={{ objectFit: 'cover' }}
+    />
   );
 };
 

@@ -20,15 +20,15 @@ const Navbar = () => {
         </div>
 
         {/* Middle */}
-        <div className={style.middle}>
+        <Link href={'/'} className={style.middle}>
           <Logo />
-        </div>
+        </Link>
 
         {/* Right */}
         <div className={style.right}>
-          <div className={style.menu}>
+          <button className={style.menu}>
             <h4>Menu</h4>
-          </div>
+          </button>
         </div>
 
         {/* <Link href={'/'}>Home</Link>
