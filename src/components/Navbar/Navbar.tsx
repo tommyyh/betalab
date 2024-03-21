@@ -20,7 +20,7 @@ const Navbar = () => {
         </div>
 
         {/* Middle */}
-        <Link href={'/'} className={style.middle}>
+        <Link href={'/'} className={style.middle} aria-label="Home">
           <Logo />
         </Link>
 
