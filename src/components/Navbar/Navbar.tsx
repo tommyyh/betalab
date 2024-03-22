@@ -5,27 +5,22 @@ import style from './navbar.module.scss';
 import Logo from '@/public/nav/logo.svg';
 import Envelope from '@/public/nav/envelope.svg';
 import Theme from './Theme/Theme';
+import Main from './Main/Main';
 
 const Navbar = () => {
   return (
     <>
       <nav className={style.nav}>
-        {/* Left */}
-        <div className={style.left}>
-          <div className={style.contact}>
-            <Envelope />
-          </div>
-
-          <Theme />
-        </div>
+        {/* Main */}
+        <Main />
 
         {/* Middle */}
         <Link href={'/'} className={style.middle} aria-label="Home">
           <Logo />
         </Link>
 
-        {/* Right */}
-        <div className={style.right}>
+        {/* Menu */}
+        <div className={style.menuCont}>
           <button className={style.menu}>
             <h4>Menu</h4>
           </button>

@@ -16,39 +16,6 @@
 
 
 
-
-// Left
-.left {
-  display: flex;
-  align-items: center;
-
-  height: 100%;
-}
-
-.contact {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 2.15rem;
-  height: 2.15rem;
-  position: relative;
-
-  border-radius: 50%;
-  background: rgb(186, 186, 186, 0.20);
-
-  &::before {
-    @include blur;
-  }
-
-  path {
-    stroke: var(--second);
-    transition: var(--theme-transition);
-  }
-}
-
-
-
 // Middle
 .middle {
   display: flex;
@@ -67,8 +34,8 @@
 
 
 
-// Right
-.right {
+// Menu
+.menuCont {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -118,41 +85,6 @@
 
 
 
-
-  // Inverted -> Right
-  .left {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-    height: 100%;
-    order: 3;
-  }
-
-  .contact {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 2.15rem;
-    height: 2.15rem;
-    position: relative;
-
-    border-radius: 50%;
-    background: rgb(186, 186, 186, 0.20);
-
-    &::before {
-      @include blur;
-    }
-
-    path {
-      stroke: var(--second);
-      transition: var(--theme-transition);
-    }
-  }
-
-
-
   // Middle
   .middle {
     display: flex;
@@ -173,8 +105,8 @@
 
 
 
-  // Inverted -> Left
-  .right {
+  // Inverted -> Menu
+  .menuCont {
     display: flex;
     align-items: center;
     justify-content: initial;
