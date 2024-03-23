@@ -5,7 +5,6 @@ import Navbar from '@/components/Navbar/Navbar';
 import localFont from 'next/font/local';
 import Cursor from '@/components/Cursor/Cursor';
 import SmoothScroll from '@/components/SmoothScroll/SmoothScroll';
-import Scrollbar from '@/components/Scrollbar/Scrollbar';
 
 // Font types
 const poppins = Poppins({

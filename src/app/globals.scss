@@ -15,6 +15,7 @@
 
   --scroll-background: #aeaeae;
   --scroll-hover: #7e7d82;
+  --scroll-width: 0.475vw;
   
   // Hover
   --hover-transition: border 120ms ease, background 120ms ease;
@@ -38,7 +39,8 @@ body[data-theme='dark'] {
   --primary: #000;
   --second: #fff;
 
-  --scroll-background: #4b4b5d;
+  --scroll-background: #454555;
+  --scroll-hover: #5a5a6b;
 }
 
 
@@ -83,7 +85,7 @@ a {
 
   // Scrollbar
   body::-webkit-scrollbar {
-    width: 0.475vw; // Whole width
+    width: var(--scroll-width); // Whole width
   }
   
   body::-webkit-scrollbar-track {
