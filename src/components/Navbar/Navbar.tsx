@@ -17,7 +17,11 @@ const Navbar = async () => {
 
         {/* Middle */}
         <div className={style.middleCont}>
-          <Link href={'/'} className={style.middle} aria-label={l('home')}>
+          <Link
+            href={'/'}
+            className={style.middle}
+            aria-label={l('general.home')}
+          >
             <Logo />
           </Link>
         </div>
