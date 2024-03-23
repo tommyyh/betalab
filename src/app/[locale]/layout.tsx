@@ -4,6 +4,7 @@ import '../globals.scss';
 import Navbar from '@/components/Navbar/Navbar';
 import localFont from 'next/font/local';
 import Cursor from '@/components/Cursor/Cursor';
+import SmoothScroll from '@/components/SmoothScroll/SmoothScroll';
 
 // Font types
 const poppins = Poppins({
@@ -43,6 +44,7 @@ export default function RootLayout({
     <html lang="en" className={`${poppins.variable} ${eiko.variable}`}>
       <body>
         <Cursor />
+        <SmoothScroll />
 
         {/* Main */}
         <Navbar />
