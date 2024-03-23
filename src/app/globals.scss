@@ -12,7 +12,11 @@
   --accent2: #110039;
 
   --nav-items: rgb(186, 186, 186, 0.20);
+
+  --scroll-background: #aeaeae;
+  --scroll-hover: #7e7d82;
   
+  // Hover
   --hover-transition: border 120ms ease, background 120ms ease;
   --border-hover: 0.08rem solid transparent;
   
@@ -27,11 +31,17 @@
   --transition2: 440ms cubic-bezier(.2,.6,.3,1);
 }
 
+
+
 // Themes
 body[data-theme='dark'] {
   --primary: #000;
   --second: #fff;
+
+  --scroll-background: #4b4b5d;
 }
+
+
 
 // General resets
 body {
@@ -41,7 +51,7 @@ body {
   font-family: var(--poppins);
 
   // Dev only
-  margin-bottom: 5000px;
+  margin-bottom: 8000px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -55,6 +65,8 @@ a {
   transition: var(--theme-transition);
 }
 
+
+
 // Desktop view
 @media all and (min-width: 1024px) {
   :root {
@@ -65,5 +77,26 @@ a {
   // Disable cursor
   *, html {
     cursor: none;
+  }
+
+
+
+  // Scrollbar
+  body::-webkit-scrollbar {
+    width: 0.475vw; // Whole width
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: initial; // Make the track invisible
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background: var(--scroll-background); // Scrollbar thumb
+    border-radius: 20rem;
+    cursor: default;
+
+    &:hover {
+      background: var(--scroll-hover);
+    }
   }
 }
