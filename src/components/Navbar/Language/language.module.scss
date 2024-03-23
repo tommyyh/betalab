@@ -1,0 +1,38 @@
+@import '../../../app/utils.scss';
+
+#language {
+  display: none;
+}
+
+@media all and (min-width: 1024px) {
+  $contSize: 2.15rem;
+
+  #language {
+    display: initial;
+
+    order: 3;
+    height: 2.03rem;
+    margin: 0 0.55rem;
+    padding: 0 1.15rem;
+
+    border-radius: 50rem;
+    border: none;
+    background: var(--nav-items);
+    font-size: 0.719rem;
+    font-family: var(--poppins);
+    color: var(--second);
+    letter-spacing: var(--letter-2);
+
+    @include hover;
+  
+    // Remove arrow
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+  
+    option {
+      color: var(--accent2);
+    }
+  }
+
+}

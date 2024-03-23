@@ -17,7 +17,7 @@
 
 
 // Middle
-.middle {
+.middleCont {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,7 +52,7 @@
 
   border-radius: 200rem;
   border: none;
-  background: rgb(186, 186, 186, 0.20);
+  background: var(--nav-items);
   
   &::before {
     @include blur;
@@ -86,12 +86,16 @@
 
 
   // Middle
-  .middle {
+  .middleCont {
     display: flex;
     align-items: center;
     justify-content: center;
 
     order: 2;
+  }
+
+  .middle {
+    padding: 0.65rem;
 
     svg {
       transform: scale(0.97);
@@ -124,8 +128,9 @@
     position: relative;
 
     border-radius: 200rem;
-    border: none;
-    background: rgb(186, 186, 186, 0.20);
+    background: var(--nav-items);
+
+    @include hover;
     
     &::before {
       @include blur;

@@ -3,8 +3,6 @@ import React from 'react';
 import style from './navbar.module.scss';
 
 import Logo from '@/public/nav/logo.svg';
-import Envelope from '@/public/nav/envelope.svg';
-import Theme from './Theme/Theme';
 import Main from './Main/Main';
 
 const Navbar = () => {
@@ -15,9 +13,11 @@ const Navbar = () => {
         <Main />
 
         {/* Middle */}
-        <Link href={'/'} className={style.middle} aria-label="Home">
-          <Logo />
-        </Link>
+        <div className={style.middleCont}>
+          <Link href={'/'} className={style.middle} aria-label="Home">
+            <Logo />
+          </Link>
+        </div>
 
         {/* Menu */}
         <div className={style.menuCont}>
@@ -25,9 +25,6 @@ const Navbar = () => {
             <h4>Menu</h4>
           </button>
         </div>
-
-        {/* <Link href={'/'}>Home</Link>
-      <Link href={'/contact'}>Contact</Link> */}
       </nav>
     </>
   );

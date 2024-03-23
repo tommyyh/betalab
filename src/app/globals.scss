@@ -10,10 +10,16 @@
   --second: #000;
   --accent1: #594CFF;
   --accent2: #110039;
+
+  --nav-items: rgb(186, 186, 186, 0.20);
+  
+  --hover-transition: border 120ms ease, background 120ms ease;
+  --border-hover: 0.08rem solid transparent;
   
   // Sizing
   --blur: 1.42rem;
   --padding: 0.875rem;
+  --letter-2: -0.3px;
 
   // Transitions
   --theme-transition: 250ms ease;

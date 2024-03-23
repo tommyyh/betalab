@@ -12,6 +12,16 @@
   border-radius: 200rem;
 }
 
+@mixin hover {
+  border: var(--border-hover);
+  transition: var(--hover-transition);
+
+  &:hover {
+    border-color: var(--second);
+    background: var(--primary);
+  }
+}
+
 // Functions
 @function greyVariation($opacity) {
   @return rgb(186, 186, 186, $opacity);

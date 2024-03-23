@@ -1,4 +1,4 @@
-@import '../../app/utils.scss';
+@import '../../../app/utils.scss';
 
 // Main
 .main {
@@ -6,6 +6,10 @@
   align-items: center;
 
   height: 100%;
+  
+  h5 {
+    display: none;
+  }
 }
 
 .contact {
@@ -28,6 +32,11 @@
     stroke: var(--second);
     transition: var(--theme-transition);
   }
+
+  // Disable text inside
+  span {
+    display: none;
+  }
 }
 
 
@@ -42,6 +51,19 @@
 
     height: 100%;
     order: 3;
+
+    h5 {
+      display: initial;
+
+      order: 1;
+      margin: 0 0.38rem 0 0;
+
+      font-size: 0.72rem;
+      font-family: var(--poppins);
+      font-weight: 400;
+      letter-spacing: var(--letter-2);
+      color: var(--second);
+    }
   }
 
   .contact {
@@ -49,20 +71,38 @@
     align-items: center;
     justify-content: center;
 
-    width: 2.15rem;
-    height: 2.15rem;
+    order: 4;
+    width: initial;
+    padding: 0 1.18rem;
+    height: 2.03rem;
     position: relative;
 
-    border-radius: 50%;
-    background: rgb(186, 186, 186, 0.20);
+    border-radius: 500rem;
+    background: var(--nav-items);
+    color: var(--second);
+    text-decoration: none;
+
+    @include hover;
 
     &::before {
       @include blur;
     }
 
-    path {
-      stroke: var(--second);
-      transition: var(--theme-transition);
+    svg {
+      margin: 0.05rem 0 0 0.42rem;
+
+      path {
+        stroke: var(--second);
+        transition: var(--theme-transition);
+      }
+    }
+
+    // Text inside
+    span {
+      display: inline;
+
+      font-size: 0.72rem;
+      white-space: nowrap;
     }
   }
 

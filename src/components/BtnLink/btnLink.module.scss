@@ -30,6 +30,8 @@ $paddingTop: 0.545rem;
     border-radius: 50rem;
     background: greyVariation(0.2);
     white-space: nowrap;
+
+    @include hover;
   }
 
 }

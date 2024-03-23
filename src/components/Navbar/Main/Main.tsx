@@ -3,15 +3,22 @@ import style from './main.module.scss';
 import Theme from '../Theme/Theme';
 
 import Envelope from '@/public/nav/envelope.svg';
+import { Link } from '@/navigation';
+import Language from '../Language/Language';
 
 const Main = () => {
   return (
     <div className={style.main}>
-        <div className={style.contact}>
+      <Link href={'/contact'} className={style.contact}>
+        <span>Contact Us</span>
         <Envelope />
-        </div>
+      </Link>
 
-        <Theme />
+      <Theme />
+
+      <h5>info@betalab.cloud</h5>
+
+      <Language />
     </div>
   );
 };

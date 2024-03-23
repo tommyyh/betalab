@@ -52,8 +52,18 @@ $contSize: 2.15rem;
   justify-content: center;
 
   min-height: $contSize;
-  min-width: $contSize;
 
   border-radius: 50%;
   transition: var(--theme-transition);
+}
+
+@media all and (min-width: 1024px) {
+  $contSize: 2.15rem;
+
+  .themeToggle {
+    order: 2;
+
+    @include hover;
+  }
+
 }
