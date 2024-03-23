@@ -138,6 +138,10 @@
     .contactSend {
       width: 0.813rem;
       height: 0.813rem;
+
+      path {
+        fill: var(--second);
+      }
     }
 
     // Contact icon animation

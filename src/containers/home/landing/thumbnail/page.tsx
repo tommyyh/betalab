@@ -16,7 +16,7 @@ const Thumbnail = () => {
         style={{ objectFit: 'cover' }}
       />
 
-      <button className={style.play}>
+      <button className={style.play} aria-label="Play video">
         <PlayIcon />
       </button>
     </div>
