@@ -3,28 +3,29 @@ import style from './landing.module.scss';
 import BtnLink from '@/components/BtnLink/BtnLink';
 import Thumbnail from './thumbnail/page';
 
-const Landing = () => {
+type PropsType = {
+  l: any;
+};
+
+const Landing = ({ l }: PropsType) => {
   return (
     <main className={style.landing}>
       <div className={style.content}>
         <div className={style.main}>
           <h1>
-            <span>Streamline your</span> <span>business sales</span> with our
-            web solutions
+            <span>{l('landing.title.1')} </span>
+            <span>{l('landing.title.2')} </span>
+            {l('landing.title.3')}
           </h1>
 
           <BtnLink
             href={'/contact'}
-            title={'Our solution'}
+            title={l('landing.cta')}
             customClass={style.link}
           />
         </div>
 
-        <p>
-          For many years, we’ve helped numerous businesses increase their profit
-          & gain more clients with our tailored digital solutions, that will
-          100% guarantee your desired results.
-        </p>
+        <p>{l('landing.text')}</p>
       </div>
 
       <div className={style.thumbnail}>

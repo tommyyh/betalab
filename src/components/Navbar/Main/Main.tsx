@@ -6,19 +6,23 @@ import Envelope from '@/public/nav/envelope.svg';
 import { Link } from '@/navigation';
 import Language from '../Language/Language';
 
-const Main = () => {
+type PropsType = {
+  l: any;
+};
+
+const Main = ({ l }: PropsType) => {
   return (
     <div className={style.main}>
       <Link href={'/contact'} className={style.contact}>
-        <span>Contact Us</span>
+        <span>{l('links.contact')}</span>
         <Envelope />
       </Link>
 
-      <Theme />
+      <Theme l={l('general.theme')} />
 
-      <h5>info@betalab.cloud</h5>
+      <h5>{l('general.email')}</h5>
 
-      <Language />
+      <Language l={l} />
     </div>
   );
 };

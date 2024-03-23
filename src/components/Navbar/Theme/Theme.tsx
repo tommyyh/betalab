@@ -5,7 +5,11 @@ import style from './theme.module.scss';
 import Moon from '@/public/nav/moon.svg';
 import Sun from '@/public/nav/sun.svg';
 
-const Theme = () => {
+type PropsType = {
+  l: string;
+};
+
+const Theme = ({ l }: PropsType) => {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
@@ -30,7 +34,7 @@ const Theme = () => {
     <button
       className={`${style.themeToggle} ${darkMode ? style.darkActive : ''}`}
       onClick={setTheme}
-      aria-label="Toggle theme"
+      aria-label={l}
     >
       <div className={style.sunCont}>
         <Sun className={style.sun} />

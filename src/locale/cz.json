@@ -1,11 +1,28 @@
 {
-  "Home": {
+  "nav": {
+    "general": {
+      "home": "Home",
+      "theme": "Přepnutí režimu",
+      "email": "info@betalab.cloud",
+      "lang": "Výběr jazyka"
+    },
+    "links": {
+      "contact": "Napište nám"
+    }
+  },
+  "home": {
     "landing": {
-      "title": "Add new task"
+      "title": {
+        "1": "Získejte více tržeb",
+        "2": "a klientů pomocí",
+        "3": "našich webových řešení"
+      },
+      "cta": "Naše řešení",
+      "text": "Už několik let pomáháme mnoho firmám zvýšit jejich zisk a získat více klientů díky našim digitálním řešením na míru, která vám 100% zaručí vaše požadované výsledky."
     },
     "solution": {
-      "title": "We can solve your problem",
-      "text": "We know getting sales isn’t easy without a good website in this new digital era. But that’s why we’re here - to help you get more clients, stand out from the crowd and help you beat your competitors."
+      "title": "Váš problém dokážeme vyřešit",
+      "text": "Víme, že v tomto novém digitálním prostředí není lehké získat více tržeb bez dobré webové stránky. Ale proto jsme tu my - abychom vám pomohli získat více klientů, vyniknout v davu a pomoci vám porazit konkurenci."
     }
   }
 }

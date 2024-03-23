@@ -33,6 +33,11 @@
     option {
       color: var(--accent2);
     }
+
+    &:focus {
+      outline: var(--border-hover);
+      border-color: var(--second);
+    }
   }
 
 }

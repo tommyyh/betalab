@@ -1,11 +1,16 @@
 import Landing from '@/containers/home/landing/page';
 import Solution from '@/containers/home/solution/page';
+import { getTranslations } from 'next-intl/server';
 
-export default function Home() {
+const Home = async () => {
+  const l = await getTranslations('home');
+
   return (
     <>
-      <Landing />
-      <Solution />
+      <Landing l={l} />
+      <Solution l={l} />
     </>
   );
-}
+};
+
+export default Home;

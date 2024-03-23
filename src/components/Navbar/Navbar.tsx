@@ -4,17 +4,20 @@ import style from './navbar.module.scss';
 
 import Logo from '@/public/nav/logo.svg';
 import Main from './Main/Main';
+import { getTranslations } from 'next-intl/server';
 
-const Navbar = () => {
+const Navbar = async () => {
+  const l = await getTranslations('nav');
+
   return (
     <>
       <nav className={style.nav}>
         {/* Main */}
-        <Main />
+        <Main l={l} />
 
         {/* Middle */}
         <div className={style.middleCont}>
-          <Link href={'/'} className={style.middle} aria-label="Home">
+          <Link href={'/'} className={style.middle} aria-label={l('home')}>
             <Logo />
           </Link>
         </div>

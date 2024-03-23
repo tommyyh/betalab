@@ -1,7 +1,24 @@
 {
-  "Home": {
+  "nav": {
+    "general": {
+      "home": "Home",
+      "theme": "Toggle theme",
+      "email": "info@betalab.cloud",
+      "lang": "Select a language"
+    },
+    "links": {
+      "contact": "Contact us"
+    }
+  },
+  "home": {
     "landing": {
-      "title": "Add new task"
+      "title": {
+        "1": "Streamline your",
+        "2": "business sales",
+        "3": "with our web solutions"
+      },
+      "cta": "Our solution",
+      "text": "For many years, we’ve helped numerous businesses increase their profit & gain more clients with our tailored digital solutions, that will 100% guarantee your desired results. "
     },
     "solution": {
       "title": "We can solve your problem",
