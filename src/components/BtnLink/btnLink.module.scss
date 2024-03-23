@@ -12,6 +12,10 @@ $paddingTop: 0.545rem;
   border-radius: 50rem;
   background: greyVariation(0.2);
   white-space: nowrap;
+
+  & span:last-child {
+    display: none;
+  }
 }
 
 
@@ -19,9 +23,12 @@ $paddingTop: 0.545rem;
 // Desktop view
 @media all and (min-width: 1024px) {
   $paddingTop: 0.542rem;
+  $height: 2.56rem;
 
   .btnLink {
-    padding: $paddingTop + 0.1rem 1.85rem $paddingTop 1.85rem;
+    padding: 0 1.85rem;
+    height: $height;
+    overflow-y: hidden;
 
     font-size: 0.835rem;
     font-weight: 400;
@@ -32,6 +39,25 @@ $paddingTop: 0.545rem;
     white-space: nowrap;
 
     @include hover;
+
+    &:hover {
+      & span:first-child {
+        margin: calc(-#{$height} + var(--hover-offset)) 0 0 0;
+      }
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+
+      height: 100%;
+
+      transition: var(--theme-transition);
+
+      &:last-child {
+        display: flex;
+      }
+    }
   }
 
 }

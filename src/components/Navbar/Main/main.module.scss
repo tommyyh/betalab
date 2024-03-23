@@ -37,6 +37,10 @@
   span {
     display: none;
   }
+  
+  .contactIcon div:last-child {
+    display: none;
+  }
 }
 
 
@@ -62,9 +66,36 @@
       font-family: var(--poppins);
       font-weight: 400;
       letter-spacing: var(--letter-2);
-      color: var(--second);
+
+      &:hover {
+        a::before {
+          width: 89%;
+        }
+      }
+
+      a {
+        position: relative;
+
+        color: var(--second);
+        text-decoration: none;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -0.15rem;
+          width: 0%;
+          height: 0.08rem;
+
+          background: var(--second);
+          transition: var(--transition-slow-fast);
+        }
+      }
     }
   }
+
+  // Contact btn
+  $contactHeight: 2.03rem; 
 
   .contact {
     display: flex;
@@ -74,7 +105,7 @@
     order: 4;
     width: initial;
     padding: 0 1.18rem;
-    height: 2.03rem;
+    height: $contactHeight;
     position: relative;
 
     border-radius: 500rem;
@@ -88,11 +119,39 @@
       @include blur;
     }
 
+    // On hover
+    &:hover {
+      div:first-child {
+        margin: calc(-#{$contactHeight} - 0.075rem) 0 0 0;
+      }
+    }
+
     svg {
       margin: 0.05rem 0 0 0.42rem;
 
       path {
         stroke: var(--second);
+        transition: var(--theme-transition);
+      }
+    }
+
+    .contactSend {
+      width: 0.813rem;
+      height: 0.813rem;
+    }
+
+    // Contact icon animation
+    .contactIcon {
+      height: $contactHeight;
+      overflow-y: hidden;
+
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: 100%;
+
         transition: var(--theme-transition);
       }
     }
@@ -103,6 +162,10 @@
 
       font-size: 0.72rem;
       white-space: nowrap;
+    }
+
+    .contactIcon div:last-child {
+      display: flex;
     }
   }
 

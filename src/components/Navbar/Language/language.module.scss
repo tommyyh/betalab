@@ -14,7 +14,6 @@
     height: $contSize;
     margin: 0 0.55rem;
     overflow-y: hidden;
-    position: relative;
 
     border-radius: 50rem;
     border: none;
@@ -28,7 +27,7 @@
 
     &:hover {
       & a:first-child {
-        margin: -$contSize 0 0 0;
+        margin: calc(-#{$contSize} + var(--hover-offset)) 0 0 0;
       }
     }
 

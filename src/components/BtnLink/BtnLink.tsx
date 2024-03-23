@@ -11,7 +11,8 @@ type PropsType = {
 const BtnLink = ({ href, title, customClass }: PropsType) => {
   return (
     <Link className={`${style.btnLink} ${customClass}`} href={href}>
-      {title}
+      <span>{title}</span>
+      <span>{title}</span>
     </Link>
   );
 };
