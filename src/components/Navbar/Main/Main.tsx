@@ -21,6 +21,7 @@ const Main = ({ l, invalidPrefix, fallbackLang }: PropsType) => {
         locale={invalidPrefix ? 'en' : ('' as 'en')}
         href={'/contact'}
         className={style.contact}
+        aria-label={invalidPrefix ? fallbackLang.contact : l('general.contact')}
       >
         <span>{invalidPrefix ? fallbackLang.contact : l('links.contact')}</span>
 
