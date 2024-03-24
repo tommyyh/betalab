@@ -2,7 +2,8 @@
   "nav": {
     "general": {
       "email": "info@betalab.cloud",
-      "contact": "Napište nám"
+      "contact": "Napište nám",
+      "theme": "Přepnutí režimu"
     },
     "links": {
       "contact": "Napište nám"

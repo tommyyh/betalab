@@ -2,7 +2,8 @@
   "nav": {
     "general": {
       "email": "info@betalab.cloud",
-      "contact": "Contact us"
+      "contact": "Contact us",
+      "theme": "Toggle theme"
     },
     "links": {
       "contact": "Contact us"
