@@ -7,20 +7,37 @@ import Main from './Main/Main';
 import { getTranslations } from 'next-intl/server';
 
 const Navbar = async () => {
-  const l = await getTranslations('nav');
+  let l;
+
+  // Necessary logic for cases where prefix is invalid
+  try {
+    l = await getTranslations('nav');
+  } catch {
+    l = {};
+  }
+
+  // Navbar is sibling to { children } in layout
+  // So we check if the prefix is invalid, we have to prevent error to load 404
+  const invalidPrefix = Object.keys(l).length === 0 && l.constructor === Object;
+  const fallbackLang = {
+    contact: 'Contact us',
+    email: 'info@betalab.cloud',
+    theme: 'Toggle theme',
+  };
 
   return (
     <>
       <nav className={style.nav}>
         {/* Main */}
-        <Main l={l} />
+        <Main l={l} invalidPrefix={invalidPrefix} fallbackLang={fallbackLang} />
 
         {/* Middle */}
         <div className={style.middleCont}>
           <Link
             href={'/'}
             className={style.middle}
-            aria-label={l('general.home')}
+            aria-label={'Home'}
+            locale={invalidPrefix ? 'en' : ('' as 'en')}
           >
             <Logo />
           </Link>

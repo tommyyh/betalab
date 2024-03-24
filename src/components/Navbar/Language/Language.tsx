@@ -1,23 +1,11 @@
 import React from 'react';
 import style from './language.module.scss';
-import { Link } from '@/navigation';
-import { getLocale } from 'next-intl/server';
+import LangLink from './LangLink/LangLink';
 
-type PropsType = {
-  l: any;
-};
-
-const Language = async ({ l }: PropsType) => {
-  const locale = await getLocale();
-
+const Language = async () => {
   return (
-    <button className={style.language} aria-label={l('general.lang')}>
-      <Link locale={locale === 'en' ? 'en' : 'cz'} href={'/'}>
-        {locale === 'en' ? 'English' : 'Čeština'}
-      </Link>
-      <Link locale={locale === 'en' ? 'cz' : 'en'} href={'/'}>
-        {locale === 'en' ? 'Čeština' : 'English'}
-      </Link>
+    <button className={style.language} aria-label={'Select a language'}>
+      <LangLink />
     </button>
   );
 };

@@ -2,31 +2,37 @@
 
 import React, { useState, useEffect } from 'react';
 import style from './cursor.module.scss';
+import { useMediaQuery } from 'react-responsive';
 
 const clickableElements = ['button', 'a', 'select'];
 
 function Cursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 }); // Coordinates
   const [isPointer, setIsPointer] = useState(false);
-
-  // Event handler for mouse movement
-  const onMouseMove = (e: any) => {
-    setPosition({ x: e.clientX, y: e.clientY }); // Update coordinates
-
-    const isClickable = e.target.closest(clickableElements);
-
-    // Check if element is clickable
-    setIsPointer(isClickable ? true : false);
-  };
+  const isDesktop = useMediaQuery({
+    query: '(min-width: 1024px)',
+  });
 
   // Event listener
   useEffect(() => {
-    window.addEventListener('mousemove', onMouseMove);
+    if (isDesktop) {
+      // Event handler for mouse movement
+      const onMouseMove = (e: any) => {
+        setPosition({ x: e.clientX, y: e.clientY }); // Update coordinates
 
-    // Clean up
-    return () => {
-      window.removeEventListener('mousemove', onMouseMove);
-    };
+        const isClickable = e.target.closest(clickableElements);
+
+        // Check if element is clickable
+        setIsPointer(isClickable ? true : false);
+      };
+
+      window.addEventListener('mousemove', onMouseMove);
+
+      // Clean up
+      return () => {
+        window.removeEventListener('mousemove', onMouseMove);
+      };
+    }
   }, []);
 
   // Cursor size based on hovered element
