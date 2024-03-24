@@ -1,0 +1,14 @@
+.work {
+  display: flex;
+  flex-direction: column;
+
+  padding: 11.38rem var(--padding) 0 var(--padding);
+
+  h2 {
+    align-self: flex-end;
+
+    font-size: 1.28rem;
+    font-weight: 300;
+    font-family: var(--poppins);
+  }
+}

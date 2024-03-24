@@ -15,7 +15,7 @@ const SmoothScroll = () => {
         const locomotiveScroll = new LocomotiveScroll();
       })();
     }
-  }, []);
+  }, [isDesktop]);
 
   return <></>;
 };
