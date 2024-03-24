@@ -43,13 +43,20 @@ export const metadata: Metadata = {
   },
 };
 
+// Body
+type PropsType = {
+  children: React.ReactNode;
+  params: {
+    locale: string;
+  };
+};
+
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+  params: { locale },
+}: Readonly<PropsType>) {
   return (
-    <html lang="en" className={`${poppins.variable} ${eiko.variable}`}>
+    <html lang={locale} className={`${poppins.variable} ${eiko.variable}`}>
       <body>
         <Cursor />
         <SmoothScroll />

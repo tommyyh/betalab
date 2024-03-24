@@ -9,13 +9,20 @@ import Language from '../Language/Language';
 
 type PropsType = {
   l: any;
+  invalidPrefix: boolean;
+  fallbackLang: any;
 };
 
-const Main = ({ l }: PropsType) => {
+const Main = ({ l, invalidPrefix, fallbackLang }: PropsType) => {
+  // Before rendering, check if prefix is valid -> if not -> load default english values
   return (
     <div className={style.main}>
-      <Link href={'/contact'} className={style.contact}>
-        <span>{l('links.contact')}</span>
+      <Link
+        locale={invalidPrefix ? 'en' : ('' as 'en')}
+        href={'/contact'}
+        className={style.contact}
+      >
+        <span>{invalidPrefix ? fallbackLang.contact : l('links.contact')}</span>
 
         <div className={style.contactIcon}>
           <div>
@@ -27,13 +34,19 @@ const Main = ({ l }: PropsType) => {
         </div>
       </Link>
 
-      <Theme l={l('general.theme')} />
+      <Theme l={invalidPrefix ? fallbackLang.theme : l('general.theme')} />
 
       <h5>
-        <a href={`mailto:${l('general.email')}`}>{l('general.email')}</a>
+        <a
+          href={`mailto:${
+            invalidPrefix ? fallbackLang.email : l('general.email')
+          }`}
+        >
+          {invalidPrefix ? fallbackLang.email : l('general.email')}
+        </a>
       </h5>
 
-      <Language l={l} />
+      <Language />
     </div>
   );
 };

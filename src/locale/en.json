@@ -1,10 +1,7 @@
 {
   "nav": {
     "general": {
-      "home": "Home",
-      "theme": "Toggle theme",
-      "email": "info@betalab.cloud",
-      "lang": "Select a language"
+      "email": "info@betalab.cloud"
     },
     "links": {
       "contact": "Contact us"
