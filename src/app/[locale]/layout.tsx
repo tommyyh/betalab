@@ -9,7 +9,7 @@ import SmoothScroll from '@/components/SmoothScroll/SmoothScroll';
 // Font types
 const poppins = Poppins({
   subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  weight: ['200', '300', '400', '500', '600', '700', '800', '900', '100'],
   variable: '--poppins',
   display: 'swap',
 });
@@ -48,7 +48,7 @@ export default function RootLayout({
   params: { locale },
 }: Readonly<PropsType>) {
   return (
-    <html lang={locale} className={`${poppins.variable} ${eiko.variable}`}>
+    <html lang={locale} className={`${eiko.variable} ${poppins.variable}`}>
       <body>
         <Cursor />
         <SmoothScroll />
