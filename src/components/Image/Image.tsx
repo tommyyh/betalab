@@ -3,7 +3,8 @@ import style from './image.module.scss';
 import NextImage from 'next/image';
 
 const Image = ({ ...props }) => {
-  return <NextImage {...props} />;
+  // return <NextImage {...props} />;
+  return <></>;
 };
 
 export default Image;
