@@ -9,7 +9,7 @@ const Home = async () => {
   return (
     <>
       <Landing l={l} />
-      <Solution l={l} />
+      {/* <Solution l={l} /> */}
       {/* <Work l={l} /> */}
     </>
   );

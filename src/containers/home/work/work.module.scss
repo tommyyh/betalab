@@ -2,10 +2,12 @@
   display: flex;
   flex-direction: column;
 
-  padding: 11.38rem var(--padding) 0 var(--padding);
+  padding: 12rem var(--padding) 0 var(--padding);
 
   h2 {
     align-self: flex-end;
+    
+    margin: 0 0 2.55rem 0;
 
     font-size: 1.28rem;
     font-weight: 300;

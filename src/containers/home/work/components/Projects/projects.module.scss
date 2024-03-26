@@ -1,5 +1,19 @@
-.project {
-  width: 100%;
-  height: auto;
-  position: relative;
+@import '../../../../../app/utils.scss';
+
+.tags {
+	display: flex;
+
+	overflow-x: scroll;
+	margin: 1rem 0 0 0;
+
+	li {
+		margin: 0 0.7rem 0 0;
+		padding: 0.52rem 1.33rem;
+
+		white-space: nowrap;
+		list-style-type: none;
+		font-size: 0.73rem;
+		border-radius: 60rem;
+		background: greyVariation(0.11);
+	}
 }
