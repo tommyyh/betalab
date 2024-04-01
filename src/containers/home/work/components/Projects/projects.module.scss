@@ -2,7 +2,7 @@
 
 .projects {
   p {
-    margin: 3.38rem 13% 0 0;
+    margin: 3.38rem 13% 4.1rem 0;
 
     font-size: 0.8125rem;
     font-weight: 300;
@@ -11,29 +11,125 @@
   }
 }
 
-// Each project
-.project {
-  margin: 4rem 0 0 0;
+// Margin top first
+.first {
+  margin: -4rem 0 0 0;
+}
 
-  &:first-child {
-    margin: initial;
+// View more
+.moreMobile {
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 0 0.68rem 0 0;
+
+  a {
+    transform: scale(1.06);
   }
 }
 
-.tags {
-  display: flex;
 
-  overflow-x: scroll;
-  margin: 0.9rem 0 0 0;
 
-  li {
-    margin: 0 0.7rem 0 0;
-    padding: 0.49rem 1.31rem;
+// Show correct text for screen size
+.textDesktop {
+  display: none;
+}
 
-    white-space: nowrap;
-    list-style-type: none;
-    font-size: 0.69rem;
-    border-radius: 60rem;
-    background: greyVariation(0.11);
+#moreDesktop {
+  display: none;
+}
+
+
+// Desktop
+@media all and (min-width: 1025px) {
+  $firstGrid1: 15%;
+  $firstGrid2: 83%;
+
+  $secondGrid1: 49.1%;
+  $secondGrid2: 49.5%;
+
+  .projects {
+    // First project margin
+    &:first-child {
+      margin: 4rem 0 0 0;
+    }
+
+    p {
+      margin: 6.5rem 0 0 0;
+  
+      font-size: 0.93rem;
+      font-weight: 300;
+      line-height: 166%;
+      letter-spacing: var(--letter-2);
+    }
   }
+  
+  // First
+  .first {
+    display: grid;
+    grid-template-columns: $firstGrid1 $firstGrid2;
+    justify-content: space-between;
+
+    margin: -1rem 0 0 0;
+  }
+
+  // Second
+  .second {
+    display: grid;
+    grid-template-columns: $secondGrid1 $secondGrid2;
+    justify-content: space-between;
+
+    width: 100%;
+    margin: 1.3rem 0 0 0;
+  }
+
+
+
+  // Inverted version of projects
+  .inverted {
+    margin: 13% 0 0 0;
+
+    // First
+    .first {
+      grid-template-columns: $firstGrid2 $firstGrid1;
+
+      p {
+        order: 2;
+      }
+    }
+
+    // Second
+    .second {
+      grid-template-columns: $secondGrid2 $secondGrid1;
+
+      .secondProject {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        order: 2;
+      }
+
+      #moreDesktop {
+        display: flex;
+
+        margin: 0 0 0.45rem 0;
+      }
+    }
+  }
+
+  
+  // Show correct text for screen size
+  .textDesktop {
+    display: initial;
+  }
+
+  .textMobile { // Paragraph
+    display: none;
+  }
+
+  .moreMobile { // View more
+    display: none;
+  }
+
 }

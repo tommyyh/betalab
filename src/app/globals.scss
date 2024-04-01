@@ -10,12 +10,19 @@
   --second: #000;
   --accent1: #594CFF;
   --accent2: #110039;
-
+  --accent1-contrast: #fff;
+  
   --nav-items: rgb(186, 186, 186, 0.20);
+  
+  --projects-tags: #fff;
+  
+  --cursor-work: rgb(255, 255, 255, 0.7);
 
   --scroll-background: #bab9b9;
   --scroll-hover: #919193;
   --scroll-width: 0.475vw;
+
+  --link-bg: rgb(242, 242, 242, 0.91);
 
   
   // Hover
@@ -73,7 +80,7 @@ a {
 
 
 // Desktop view
-@media all and (min-width: 1024px) {
+@media all and (min-width: 1025px) {
   :root {
     --padding: 1.81rem;
     font-size: 16px;

@@ -5,7 +5,7 @@ import { useMediaQuery } from 'react-responsive';
 
 const SmoothScroll = () => {
   const isDesktop = useMediaQuery({
-    query: '(min-width: 1024px)',
+    query: '(min-width: 1025px)',
   });
 
   useEffect(() => {

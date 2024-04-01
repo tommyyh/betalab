@@ -1,0 +1,61 @@
+@import '../../../../../app/utils.scss';
+
+.project {
+  margin: 4rem 0 0 0;
+}
+
+.tags {
+  display: flex;
+
+  overflow-x: scroll;
+  margin: 0.9rem 0 0 0;
+
+  li {
+    margin: 0 0.7rem 0 0;
+    padding: 0.49rem 1.31rem;
+
+    white-space: nowrap;
+    list-style-type: none;
+    font-size: 0.69rem;
+    border-radius: 60rem;
+    color: var(--second);
+
+    backdrop-filter: blur(var(--blur));
+    background: var(--nav-items);
+  }
+}
+
+
+
+// Desktop
+@media all and (min-width: 1025px) {
+  .project {
+    position: relative;
+    margin: 0;
+    height: fit-content;
+  }
+  
+  .tags {
+    display: initial;
+  
+    overflow-x: initial;
+    margin: 0 0 1.1rem 1.35rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  
+    li {
+      margin: 0 0 0.65rem 0;
+      padding: 0.56rem 1.6rem;
+  
+      white-space: nowrap;
+      list-style-type: none;
+      font-size: 0.77rem;
+      border-radius: 60rem;
+      color: var(--projects-tags);
+
+      backdrop-filter: blur(calc(var(--blur) * 100));
+      background: var(--nav-items);
+    }
+  }
+}

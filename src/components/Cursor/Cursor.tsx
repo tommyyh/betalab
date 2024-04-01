@@ -4,14 +4,31 @@ import React, { useState, useEffect } from 'react';
 import style from './cursor.module.scss';
 import { useMediaQuery } from 'react-responsive';
 
+interface CSSVariable {
+  [key: string]: string | number;
+}
+
 const clickableElements = ['button', 'a', 'select'];
 
 function Cursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 }); // Coordinates
-  const [isPointer, setIsPointer] = useState('');
+  const [pointer, setPointer] = useState('');
+  const [workPercentage, setWorkPercentage] = useState(0);
   const isDesktop = useMediaQuery({
-    query: '(min-width: 1024px)',
+    query: '(min-width: 1025px)',
   });
+
+  // Function for work hovering animation
+  const workHover = (element: HTMLDivElement | null, e: MouseEvent) => {
+    if (element) {
+      const div = element.getBoundingClientRect();
+      const relativeCursorPosition = e.clientY - div.top; // Cursor relative to image
+      const positionPercentage =
+        (relativeCursorPosition / element.clientHeight) * 100;
+
+      setWorkPercentage(positionPercentage);
+    }
+  };
 
   // Event listener
   useEffect(() => {
@@ -33,6 +50,14 @@ function Cursor() {
             case 'special':
               cursorType = 'special';
               break;
+            case 'work':
+              cursorType = 'work'; // Special cursor when hover on work
+              workHover(e.target.closest('[data-cursor]'), e); // Special animation
+
+              break;
+            case 'pointer':
+              cursorType = 'pointer';
+              break;
             default:
               cursorType = '';
               break;
@@ -44,7 +69,7 @@ function Cursor() {
         }
 
         // Check if element is clickable
-        setIsPointer(cursorType);
+        setPointer(cursorType);
       };
 
       window.addEventListener('mousemove', onMouseMove);
@@ -59,9 +84,12 @@ function Cursor() {
   // Cursor size based on hovered element
   let cursorSize = 0.432;
 
-  switch (isPointer) {
+  switch (pointer) {
     case 'special':
       cursorSize = 0.432 * 8;
+      break;
+    case 'work':
+      cursorSize = 0.432 * 15;
       break;
     case 'pointer':
       cursorSize = 0.432 * 4;
@@ -73,14 +101,36 @@ function Cursor() {
 
   return (
     <div
-      className={`${style.flare} ${style[isPointer]}`}
+      className={`${style.flare} ${style[pointer]}`}
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
         width: `${cursorSize}vw`,
         height: `${cursorSize}vw`,
       }}
-    ></div>
+    >
+      <span
+        className={`
+          ${pointer === 'work' ? style.viewActive : ''} 
+          ${style.view}
+        `}
+      >
+        View work
+      </span>
+
+      {/* Work indicator of cursor position */}
+      <svg
+        width="250"
+        height="250"
+        viewBox="0 0 250 250"
+        className={`${style.workIndicator} ${
+          pointer === 'work' ? style.workIndicatorActive : ''
+        }`}
+        style={{ ['--progress' as string]: workPercentage }}
+      >
+        <circle className={style.workInner}></circle>
+      </svg>
+    </div>
   );
 }
 

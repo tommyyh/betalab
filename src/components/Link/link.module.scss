@@ -1,0 +1,94 @@
+.link {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  width: fit-content;
+
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--second);
+  text-decoration: none;
+
+  svg {
+    margin: -0.135rem 0 0 0.45rem;
+    transform: scale(0.44);
+
+    path {
+      fill: var(--second);
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    right: -0.57rem;
+    width: 72%;
+    height: 1.81rem;
+    z-index: -1;
+    
+    background: var(--nav-items);
+    backdrop-filter: blur(var(--blur));
+    border-radius: 50rem;
+  }
+}
+
+
+
+// Desktop
+@media all and (min-width: 1025px) {
+  $bg-width: 8.25%;
+
+  .link {
+    display: flex;
+    align-items: center;
+    position: relative;
+  
+    width: fit-content;
+    padding: 0.75rem 0;
+  
+    font-size: 1.035rem;
+    font-weight: 400;
+    color: var(--second);
+    text-decoration: none;
+    letter-spacing: var(--letter-2);
+    transition: var(--transition-slow-fast);
+  
+    svg {
+      margin: 0 0 0 .45rem;
+      transform: scale(0.45);
+
+      transition: var(--transition-slow-fast);
+
+      path {
+        fill: var(--second);
+      }
+    }
+  
+    &::before {
+      content: '';
+      position: absolute;
+      right: -$bg-width;
+      width: 70%;
+      height: 1.97rem;
+      z-index: -1;
+      
+      background: var(--nav-items);
+      backdrop-filter: blur(var(--blur));
+      border-radius: 50rem;
+      transition: var(--transition-slow-fast);
+    }
+
+    // Hover
+    &:hover {
+      &::before {
+        width: $bg-width + 89%;
+      }
+
+      svg {
+        transform: scale(0.41) rotate(45deg);
+      }
+    }
+  }
+
+}

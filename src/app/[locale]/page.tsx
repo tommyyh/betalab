@@ -1,10 +1,10 @@
-import Landing from "@/containers/home/landing/page";
-import Solution from "@/containers/home/solution/page";
-import Work from "@/containers/home/work/page";
-import { getTranslations } from "next-intl/server";
+import Landing from '@/containers/home/landing/page';
+import Solution from '@/containers/home/solution/page';
+import Work from '@/containers/home/work/page';
+import { getTranslations } from 'next-intl/server';
 
 const Home = async () => {
-  const l = await getTranslations("home");
+  const l = await getTranslations('home');
 
   return (
     <>
