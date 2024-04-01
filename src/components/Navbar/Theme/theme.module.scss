@@ -18,13 +18,11 @@ $contSize: 2.15rem;
   }
 
   .moon svg {
-    width: 0.659rem;
-    height: 0.853rem;
+    transform: scale(1);
   }
 
   .sun {
-    width: 0.7813rem;
-    height: 0.7813rem;
+    transform: scale(1);
   }
 
   rect, path {

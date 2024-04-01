@@ -27,7 +27,7 @@
   @return rgb(186, 186, 186, $opacity);
 }
 
-@function blackVariation($opacity) {
+@function secondVariation($opacity) {
   @return rgb(from var(--second) r g b / $opacity);
 }
 

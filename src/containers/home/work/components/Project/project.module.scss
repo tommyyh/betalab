@@ -1,22 +1,22 @@
 @import '../../../../../app/utils.scss';
 
 .project {
-  margin: 4rem 0 0 0;
+  margin: 3.5rem 0 0 0;
 }
 
 .tags {
   display: flex;
 
   overflow-x: scroll;
-  margin: 0.9rem 0 0 0;
+  margin: 0.67rem 0 0 0;
 
   li {
     margin: 0 0.7rem 0 0;
-    padding: 0.49rem 1.31rem;
+    padding: 0.45rem 1.225rem;
 
     white-space: nowrap;
     list-style-type: none;
-    font-size: 0.69rem;
+    font-size: 0.67rem;
     border-radius: 60rem;
     color: var(--second);
 

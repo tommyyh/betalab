@@ -28,6 +28,14 @@
     @include blur;
   }
 
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+  }
+
   path {
     stroke: var(--second);
     transition: var(--theme-transition);

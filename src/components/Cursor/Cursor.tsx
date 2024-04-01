@@ -13,22 +13,9 @@ const clickableElements = ['button', 'a', 'select'];
 function Cursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 }); // Coordinates
   const [pointer, setPointer] = useState('');
-  const [workPercentage, setWorkPercentage] = useState(0);
   const isDesktop = useMediaQuery({
     query: '(min-width: 1025px)',
   });
-
-  // Function for work hovering animation
-  const workHover = (element: HTMLDivElement | null, e: MouseEvent) => {
-    if (element) {
-      const div = element.getBoundingClientRect();
-      const relativeCursorPosition = e.clientY - div.top; // Cursor relative to image
-      const positionPercentage =
-        (relativeCursorPosition / element.clientHeight) * 100;
-
-      setWorkPercentage(positionPercentage);
-    }
-  };
 
   // Event listener
   useEffect(() => {
@@ -47,13 +34,8 @@ function Cursor() {
         // Cursor depending on if is clickable
         if (specialCursor) {
           switch (specialCursor) {
-            case 'special':
-              cursorType = 'special';
-              break;
             case 'work':
               cursorType = 'work'; // Special cursor when hover on work
-              workHover(e.target.closest('[data-cursor]'), e); // Special animation
-
               break;
             case 'pointer':
               cursorType = 'pointer';
@@ -82,20 +64,18 @@ function Cursor() {
   }, [isDesktop]);
 
   // Cursor size based on hovered element
-  let cursorSize = 0.432;
+  const baseSize = 0.44;
+  let cursorSize = baseSize;
 
   switch (pointer) {
-    case 'special':
-      cursorSize = 0.432 * 8;
-      break;
     case 'work':
-      cursorSize = 0.432 * 15;
+      cursorSize = baseSize * 15;
       break;
     case 'pointer':
-      cursorSize = 0.432 * 4;
+      cursorSize = baseSize * 4;
       break;
     default:
-      cursorSize = 0.432;
+      cursorSize = baseSize;
       break;
   }
 
@@ -109,6 +89,7 @@ function Cursor() {
         height: `${cursorSize}vw`,
       }}
     >
+      {/* Work text */}
       <span
         className={`
           ${pointer === 'work' ? style.viewActive : ''} 
@@ -117,19 +98,6 @@ function Cursor() {
       >
         View work
       </span>
-
-      {/* Work indicator of cursor position */}
-      <svg
-        width="250"
-        height="250"
-        viewBox="0 0 250 250"
-        className={`${style.workIndicator} ${
-          pointer === 'work' ? style.workIndicatorActive : ''
-        }`}
-        style={{ ['--progress' as string]: workPercentage }}
-      >
-        <circle className={style.workInner}></circle>
-      </svg>
     </div>
   );
 }
