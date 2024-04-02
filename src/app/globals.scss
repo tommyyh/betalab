@@ -8,14 +8,15 @@
   // Color theme
   --primary: #fff;
   --second: #000;
-  --accent1: #594CFF;
+  --accent1: #594cff;
   --accent2: #110039;
   --accent1-contrast: #fff;
-  
-  --nav-items: rgb(186, 186, 186, 0.20);
-  
+
+  --nav-items: rgb(186, 186, 186, 0.2);
+
   --projects-tags: #fff;
-  
+  --projects-tags-bg: rgb(0, 0, 0, 0.42);
+
   --cursor-work: rgb(255, 255, 255, 0.7);
 
   --scroll-background: #bab9b9;
@@ -24,12 +25,11 @@
 
   --link-bg: rgb(242, 242, 242, 0.91);
 
-  
   // Hover
   --hover-transition: border 120ms ease, background 120ms ease;
   --border-hover: 0.08rem solid transparent;
   --hover-offset: 0.16rem; // When text jumps in animation - slight offset
-  
+
   // Sizing
   --blur: 1.42rem;
   --padding: 0.875rem;
@@ -37,15 +37,13 @@
 
   // Transitions
   --theme-transition: 250ms ease;
-  --transition1: 350ms cubic-bezier(.2,.6,.3,1);
-  --transition2: 440ms cubic-bezier(.2,.6,.3,1);
-  --transition-slow-fast: 310ms cubic-bezier(.64,.36,0,.96);
+  --transition1: 350ms cubic-bezier(0.2, 0.6, 0.3, 1);
+  --transition2: 440ms cubic-bezier(0.2, 0.6, 0.3, 1);
+  --transition-slow-fast: 310ms cubic-bezier(0.64, 0.36, 0, 0.96);
 }
 
-
-
 // Themes
-body[data-theme='dark'] {
+body[data-theme="dark"] {
   --primary: #000;
   --second: #fff;
 
@@ -53,20 +51,25 @@ body[data-theme='dark'] {
   --scroll-hover: #474755;
 }
 
-
-
 // General resets
 body {
   background: var(--primary);
   color: var(--second);
-  transition: background var(--theme-transition), color var(--theme-transition);
+  transition:
+    background var(--theme-transition),
+    color var(--theme-transition);
   font-family: var(--poppins);
 
   // Dev only
   margin-bottom: 8000px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--eiko);
   font-weight: 300;
   color: var(--second);
@@ -77,8 +80,6 @@ a {
   transition: var(--theme-transition);
 }
 
-
-
 // Desktop view
 @media all and (min-width: 1025px) {
   :root {
@@ -87,21 +88,20 @@ a {
   }
 
   // Disable cursor
-  *, html {
+  *,
+  html {
     cursor: none;
   }
-
-
 
   // Scrollbar
   body::-webkit-scrollbar {
     width: var(--scroll-width); // Whole width
   }
-  
+
   body::-webkit-scrollbar-track {
     background: initial; // Make the track invisible
   }
-  
+
   body::-webkit-scrollbar-thumb {
     background: var(--scroll-background); // Scrollbar thumb
     border-radius: 20rem;
@@ -112,8 +112,6 @@ a {
     }
   }
 }
-
-
 
 // Tablet
 @media (min-width: 700px) and (max-width: 1024px) {

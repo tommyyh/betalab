@@ -1,5 +1,3 @@
-@import '../../app/utils.scss';
-
 $transitionTime: 230ms ease;
 
 .flare {
@@ -11,12 +9,15 @@ $transitionTime: 230ms ease;
   transform: translate(-50%, -50%);
   z-index: 999999 !important;
 
-  border: 0.0001vw solid var(--second);
+  border: 0.094rem solid var(--second);
   border-radius: 50%;
   pointer-events: none;
   background: var(--second);
-  transition: width $transitionTime, height $transitionTime,
-    background $transitionTime, border $transitionTime;
+  transition:
+    width $transitionTime,
+    height $transitionTime,
+    background $transitionTime,
+    border $transitionTime;
   cursor: none !important;
 }
 
@@ -46,7 +47,51 @@ $transitionTime: 230ms ease;
   transition-delay: 20ms;
 }
 
+// Work indicator
+.workIndicator {
+  --size: 5.72vw;
+  --half-size: calc(var(--size) / 2);
+  --stroke-width: 0.0475vw;
+  --radius: calc((var(--size) - var(--stroke-width)) / 2);
+  --circumference: calc(var(--radius) * pi * 2);
+  --dash: calc((var(--progress) * var(--circumference)) / 100);
 
+  position: absolute;
+
+  opacity: 0;
+  visibility: 0;
+}
+
+.workIndicatorActive {
+  // Active animation
+  opacity: 1;
+  visibility: 1;
+  transition:
+    opacity var(--theme-transition),
+    visibility var(--theme-transition);
+  transition-delay: 190ms;
+}
+
+.workIndicator circle {
+  cx: var(--half-size);
+  cy: var(--half-size);
+  r: var(--radius);
+  stroke-width: var(--stroke-width);
+  fill: none;
+  stroke-linecap: round;
+}
+
+.workIndicator circle.workInner {
+  transform: translate(
+      calc(50% - var(--half-size)),
+      calc(50% - var(--half-size))
+    )
+    rotate(-90deg);
+  transform-origin: var(--half-size) var(--half-size);
+
+  stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+  stroke: var(--cursor-work);
+}
 
 // Remove for mobile and tablet
 @media screen and (max-width: 768px) {
