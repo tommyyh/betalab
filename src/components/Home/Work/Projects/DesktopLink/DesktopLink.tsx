@@ -17,9 +17,7 @@ const DesktopLink = ({ customId, children }: PropsType) => {
   });
 
   return isDesktop ? (
-    <Link href="/work" customId={customId}>
-      {children}
-    </Link>
+    <Link href="/work">{children}</Link>
   ) : (
     <Link href="/work">{children}</Link>
   );
