@@ -12,27 +12,43 @@ type PropsType = {
   l: any;
 };
 
-// Images
-const projectImages = [
-  [
-    { src: Project1, alt: 'Project number 1' },
-    { src: Project2, alt: 'Project number 2' },
-    { src: Project3, alt: 'Project number 3' },
-  ],
-  [
-    { src: Project4, alt: 'Project number 4' },
-    { src: Project5, alt: 'Project number 5' },
-    { src: Project6, alt: 'Project number 6' },
-  ],
-];
-
 const Work = ({ l }: PropsType) => {
+  const projects1 = 'work.projects1';
+  const projects2 = 'work.projects2';
+
+  // Projects
+  const projectsList = [
+    {
+      id: 1,
+      text: l(`${projects1}.text`),
+      projects: [
+        { src: Project1, alt: l(`${projects1}.1.alt`) },
+        { src: Project2, alt: l(`${projects1}.2.alt`) },
+        { src: Project3, alt: l(`${projects1}.3.alt`) },
+      ],
+    },
+    {
+      id: 2,
+      text: l(`${projects2}.text`),
+      cta: l(`work.cta`),
+      projects: [
+        { src: Project4, alt: l(`${projects2}.1.alt`) },
+        { src: Project5, alt: l(`${projects2}.2.alt`) },
+        { src: Project6, alt: l(`${projects2}.3.alt`) },
+      ],
+    },
+  ];
+
   return (
     <section className={style.work}>
-      <h2>Some of our previous work</h2>
+      <h2>{l('work.title')}</h2>
 
-      <Projects images={projectImages[0]} />
-      <Projects images={projectImages[1]} inverted={true} />
+      {projectsList.map((projects) => (
+        <Projects
+          projects={projects}
+          inverted={projects.id === 2 ? true : false}
+        />
+      ))}
     </section>
   );
 };

@@ -23,12 +23,43 @@
       "title": "We can solve your problem",
       "text": "We know getting sales isn’t easy without a good website in this new digital era. But that’s why we’re here - to help you get more clients, stand out from the crowd and help you beat your competitors."
     },
+    "work": {
+      "title": "Some of our previous work",
+      "cta": "View all work",
+      "projects1": {
+        "text": "Companies who put trust in our hands, saw huge benefits right after deployment. With their new web solutions they found an increase in both sales and exposure in the digital world.",
+        "projects": {
+          "1": {
+            "alt": "Project number 1"
+          },
+          "2": {
+            "alt": "Project number 2"
+          },
+          "3": {
+            "alt": "Project number 3"
+          }
+        }
+      },
+      "projects2": {
+        "text": "Companies who put trust in our hands, saw huge benefits right after deployment. With their new web solutions they found an increase in both sales and exposure in the digital world.",
+        "projects": {
+          "1": {
+            "alt": "Project number 4"
+          },
+          "2": {
+            "alt": "Project number 5"
+          },
+          "3": {
+            "alt": "Project number 6"
+          }
+        }
+      }
+    },
     "benefits": {
       "title": "The benefits of working with us",
-      "cta": "I'm interested",
       "list": {
         "1": {
-          "feature": "+75% on average",
+          "feature": "+120% on average",
           "title": "Our tailored digital solutions <span>will increase your sales</span>",
           "text": "Companies who put trust in our hands, saw huge <span>benefits right after deployment. With their new web</span> solutions they found an increase in both sales"
         },
@@ -43,7 +74,7 @@
           "text": "Companies who put trust in our hands, saw huge <span>benefits right after deployment. With their new web</span> solutions they found an increase in both sales"
         },
         "4": {
-          "feature": "+110% exposure on average",
+          "feature": "+170% exposure on average",
           "title": "Organic marketing and better <span>exposure as a side effect</span>",
           "text": "Companies who put trust in our hands, saw huge <span>benefits right after deployment. With their new web</span> solutions they found an increase in both sales"
         }

@@ -22,6 +22,63 @@
     "solution": {
       "title": "Váš problém dokážeme vyřešit",
       "text": "Víme, že v tomto novém digitálním prostředí není lehké získat více tržeb bez dobré webové stránky. Ale proto jsme tu my - abychom vám pomohli získat více klientů, vyniknout v davu a pomoc vám porazit konkurenci."
+    },
+    "work": {
+      "title": "Některé z našich předchozích prací",
+      "cta": "Zobrazit všechny reference",
+      "projects1": {
+        "text": "Společnosti, které se svěřily do našich rukou, zaznamenaly hned po zhotovení obrovské přínosy. S novými webovými řešeními zjistily, že se jim zvýšil prodej i viditelnost v digitálním světě.",
+        "projects": {
+          "1": {
+            "alt": "Práce číslo 1"
+          },
+          "2": {
+            "alt": "Práce číslo 2"
+          },
+          "3": {
+            "alt": "Práce číslo 3"
+          }
+        }
+      },
+      "projects2": {
+        "text": "Společnosti, které se svěřily do našich rukou, zaznamenaly hned po zhotovení obrovské přínosy. S novými webovými řešeními zjistily, že se jim zvýšil prodej i viditelnost v digitálním světě.",
+        "projects": {
+          "1": {
+            "alt": "Práce číslo 4"
+          },
+          "2": {
+            "alt": "Práce číslo 5"
+          },
+          "3": {
+            "alt": "Práce číslo 6"
+          }
+        }
+      }
+    },
+    "benefits": {
+      "title": "Jaké výhody budete získáte?",
+      "list": {
+        "1": {
+          "feature": "+120% více zisku",
+          "title": "Naše digitální řešení na míru <span>vám několikrát zvýší zisk </span>",
+          "text": "Společnosti, které se svěřily do našich rukou, zaznamenaly hned <span>po zhotovení obrovské přínosy. S novými webovými řešeními</span> zjistily, že se jim zvýšil prodej i viditelnost v digitálním světě."
+        },
+        "2": {
+          "feature": "Navždy trvající důvěra",
+          "title": "Získejte větší důvěryhodnost",
+          "text": "Společnosti, které se svěřily do našich rukou, zaznamenaly hned <span>po zhotovení obrovské přínosy. S novými webovými řešeními</span> zjistily, že se jim zvýšil prodej i viditelnost v digitálním světě."
+        },
+        "3": {
+          "feature": "Zaručené výsledky",
+          "title": "Poražte své konkurenty <span>s naší pomocí</span>",
+          "text": "Společnosti, které se svěřily do našich rukou, zaznamenaly hned <span>po zhotovení obrovské přínosy. S novými webovými řešeními</span> zjistily, že se jim zvýšil prodej i viditelnost v digitálním světě."
+        },
+        "4": {
+          "feature": "+170% více zviditelnění",
+          "title": "Organický marketing a lepší <span>zviditelnění zaručeno</span>",
+          "text": "Společnosti, které se svěřily do našich rukou, zaznamenaly hned <span>po zhotovení obrovské přínosy. S novými webovými řešeními</span> zjistily, že se jim zvýšil prodej i viditelnost v digitálním světě."
+        }
+      }
     }
   }
 }
