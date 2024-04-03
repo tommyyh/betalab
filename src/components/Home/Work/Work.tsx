@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './work.module.scss';
-import Projects from './components/Projects/Projects';
+import Projects from './Projects/Projects';
 import Project1 from '@/public/home/work/1.png';
 import Project2 from '@/public/home/work/2.png';
 import Project3 from '@/public/home/work/3.png';

@@ -5,14 +5,13 @@ import ArrowSvg from '@/public/icons/arrow.svg';
 
 type PropsType = {
   href: string;
-  text: string;
-  customId?: any;
+  children: React.ReactNode;
 };
 
-const Link = ({ href, text, customId }: PropsType) => {
+const Link = ({ href, children }: PropsType) => {
   return (
-    <NextLink href={href} className={style.link} id={customId}>
-      <span>{text}</span> <ArrowSvg />
+    <NextLink href={href} className={style.link}>
+      <span>{children}</span> <ArrowSvg />
     </NextLink>
   );
 };

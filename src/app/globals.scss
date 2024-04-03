@@ -14,6 +14,8 @@
 
   --nav-items: rgb(186, 186, 186, 0.2);
 
+  --items: rgb(186, 186, 186, 0.2);
+
   --projects-tags: #fff;
   --projects-tags-bg: rgb(0, 0, 0, 0.42);
 
@@ -33,10 +35,15 @@
   // Sizing
   --blur: 1.42rem;
   --padding: 0.875rem;
-  --letter-2: -0.3px;
+  --letter-1: -0.0125rem;
+  --letter-2: -0.01875rem;
+  --letter-2-5: -0.02175rem;
+
+  --benefits-blur: rgb(from var(--second) r g b / 0.042);
 
   // Transitions
   --theme-transition: 250ms ease;
+  --theme-transition2: 310ms ease;
   --transition1: 350ms cubic-bezier(0.2, 0.6, 0.3, 1);
   --transition2: 440ms cubic-bezier(0.2, 0.6, 0.3, 1);
   --transition-slow-fast: 310ms cubic-bezier(0.64, 0.36, 0, 0.96);
@@ -49,6 +56,8 @@ body[data-theme="dark"] {
 
   --scroll-background: #353540;
   --scroll-hover: #474755;
+
+  --benefits-blur: rgb(from var(--second) r g b / 0.055);
 }
 
 // General resets

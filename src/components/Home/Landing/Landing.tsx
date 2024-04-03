@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './landing.module.scss';
 import BtnLink from '@/components/BtnLink/BtnLink';
-import Thumbnail from './thumbnail/page';
+import Thumbnail from './Thumbnail/Thumbnail';
 
 type PropsType = {
   l: any;

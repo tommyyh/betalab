@@ -36,7 +36,7 @@ const Projects = ({ images, inverted }: ProjectsType) => {
           />
 
           {/* View all work - desktop */}
-          <Link href="/" text={'View all work'} customId={style.moreDesktop} />
+          <Link href="/work">View all work</Link>
         </div>
 
         <Project
@@ -55,7 +55,7 @@ const Projects = ({ images, inverted }: ProjectsType) => {
       {/* View all work - mobile */}
       {inverted && (
         <div className={style.moreMobile}>
-          <Link href="/" text={'View all work'} />
+          <Link href="/work">View all work</Link>
         </div>
       )}
     </div>

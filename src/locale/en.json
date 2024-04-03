@@ -22,6 +22,32 @@
     "solution": {
       "title": "We can solve your problem",
       "text": "We know getting sales isn’t easy without a good website in this new digital era. But that’s why we’re here - to help you get more clients, stand out from the crowd and help you beat your competitors."
+    },
+    "benefits": {
+      "title": "The benefits of working with us",
+      "cta": "I'm interested",
+      "list": {
+        "1": {
+          "feature": "+75% on average",
+          "title": "Our tailored digital solutions <span>will increase your sales</span>",
+          "text": "Companies who put trust in our hands, saw huge <span>benefits right after deployment. With their new web</span> solutions they found an increase in both sales"
+        },
+        "2": {
+          "feature": "Forever lasting trust",
+          "title": "Gain more trust and credibility",
+          "text": "Companies who put trust in our hands, saw huge <span>benefits right after deployment. With their new web</span> solutions they found an increase in both sales"
+        },
+        "3": {
+          "feature": "Guaranteed results",
+          "title": "Beat your competitors <span>with our help</span>",
+          "text": "Companies who put trust in our hands, saw huge <span>benefits right after deployment. With their new web</span> solutions they found an increase in both sales"
+        },
+        "4": {
+          "feature": "+110% exposure on average",
+          "title": "Organic marketing and better <span>exposure as a side effect</span>",
+          "text": "Companies who put trust in our hands, saw huge <span>benefits right after deployment. With their new web</span> solutions they found an increase in both sales"
+        }
+      }
     }
   }
 }

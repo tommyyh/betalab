@@ -1,0 +1,108 @@
+@import '../../../../app/utils.scss';
+
+.benefit {
+  padding: 2.65rem var(--padding);
+
+  border-top: 0.06rem solid secondVariation(0.13);
+
+  h3 {
+    width: fit-content;
+    padding: 0.4rem 1.1rem;
+
+    border-radius: 15rem;
+    font-size: 0.72rem;
+    font-weight: 400;
+    font-family: var(--poppins);
+    background: var(--items);
+  }
+
+  h4 {
+    margin: 0.85rem 0 0 0;
+
+    font-size: 1.45rem;
+    font-weight: 300;
+    line-height: 126%;
+    letter-spacing: var(--letter-1);
+    -webkit-text-stroke: bolderText(0.043rem);
+  }
+
+  p {
+    margin: 1.3rem 0 0 0;
+
+    letter-spacing: var(--letter-2-5);
+    font-size: 0.85rem;
+    line-height: 161%;
+    font-weight: 300;
+    color: secondVariation(0.75);
+  }
+}
+
+
+@media all and (min-width: 1025px) {
+  .benefit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    height: 15rem;
+    padding: 0 var(--padding);
+  
+    border-top: 0.06rem solid secondVariation(0.15);
+    transition: var(--theme-transition2);
+
+    &:hover {
+      background: var(--benefits-blur);
+      padding: 0 calc(var(--padding) + 2.5rem) 0 calc(var(--padding) + 2.5rem);
+    }
+
+    // Left side
+    .left {
+      display: flex;
+      align-items: flex-start;
+
+      h3 { // Reverse order
+        order: 2;
+      }
+    }
+  
+    h3 {
+      width: fit-content;
+      padding: 0.5rem 1.3rem;
+      margin: 0.44rem 0 0 1.51rem;
+  
+      border-radius: 15rem;
+      font-size: 0.79rem;
+      font-weight: 400;
+      font-family: var(--poppins);
+      background: var(--items);
+    }
+  
+    h4 {
+      margin: initial;
+  
+      font-size: 2.19rem;
+      font-weight: 300;
+      line-height: 123%;
+      letter-spacing: var(--letter-1);
+      -webkit-text-stroke: bolderText(0.053rem);
+
+      span {
+        display: block;
+      }
+    }
+  
+    p {
+      margin: initial;
+  
+      letter-spacing: var(--letter-2-5);
+      font-size: 0.98rem;
+      line-height: 177%;
+      font-weight: 300;
+      color: secondVariation(0.85);
+
+      span {
+        display: block;
+      }
+    }
+  }
+}
