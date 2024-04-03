@@ -45,6 +45,7 @@ const Work = ({ l }: PropsType) => {
 
       {projectsList.map((projects) => (
         <Projects
+          key={projects.id}
           projects={projects}
           inverted={projects.id === 2 ? true : false}
         />
