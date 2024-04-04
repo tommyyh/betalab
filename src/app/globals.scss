@@ -6,8 +6,8 @@
 
 :root {
   // Color theme
-  --primary: #fff;
-  --second: #000;
+  --primary: #000;
+  --second: #fff;
   --accent1: #594cff;
   --accent2: #110039;
   --accent1-contrast: #fff;
@@ -21,8 +21,8 @@
 
   --cursor-work: rgb(255, 255, 255, 0.7);
 
-  --scroll-background: #bab9b9;
-  --scroll-hover: #919193;
+  --scroll-background: #353540;
+  --scroll-hover: #474755;
   --scroll-width: 0.475vw;
 
   --link-bg: rgb(242, 242, 242, 0.91);
@@ -39,7 +39,7 @@
   --letter-2: -0.01875rem;
   --letter-2-5: -0.02175rem;
 
-  --benefits-blur: rgb(from var(--second) r g b / 0.042);
+  --benefits-blur: rgb(from var(--second) r g b / 0.055);
 
   // Transitions
   --theme-transition: 250ms ease;
@@ -50,14 +50,14 @@
 }
 
 // Themes
-body[data-theme="dark"] {
-  --primary: #000;
-  --second: #fff;
+body[data-theme="light"] {
+  --primary: #fff;
+  --second: #000;
 
-  --scroll-background: #353540;
-  --scroll-hover: #474755;
+  --scroll-background: #bab9b9;
+  --scroll-hover: #919193;
 
-  --benefits-blur: rgb(from var(--second) r g b / 0.055);
+  --benefits-blur: rgb(from var(--second) r g b / 0.0265);
 }
 
 // General resets

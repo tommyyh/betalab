@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './main.module.scss';
-import Theme from '../Theme/Theme';
+import Theme from '@/components/Theme/Theme';
 
 import Envelope from '@/public/nav/envelope.svg';
 import Send from '@/public/nav/send.svg';

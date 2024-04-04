@@ -13,11 +13,26 @@ const Theme = ({ l }: PropsType) => {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    const theme = localStorage.getItem('theme') || 'light';
+    const preferredLoaded = localStorage.getItem('preferredLoaded');
 
-    document.body.setAttribute('data-theme', theme);
+    // Check if user visits for the first time -> select system preferred theme
+    if (preferredLoaded === 'true') {
+      // User already visited before
+      const theme = localStorage.getItem('theme') || 'dark';
 
-    setDarkMode(theme === 'dark' ? true : false);
+      document.body.setAttribute('data-theme', theme);
+
+      setDarkMode(theme === 'dark' ? true : false);
+    } else {
+      // User visits for the first time -> Set to know
+      const userPreferred = window.matchMedia('(prefers-color-scheme: dark)');
+      const preferredTheme = userPreferred ? 'dark' : 'light';
+
+      document.body.setAttribute('data-theme', preferredTheme);
+      localStorage.setItem('preferredLoaded', 'true');
+
+      setDarkMode(preferredTheme === 'dark' ? true : false);
+    }
   }, []);
 
   const setTheme = () => {
