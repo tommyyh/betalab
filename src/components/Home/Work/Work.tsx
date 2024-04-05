@@ -22,9 +22,9 @@ const Work = ({ l }: PropsType) => {
       id: 1,
       text: l(`${projects1}.text`),
       projects: [
-        { src: Project1, alt: l(`${projects1}.1.alt`) },
-        { src: Project2, alt: l(`${projects1}.2.alt`) },
-        { src: Project3, alt: l(`${projects1}.3.alt`) },
+        { src: Project1, alt: l(`${projects1}.projects.1.alt`) },
+        { src: Project2, alt: l(`${projects1}.projects.2.alt`) },
+        { src: Project3, alt: l(`${projects1}.projects.3.alt`) },
       ],
     },
     {
@@ -32,9 +32,9 @@ const Work = ({ l }: PropsType) => {
       text: l(`${projects2}.text`),
       cta: l(`work.cta`),
       projects: [
-        { src: Project4, alt: l(`${projects2}.1.alt`) },
-        { src: Project5, alt: l(`${projects2}.2.alt`) },
-        { src: Project6, alt: l(`${projects2}.3.alt`) },
+        { src: Project4, alt: l(`${projects2}.projects.1.alt`) },
+        { src: Project5, alt: l(`${projects2}.projects.2.alt`) },
+        { src: Project6, alt: l(`${projects2}.projects.3.alt`) },
       ],
     },
   ];
