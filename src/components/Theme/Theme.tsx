@@ -29,7 +29,9 @@ const Theme = ({ l }: PropsType) => {
       const preferredTheme = userPreferred ? "dark" : "light";
 
       console.log(`Preferred theme: ${preferredTheme}`);
-      console.log(`System user preferred: ${userPreferred}`);
+      console.log(
+        `System user preferred: ${userPreferred.media} ---- ${userPreferred.matches}`,
+      );
 
       document.body.setAttribute("data-theme", preferredTheme);
       localStorage.setItem("preferredLoaded", "true");
