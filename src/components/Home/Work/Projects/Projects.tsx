@@ -2,6 +2,7 @@ import React from 'react';
 import style from './projects.module.scss';
 import Project from '../Project/Project';
 import Link from '@/components/Link/Link';
+import Text from '@/components/Text/Text';
 
 type ProjectsType = {
   projects: {
@@ -23,7 +24,7 @@ const Projects = ({ projects, inverted }: ProjectsType) => {
     <div className={`${style.projects} ${inverted ? style.inverted : ''}`}>
       {/* Upper row */}
       <div className={style.first}>
-        <p className={style.textDesktop}>{projects.text}</p>
+        <Text customClass={style.textDesktop}>{projects.text}</Text>
 
         <Project
           src={projectsList[0].src}
