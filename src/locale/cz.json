@@ -1,4 +1,8 @@
 {
+  "welcome": {
+    "welcome": "Betalab · Vedoucí webová agentura",
+    "contact": "Kontakt"
+  },
   "nav": {
     "general": {
       "email": "info@betalab.cloud",

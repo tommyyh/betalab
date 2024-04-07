@@ -1,4 +1,8 @@
 {
+  "welcome": {
+    "welcome": "Betalab · Leading web agency",
+    "contact": "Contact us"
+  },
   "nav": {
     "general": {
       "email": "info@betalab.cloud",

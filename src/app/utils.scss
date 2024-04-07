@@ -35,6 +35,11 @@
   @return $thickness var(--second);
 }
 
+// For text that doesn't changes with theme colors
+@function bolderTextWhite($thickness) {
+  @return $thickness var(--white);
+}
+
 @function font($size, $min, $max) {
   @return min(max($size, $min), $max);
 }
