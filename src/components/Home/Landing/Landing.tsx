@@ -2,6 +2,8 @@ import React from 'react';
 import style from './landing.module.scss';
 import BtnLink from '@/components/BtnLink/BtnLink';
 import Thumbnail from './Thumbnail/Thumbnail';
+import Text from '@/components/Text/Text';
+import Title from './Title/Title';
 
 type PropsType = {
   l: any;
@@ -12,11 +14,11 @@ const Landing = ({ l }: PropsType) => {
     <main className={style.landing}>
       <div className={style.content}>
         <div className={style.main}>
-          <h1>
-            <span>{l('landing.title.1')} </span>
-            <span>{l('landing.title.2')} </span>
-            {l('landing.title.3')}
-          </h1>
+          <Title
+            l1={l('landing.title.1')}
+            l2={l('landing.title.2')}
+            l3={l('landing.title.3')}
+          />
 
           <BtnLink
             href={'/contact'}
@@ -25,7 +27,7 @@ const Landing = ({ l }: PropsType) => {
           />
         </div>
 
-        <p>{l('landing.text')}</p>
+        <Text animateRightAway={true}>{l('landing.text')}</Text>
       </div>
 
       <div className={style.thumbnail}>

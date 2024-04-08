@@ -54,11 +54,11 @@ const Loading = ({ text }: PropsType) => {
     curve = {
       initial: {
         d: initialPath,
-        transition: { duration: 0.7, ease: [0, 0, 0.09, 0.5] },
+        transition: { duration: 0.7, ease: [0.38, 0, 0.09, 0.5] },
       },
       exit: {
         d: targetPath,
-        transition: { duration: 0.7, ease: [0, 0, 0.09, 0.5], delay: 0.3 },
+        transition: { duration: 0.7, ease: [0.38, 0, 0.09, 0.5], delay: 0.3 },
       },
     };
   }

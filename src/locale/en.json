@@ -64,23 +64,23 @@
       "list": {
         "1": {
           "feature": "+120% on average",
-          "title": "Our tailored digital solutions <span>will increase your sales</span>",
-          "text": "Companies who put trust in our hands, saw huge <span>benefits right after deployment. With their new web</span> solutions they found an increase in both sales"
+          "title": "<span>Our tailored digital solutions </span><span>will increase your sales</span>",
+          "text": "<span>Companies who put trust in our hands, saw huge </span><span>benefits right after deployment. With their new web</span><span> solutions they found an increase in both sales</span>"
         },
         "2": {
           "feature": "Forever lasting trust",
-          "title": "Gain more trust and credibility",
-          "text": "Companies who put trust in our hands, saw huge <span>benefits right after deployment. With their new web</span> solutions they found an increase in both sales"
+          "title": "<span>Gain more trust and credibility</span>",
+          "text": "<span>Companies who put trust in our hands, saw huge </span><span>benefits right after deployment. With their new web</span><span> solutions they found an increase in both sales</span>"
         },
         "3": {
           "feature": "Guaranteed results",
-          "title": "Beat your competitors <span>with our help</span>",
-          "text": "Companies who put trust in our hands, saw huge <span>benefits right after deployment. With their new web</span> solutions they found an increase in both sales"
+          "title": "<span>Beat your competitors </span><span>with our help</span>",
+          "text": "<span>Companies who put trust in our hands, saw huge </span><span>benefits right after deployment. With their new web</span><span> solutions they found an increase in both sales</span>"
         },
         "4": {
           "feature": "+170% exposure on average",
-          "title": "Organic marketing and better <span>exposure as a side effect</span>",
-          "text": "Companies who put trust in our hands, saw huge <span>benefits right after deployment. With their new web</span> solutions they found an increase in both sales"
+          "title": "<span>Organic marketing and better </span><span>exposure as a side effect</span>",
+          "text": "<span>Companies who put trust in our hands, saw huge </span><span>benefits right after deployment. With their new web</span><span> solutions they found an increase in both sales</span>"
         }
       }
     }
