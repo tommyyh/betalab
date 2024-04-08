@@ -7,6 +7,7 @@ import Project3 from '@/public/home/work/3.png';
 import Project4 from '@/public/home/work/1.png';
 import Project5 from '@/public/home/work/2.png';
 import Project6 from '@/public/home/work/3.png';
+import Title from '@/components/Title/Text';
 
 type PropsType = {
   l: any;
@@ -41,7 +42,9 @@ const Work = ({ l }: PropsType) => {
 
   return (
     <section className={style.work}>
-      <h2>{l('work.title')}</h2>
+      <h2>
+        <Title>{l('work.title')}</Title>
+      </h2>
 
       {projectsList.map((projects) => (
         <Projects

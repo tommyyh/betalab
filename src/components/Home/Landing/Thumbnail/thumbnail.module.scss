@@ -6,21 +6,6 @@
   position: relative;
 }
 
-// Play icon
-.play {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-
-  background: none;
-  border: none;
-
-  svg {
-    transform: scale(0.6);
-  }
-}
-
 
 // Desktop view
 @media all and (min-width: 1025px) {
@@ -30,13 +15,6 @@
     width: 100%;
     height: 81vh;
     position: relative;
-  }
-
-  // Play icon
-  .play {
-    svg {
-      transform: scale(1);
-    }
   }
 
 }

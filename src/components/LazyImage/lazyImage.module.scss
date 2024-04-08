@@ -8,3 +8,10 @@
 .blur {
   filter: blur(0.7rem);
 }
+
+// Wrapper
+.imgWrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}

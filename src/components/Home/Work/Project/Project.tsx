@@ -1,6 +1,6 @@
-import React from "react";
-import style from "./project.module.scss";
-import LazyImage from "@/components/LazyImage/LazyImage";
+import React from 'react';
+import style from './project.module.scss';
+import LazyImage from '@/components/LazyImage/LazyImage';
 
 const Project = ({ ...props }) => {
   return (
@@ -8,10 +8,10 @@ const Project = ({ ...props }) => {
       <LazyImage {...props} src={props.src} alt={props.alt} quality={100} />
 
       <ul className={style.tags}>
-        <Tag text={"Web design"} />
-        <Tag text={"Web design"} />
-        <Tag text={"Web design"} />
-        <Tag text={"Web design"} />
+        <Tag text={'Web design'} />
+        <Tag text={'Web design'} />
+        <Tag text={'Web design'} />
+        <Tag text={'Web design'} />
       </ul>
     </div>
   );

@@ -29,6 +29,7 @@
 
 
 
+
 // Desktop view
 @media all and (min-width: 1025px) {
   .landing {
@@ -78,7 +79,7 @@
   }
 
   // Main section (Left)
-  .main {
+  .main, .btnWrapper {
     display: flex;
     align-items: flex-end;
   }

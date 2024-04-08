@@ -1,9 +1,9 @@
 import React from 'react';
 import style from './landing.module.scss';
-import BtnLink from '@/components/BtnLink/BtnLink';
 import Thumbnail from './Thumbnail/Thumbnail';
 import Text from '@/components/Text/Text';
 import Title from './Title/Title';
+import Button from './Button/Button';
 
 type PropsType = {
   l: any;
@@ -20,10 +20,11 @@ const Landing = ({ l }: PropsType) => {
             l3={l('landing.title.3')}
           />
 
-          <BtnLink
+          <Button
             href={'/contact'}
             title={l('landing.cta')}
             customClass={style.link}
+            wrapperClass={style.btnWrapper}
           />
         </div>
 
