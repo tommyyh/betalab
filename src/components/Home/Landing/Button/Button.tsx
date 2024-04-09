@@ -16,8 +16,8 @@ const Button = ({ title, href, customClass, wrapperClass }: PropsType) => {
   return (
     <div className={style.cont}>
       <motion.div
-        initial={{ y: '100%' }}
-        animate={{ y: '0%' }}
+        initial={{ y: '100%', opacity: '0%' }}
+        animate={{ y: '0%', opacity: '100%' }}
         transition={{ duration: 0.65 }}
         className={wrapperClass}
       >

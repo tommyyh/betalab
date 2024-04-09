@@ -53,7 +53,7 @@ const Projects = ({ projects, inverted }: ProjectsType) => {
         />
       </div>
 
-      <p className={style.textMobile}>{projects.text}</p>
+      <Text customClass={style.textMobile}>{projects.text}</Text>
 
       {/* View all work - mobile */}
       {inverted && projects.cta && (

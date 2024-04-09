@@ -2,58 +2,31 @@
 
 .project {
   margin: 3.5rem 0 0 0;
+  height: initial;
 }
 
-.tags {
-  display: flex;
-
-  overflow-x: scroll;
-  margin: 0.67rem 0 0 0;
-
-  li {
-    margin: 0 0.7rem 0 0;
-    padding: 0.45rem 1.225rem;
-
-    white-space: nowrap;
-    list-style-type: none;
-    font-size: 0.67rem;
-    border-radius: 60rem;
-    color: var(--second);
-
-    backdrop-filter: blur(var(--blur));
-    background: var(--nav-items);
-  }
+// Wrapper
+.imgWrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
+
+
 
 // Desktop
 @media all and (min-width: 1025px) {
   .project {
     position: relative;
     margin: 0;
-    height: fit-content;
+    height: initial;
   }
 
-  .tags {
-    display: initial;
-
-    overflow-x: initial;
-    margin: 0 0 1.1rem 1.35rem;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    li {
-      margin: 0 0 0.65rem 0;
-      padding: 0.56rem 1.6rem;
-
-      white-space: nowrap;
-      list-style-type: none;
-      font-size: 0.77rem;
-      border-radius: 60rem;
-      color: var(--projects-tags);
-
-      backdrop-filter: blur(calc(var(--blur)));
-      background: var(--projects-tags-bg);
-    }
+  // Wrapper
+  .imgWrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
   }
+
 }
