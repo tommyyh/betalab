@@ -7,8 +7,8 @@ import { motion, useInView } from 'framer-motion';
 import generalJson from '@/data/general.json';
 import Tags from './Tags/Tags';
 
-const Project = ({ ...props }) => {
-  const div = useRef(null);
+const Project = ({ aspectRatio, ...props }: any) => {
+  const div = useRef(null) as any;
   const inView = useInView(div, {
     once: true,
     margin: '-09% 0% -60% 0%',
@@ -27,8 +27,8 @@ const Project = ({ ...props }) => {
           ease: generalJson.imageAnimation,
         }}
         variants={{
-          visible: { height: '100%' },
-          hidden: { height: '0.01%' },
+          visible: { height: `${div?.current?.offsetWidth / aspectRatio}px` },
+          hidden: { height: '0.01px' },
         }}
       >
         <LazyImage
