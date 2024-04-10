@@ -26,17 +26,14 @@ const Work = ({ l }: PropsType) => {
         {
           src: Project1,
           alt: l(`${projects1}.projects.1.alt`),
-          aspectRatio: 2.049,
         },
         {
           src: Project2,
           alt: l(`${projects1}.projects.2.alt`),
-          aspectRatio: 1.701,
         },
         {
           src: Project3,
           alt: l(`${projects1}.projects.3.alt`),
-          aspectRatio: 1.317,
         },
       ],
     },
@@ -48,17 +45,14 @@ const Work = ({ l }: PropsType) => {
         {
           src: Project4,
           alt: l(`${projects2}.projects.1.alt`),
-          aspectRatio: 2.049,
         },
         {
           src: Project5,
           alt: l(`${projects2}.projects.2.alt`),
-          aspectRatio: 1.701,
         },
         {
           src: Project6,
           alt: l(`${projects2}.projects.3.alt`),
-          aspectRatio: 1.317,
         },
       ],
     },

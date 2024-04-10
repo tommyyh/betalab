@@ -2,13 +2,20 @@
 
 .project {
   margin: 3.5rem 0 0 0;
-}
-
-// Wrapper
-.imgWrapper {
   width: 100%;
   overflow: hidden;
   position: relative;
+}
+
+// Animate
+.curtain {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: bottom;
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
 }
 
 
@@ -16,16 +23,22 @@
 // Desktop
 @media all and (min-width: 1025px) {
   .project {
-    position: relative;
     margin: 0;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
     height: initial;
   }
-
-  // Wrapper
-  .imgWrapper {
+  
+  // Animate
+  .curtain {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: bottom;
     width: 100%;
-    overflow: hidden;
-    position: relative;
+    height: 100%;
+    background: var(--primary);
   }
 
 }

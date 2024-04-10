@@ -12,8 +12,6 @@ type ProjectsType = {
     projects: Array<{
       src: any;
       alt: string;
-      aspectRatio?: number;
-      aspectRatioCont?: number;
     }>;
   };
   inverted?: boolean;
@@ -31,7 +29,6 @@ const Projects = ({ projects, inverted }: ProjectsType) => {
         <Project
           src={projectsList[0].src}
           alt={projectsList[0].alt}
-          aspectRatio={projectsList[0].aspectRatio}
           style={{ width: '100%', height: 'auto' }}
         />
       </div>
@@ -42,7 +39,6 @@ const Projects = ({ projects, inverted }: ProjectsType) => {
           <Project
             src={projectsList[1].src}
             alt={projectsList[1].alt}
-            aspectRatio={projectsList[0].aspectRatio}
             style={{ width: '100%', height: 'auto' }}
           />
 
@@ -53,7 +49,6 @@ const Projects = ({ projects, inverted }: ProjectsType) => {
         <Project
           src={projectsList[2].src}
           alt={projectsList[2].alt}
-          aspectRatio={projectsList[0].aspectRatio}
           style={{ width: '100%', height: 'auto' }}
         />
       </div>

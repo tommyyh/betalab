@@ -7,38 +7,38 @@ import { motion, useInView } from 'framer-motion';
 import generalJson from '@/data/general.json';
 import Tags from './Tags/Tags';
 
-const Project = ({ aspectRatio, ...props }: any) => {
-  const div = useRef(null) as any;
+const Project = ({ ...props }) => {
+  const div = useRef(null);
   const inView = useInView(div, {
     once: true,
     margin: '-09% 0% -60% 0%',
   });
 
   return (
-    <div className={style.project} data-cursor="work">
+    <div className={style.project} data-cursor="work" ref={div}>
+      <LazyImage
+        {...props}
+        src={props.src}
+        alt={props.alt}
+        quality={100}
+        rawImg={true}
+      />
+
+      {/* Emulate image animation for mobile - % headaches */}
       <motion.div
-        ref={div}
-        className={style.imgWrapper}
+        className={style.curtain}
         initial="hidden"
         viewport={{ once: true }}
         whileInView={inView ? 'visible' : ''}
         transition={{
-          duration: 1.25,
+          duration: 1.6,
           ease: generalJson.imageAnimation,
         }}
         variants={{
-          visible: { height: `${div?.current?.offsetWidth / aspectRatio}px` },
-          hidden: { height: '0.01px' },
+          visible: { scaleY: 0 },
+          hidden: { scaleY: 1 },
         }}
-      >
-        <LazyImage
-          {...props}
-          src={props.src}
-          alt={props.alt}
-          quality={100}
-          rawImg={true}
-        />
-      </motion.div>
+      ></motion.div>
 
       <Tags inView={inView} />
     </div>
