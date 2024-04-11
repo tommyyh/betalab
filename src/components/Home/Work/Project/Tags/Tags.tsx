@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import React from 'react';
-import style from './tags.module.scss';
+import { motion } from "framer-motion";
+import React from "react";
+import style from "./tags.module.scss";
 
 type TagsProps = {
   inView: boolean;
@@ -11,21 +11,21 @@ const Tags = ({ inView }: TagsProps) => {
     <motion.ul
       className={style.tags}
       initial="hidden"
-      whileInView={inView ? 'visible' : ''}
+      whileInView={inView ? "visible" : ""}
       viewport={{ once: true }}
       transition={{
         duration: 0.5,
-        delay: 0.45,
+        delay: 0.6,
       }}
       variants={{
-        visible: { opacity: '100%' },
-        hidden: { opacity: '0%' },
+        visible: { opacity: "100%" },
+        hidden: { opacity: "0%" },
       }}
     >
-      <Tag text={'Web design'} />
-      <Tag text={'Web design'} />
-      <Tag text={'Web design'} />
-      <Tag text={'Web design'} />
+      <Tag text={"Web design"} />
+      <Tag text={"Web design"} />
+      <Tag text={"Web design"} />
+      <Tag text={"Web design"} />
     </motion.ul>
   );
 };
