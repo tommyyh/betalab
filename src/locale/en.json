@@ -83,6 +83,38 @@
           "text": "<span>Companies who put trust in our hands, saw huge </span><span>benefits right after deployment. With their new web</span><span> solutions they found an increase in both sales</span>"
         }
       }
+    },
+    "services": {
+      "1": {
+        "title": "Design",
+        "length": "5",
+        "list": {
+          "1": "Website design",
+          "2": "Animations",
+          "3": "Graphic design",
+          "4": "Website design",
+          "5": "Animations"
+        }
+      },
+      "2": {
+        "title": "Development",
+        "length": "3",
+        "list": {
+          "1": "Website design",
+          "2": "Animations",
+          "3": "Graphic design"
+        }
+      },
+      "3": {
+        "title": "Other",
+        "length": "4",
+        "list": {
+          "1": "Website design",
+          "2": "Animations",
+          "3": "Graphic design",
+          "4": "Website design"
+        }
+      }
     }
   }
 }

@@ -85,9 +85,6 @@ function Cursor() {
     case 'special':
       cursorSize = 0.432 * 8;
       break;
-    case 'work':
-      cursorSize = 0.432 * 15;
-      break;
     case 'pointer':
       cursorSize = 0.432 * 4;
       break;
@@ -99,12 +96,21 @@ function Cursor() {
   return (
     <div
       className={`${style.flare} ${style[pointer]}`}
-      style={{
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-        width: `${cursorSize}vw`,
-        height: `${cursorSize}vw`,
-      }}
+      style={
+        pointer !== 'work'
+          ? {
+              left: `${position.x}px`,
+              top: `${position.y}px`,
+              width: `${cursorSize}vw`,
+              height: `${cursorSize}vw`,
+            }
+          : {
+              left: `${position.x}px`,
+              top: `${position.y}px`,
+              padding: '0.43vh 0.77vw 0.41vh 0.77vw',
+              borderRadius: '10rem',
+            }
+      }
     >
       {/* Work cursor */}
       <Work pointer={pointer} workPercentage={workPercentage} />

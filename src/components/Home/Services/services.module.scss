@@ -1,0 +1,65 @@
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 50% 50%);
+  justify-content: space-between;
+
+  padding: 1.5rem var(--padding) 0 var(--padding);
+}
+
+// Each services group
+.group {
+  display: flex;
+  flex-direction: column;
+
+  margin: 5.05rem 0 0 0;
+
+  h3 {
+    font-size: 1.04rem;
+    font-weight: 400;
+    font-family: var(--poppins);
+  }
+
+  ul {
+    margin: 2rem 0 0 0;
+  }
+
+  &:nth-child(even) {
+    align-items: flex-end;
+  }
+}
+
+
+
+// Desktop
+@media all and (min-width: 1025px) {
+  .services {
+    display: grid;
+    grid-template-columns: 26.26% 26.26% 47.48%;
+    justify-content: space-between;
+  
+    max-width: 118.75rem;
+    padding: 8.75rem var(--padding) 0 var(--padding);
+  }
+  
+  // Each services group
+  .group {
+    display: block;
+  
+    margin: initial;
+  
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      font-family: var(--poppins);
+    }
+  
+    ul {
+      margin: 2.3rem 0 0 0;
+    }
+  
+    &:nth-child(even) {
+      align-items: initial;
+    }
+  }
+
+}

@@ -20,7 +20,7 @@ const Span = ({ text, index }: any) => {
       <motion.span
         initial={{ y: '100%' }}
         animate={{ y: '0%' }}
-        transition={{ duration: 0.5, delay: 0.125 * index }}
+        transition={{ duration: 0.55, delay: 0.125 * index }}
         custom={index}
         key={index}
       >

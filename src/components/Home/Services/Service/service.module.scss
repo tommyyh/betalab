@@ -1,0 +1,101 @@
+@import '../../../../app/utils.scss';
+
+.service {
+  display: flex;
+  align-items: center;
+
+  width: fit-content;
+  margin: 1.28rem 0 0 0;
+  padding: 0 0 0 0.685rem;
+  position: relative;
+
+  span, svg {
+    margin-top: 0.1rem;
+  }
+
+  span {
+    margin-left: 0.55rem;
+
+    letter-spacing: 0.01rem;
+    font-size: 0.789rem;
+    font-weight: 300;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 73.5%;
+    height: 120%;
+    left: 0;
+    margin: 0.08rem 0 0 0;
+
+    background: var(--items-darker);
+    border-radius: 5rem;
+  }
+}
+
+
+
+// Desktop
+@media all and (min-width: 1025px) {
+  .service {
+    display: flex;
+    align-items: center;
+  
+    width: fit-content;
+    margin: 1.32rem 0 0 0;
+    padding: 0 0 0 0.685rem;
+    position: relative;
+    
+    span, svg {
+      transition: var(--transition2);
+      margin-top: 0.11rem;
+    }
+
+    svg path {
+      fill: var(--second);
+      transition: var(--theme-transition);
+    }
+    
+    span {
+      margin-left: 0.575rem;
+      
+      letter-spacing: 0.0123rem;
+      font-weight: 400;
+      font-size: 0.794rem;
+    }
+    
+    &::before {
+      content: '';
+      position: absolute;
+      width: 73.5%;
+      height: 1.4rem;
+      left: 0;
+      margin: 0.08rem 0 0 0;
+      
+      background: var(--items-darker);
+      border-radius: 5rem;
+      transition: var(--transition1);
+      border: 0.06rem solid transparent;
+    }
+  }
+
+  // Hover state
+  .service:hover {
+    span {
+      margin-left: 0.78rem;
+    }
+    
+    svg {
+      margin-left: 0.2rem;
+    }
+
+    &::before {
+      width: 112%;
+      
+      background: transparent;
+      border-color: var(--second);
+    }
+  }
+
+}
