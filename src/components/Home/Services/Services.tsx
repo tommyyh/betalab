@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './services.module.scss';
 import Service from './Service/Service';
+import Title from '@/components/Title/Text';
 
 type PropsType = {
   l: any;
@@ -32,7 +33,9 @@ const Group = ({ index, l }: GroupType) => {
   return (
     <div className={style.group}>
       <div className={style.content}>
-        <h3>{l(`${lang}.title`)}</h3>
+        <h3>
+          <Title>{l(`${lang}.title`)}</Title>
+        </h3>
 
         <ul>
           {keys.map((key) => (

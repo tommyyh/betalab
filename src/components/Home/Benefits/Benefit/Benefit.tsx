@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './benefit.module.scss';
+import Title from '@/components/Title/Text';
 
 type PropsType = {
   benefitKey: string;
@@ -13,7 +14,9 @@ const Benefit = ({ benefitKey, lang }: PropsType) => {
   return (
     <div className={style.benefit}>
       <div className={style.left}>
-        <h3>{l('feature')}</h3>
+        <h3>
+          <Title>{l('feature')}</Title>
+        </h3>
         <h4>
           {lang.rich(`${translationPath}.title`, {
             span: (chunks: any) => <span>{chunks}</span>,
