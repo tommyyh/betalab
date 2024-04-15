@@ -34,39 +34,6 @@
 
 
 
-// Menu
-.menuCont {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 4.15rem;
-  height: 1.91rem;
-  position: relative;
-
-  border-radius: 200rem;
-  border: none;
-  background: var(--nav-items);
-  
-  &::before {
-    @include blur;
-  }
-
-  h4 {
-    font-size: 0.744rem;
-    font-weight: 400;
-    font-family: var(--poppins);
-  }
-}
-
-
-
 // Desktop view
 @media all and (min-width: 1025px) {
   // Nav
@@ -104,42 +71,6 @@
     path {
       fill: var(--second);
       transition: var(--theme-transition);
-    }
-  }
-
-
-
-  // Inverted -> Menu
-  .menuCont {
-    display: flex;
-    align-items: center;
-    justify-content: initial;
-    
-    order: 1;
-  }
-
-  .menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 4.56rem;
-    height: 1.75rem;
-    position: relative;
-
-    border-radius: 200rem;
-    background: var(--nav-items);
-
-    @include hover;
-    
-    &::before {
-      @include blur;
-    }
-
-    h4 {
-      font-size: 0.744rem;
-      font-weight: 400;
-      font-family: var(--poppins);
     }
   }
 

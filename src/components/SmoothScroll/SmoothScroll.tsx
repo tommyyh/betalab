@@ -22,7 +22,7 @@ const SmoothScroll = () => {
         const LocomotiveScroll = (await import('locomotive-scroll')).default;
         const locomotiveScroll = new LocomotiveScroll({
           lenisOptions: {
-            duration: 0.425,
+            duration: 0.415,
           },
         });
       })();

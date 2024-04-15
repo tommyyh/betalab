@@ -5,6 +5,8 @@ import Navbar from '@/components/Navbar/Navbar';
 import localFont from 'next/font/local';
 import Cursor from '@/components/Cursor/Cursor';
 import SmoothScroll from '@/components/SmoothScroll/SmoothScroll';
+import { MenuProvider } from '@/components/Navbar/MenuContext/MenuContext';
+import Menu from '@/components/Navbar/Menu/Menu';
 
 // Font types
 const poppins = Poppins({
@@ -54,7 +56,10 @@ export default function RootLayout({
         <SmoothScroll />
 
         {/* Main */}
-        <Navbar />
+        <MenuProvider>
+          <Navbar />
+          <Menu />
+        </MenuProvider>
         {children}
       </body>
     </html>

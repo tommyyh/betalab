@@ -1,0 +1,57 @@
+.cont {
+  position: fixed;
+  z-index: 400;
+  width: 100%;
+  top: 4.5rem;
+  margin: 0 0 0 var(--padding);
+  perspective: 62.5rem;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-menu);
+}
+
+.menu {
+  width: calc(100% - var(--padding) * 2);
+  height: 38.5vh;
+  transform: rotateX(-90deg);
+  padding: var(--padding);
+  
+  background: rgb(255, 255, 255, 0.94);
+  transition: var(--transition-slow-fast);
+  border-radius: 1.1rem;
+  
+  backdrop-filter: blur(var(--blur)) opacity(0);
+  transform-origin: top;
+  transition: var(--transition-menu);
+
+  li {
+    margin: 0.5rem;
+
+    list-style-type: none;
+    font-size: 1.5rem;
+    color: var(--primary);
+  }
+}
+
+// Open
+.contOpen {
+  .menu {
+    transform: rotateX(0deg);
+
+    backdrop-filter: blur(var(--blur)) opacity(1);
+  }
+
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+// Desktop
+@media all and (min-width: 1025px) {
+  .menu {
+    display: none;
+  }
+
+}

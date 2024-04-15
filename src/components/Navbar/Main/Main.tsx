@@ -19,11 +19,13 @@ const Main = ({ l, invalidPrefix, fallbackLang }: PropsType) => {
     <div className={style.main}>
       <Link
         locale={invalidPrefix ? 'en' : ('' as 'en')}
-        href={'/contact'}
+        href={l('links.contact.link')}
         className={style.contact}
         aria-label={invalidPrefix ? fallbackLang.contact : l('general.contact')}
       >
-        <span>{invalidPrefix ? fallbackLang.contact : l('links.contact')}</span>
+        <span>
+          {invalidPrefix ? fallbackLang.contact : l('links.contact.title')}
+        </span>
 
         <div className={style.contactIcon}>
           <div>

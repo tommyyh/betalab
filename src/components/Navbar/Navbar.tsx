@@ -5,6 +5,8 @@ import style from './navbar.module.scss';
 import Logo from '@/public/nav/logo.svg';
 import Main from './Main/Main';
 import { getTranslations } from 'next-intl/server';
+import Links from './Links/Links';
+import MenuIcon from './MenuIcon/MenuIcon';
 
 const Navbar = async () => {
   let l;
@@ -23,6 +25,12 @@ const Navbar = async () => {
     contact: 'Contact us',
     email: 'info@betalab.cloud',
     theme: 'Toggle theme',
+    links: {
+      home: 'Home',
+      work: 'Our Work',
+      services: 'Services',
+      contact: 'Contact Us',
+    },
   };
 
   return (
@@ -43,12 +51,15 @@ const Navbar = async () => {
           </Link>
         </div>
 
-        {/* Menu */}
-        <div className={style.menuCont}>
-          <button className={style.menu}>
-            <h4>Menu</h4>
-          </button>
-        </div>
+        {/* Link */}
+        <Links
+          l={l}
+          invalidPrefix={invalidPrefix}
+          fallbackLang={fallbackLang.links}
+        />
+
+        {/* Menu for mobile */}
+        <MenuIcon />
       </nav>
     </>
   );

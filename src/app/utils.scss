@@ -35,6 +35,11 @@
   @return $thickness var(--second);
 }
 
+// For text with primary color
+@function bolderTextPrimary($thickness) {
+  @return $thickness var(--primary);
+}
+
 // For text that doesn't changes with theme colors
 @function bolderTextWhite($thickness) {
   @return $thickness var(--white);

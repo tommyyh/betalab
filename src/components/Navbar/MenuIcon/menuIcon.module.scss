@@ -1,0 +1,110 @@
+@import '../../../app/utils.scss';
+
+$height: 1.9rem;
+
+// Menu
+.menuCont {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 0.6rem;
+  height: $height;
+  position: relative;
+  overflow-y: hidden;
+
+  border-radius: 200rem;
+  border: none;
+  background: var(--nav-items);
+  transition: var(--transition-slow-fast);
+  
+  &::before {
+    @include blur;
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: $height;
+
+    font-size: 0.744rem;
+    font-weight: 400;
+    font-family: var(--poppins);
+    color: var(--second);
+    transition: var(--transition-slow-fast);
+
+    &:first-child {
+      margin: $height 0 0 0;
+    }
+  }
+}
+
+// Close icon
+.closeIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  width: 0.63rem;
+  height: 0.63rem;
+  margin: 0 0 0 0.29rem;
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0.065rem;
+    transform: rotate(0deg);
+
+    background: var(--second);
+    transition: var(--transition-slow-fast);
+    transition-delay: 210ms;
+  }
+
+  &::after {
+    transform: rotate(0deg);
+  }
+}
+
+// Open state
+.menuOpen {
+  padding: 0 0.789rem 0 0.95rem;
+
+  span:first-child {
+    margin: -$height 0 0 0;
+  }
+
+  .closeIcon {
+    &::before {
+      transform: rotate(45deg);
+    }
+    
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+
+
+// Desktop
+@media all and (min-width: 1025px) {
+  .menuCont {
+    display: none;
+  }
+
+  .main {
+    display: none;
+  }
+
+}

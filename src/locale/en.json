@@ -10,7 +10,22 @@
       "theme": "Toggle theme"
     },
     "links": {
-      "contact": "Contact us"
+      "contact": {
+        "title": "Contact us",
+        "link": "/contact"
+      },
+      "home": {
+        "title": "Home",
+        "link": "/"
+      },
+      "work": {
+        "title": "Our Work",
+        "link": "/work"
+      },
+      "services": {
+        "title": "Services",
+        "link": "/"
+      }
     }
   },
   "home": {

@@ -1,0 +1,73 @@
+@import '../../../app/utils.scss';
+
+// Links
+.links {
+  display: none;
+}
+
+
+
+// Desktop view
+@media all and (min-width: 1025px) {
+  // Inverted -> Links
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: initial;
+    
+    order: 1;
+
+    li {
+      position: relative;
+      padding: 0.21rem 0.92rem;
+      margin: 0 0 0 0.7rem;
+      overflow-x: hidden;
+      white-space: nowrap;
+      
+      list-style-type: none;
+      font-size: 0.725rem;
+      font-weight: 400;
+      border-radius: 10rem;
+      background: var(--items-darker);
+      border: var(--border-hover);
+      transition: var(--theme-transition);
+
+      &:hover {
+        padding: 0.21rem 2.1rem 0.21rem 0.92rem;
+
+        border-color: var(--second);
+        background: transparent;
+
+        svg {
+          right: 0.68rem;
+          transition-delay: 110ms;
+        }
+      }
+  
+      &::before {
+        @include blur;
+      }
+  
+      a {
+        display: flex;
+        align-items: center;
+
+        color: var(--second);
+        text-decoration: none;
+      }
+
+      svg {
+        position: absolute;
+        margin: 0 0 0 0.42rem;
+        right: -1.25rem;
+
+        transition: var(--transition-slow);
+      }
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+  }
+
+}
