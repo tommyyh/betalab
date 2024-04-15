@@ -11,7 +11,7 @@ type PropsType = {
 const Links = ({ l, desktop }: PropsType) => {
   const title = (word: string) => l(`links.${word}.title`);
   const linkTo = (word: string) => l(`links.${word}.link`);
-  const keys = ['home', 'work', 'services', 'contact'];
+  const keys = ['home', 'work', 'services', 'clients'];
 
   return (
     <ul

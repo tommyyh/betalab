@@ -1,0 +1,23 @@
+.lang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  border-radius: 50%;
+  background: var(--nav-items);
+  color: var(--second);
+  text-decoration: none;
+  font-size: 0.77rem;
+  letter-spacing: 0.019rem;
+}
+
+@media all and (min-width: 1025px) {
+  .lang {
+    display: none;
+  }
+
+}

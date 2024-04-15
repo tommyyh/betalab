@@ -27,6 +27,10 @@
       "services": {
         "title": "Služby",
         "link": "/"
+      },
+      "clients": {
+        "title": "Naši klienti",
+        "link": "/"
       }
     }
   },
