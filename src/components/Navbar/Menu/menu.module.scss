@@ -2,7 +2,7 @@
   position: fixed;
   z-index: 400;
   width: 100%;
-  top: 4.5rem;
+  top: 4.25rem;
   margin: 0 0 0 var(--padding);
   perspective: 62.5rem;
 
@@ -13,15 +13,13 @@
 
 .menu {
   width: calc(100% - var(--padding) * 2);
-  height: 38.5vh;
   transform: rotateX(-90deg);
-  padding: var(--padding);
+  padding: calc(var(--padding) + 0.2rem) calc(var(--padding) - 0.27rem);
   
-  background: rgb(255, 255, 255, 0.94);
+  background: rgb(30, 30, 30, 0.725);
   transition: var(--transition-slow-fast);
-  border-radius: 1.1rem;
-  
   backdrop-filter: blur(var(--blur)) opacity(0);
+  border-radius: 1.3rem;
   transform-origin: top;
   transition: var(--transition-menu);
 
@@ -34,19 +32,29 @@
   }
 }
 
+// Link container
+.links {
+  opacity: 0;
+  transition: var(--transition-menu);
+}
+
 // Open
 .contOpen {
   .menu {
     transform: rotateX(0deg);
 
     backdrop-filter: blur(var(--blur)) opacity(1);
+    transition: var(--transition-menu-delay);
+  }
+
+  .links {
+    opacity: 1;
+    transition: opacity var(--transition-menu) 250ms;
   }
 
   opacity: 1;
   visibility: visible;
 }
-
-
 
 // Desktop
 @media all and (min-width: 1025px) {

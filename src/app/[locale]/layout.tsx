@@ -7,6 +7,8 @@ import Cursor from '@/components/Cursor/Cursor';
 import SmoothScroll from '@/components/SmoothScroll/SmoothScroll';
 import { MenuProvider } from '@/components/Navbar/MenuContext/MenuContext';
 import Menu from '@/components/Navbar/Menu/Menu';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 
 // Font types
 const poppins = Poppins({
@@ -49,6 +51,20 @@ export default function RootLayout({
   children,
   params: { locale },
 }: Readonly<PropsType>) {
+  // @ts-ignore
+  const navMessages = useMessages('nav');
+  const navFallback = {
+    contact: 'Contact us',
+    email: 'info@betalab.cloud',
+    theme: 'Toggle theme',
+    links: {
+      home: 'Home',
+      work: 'Our Work',
+      services: 'Services',
+      contact: 'Contact Us',
+    },
+  };
+
   return (
     <html lang={locale} className={`${eiko.variable} ${poppins.variable}`}>
       <body>
@@ -56,10 +72,12 @@ export default function RootLayout({
         <SmoothScroll />
 
         {/* Main */}
-        <MenuProvider>
-          <Navbar />
-          <Menu />
-        </MenuProvider>
+        <NextIntlClientProvider messages={navMessages as any}>
+          <MenuProvider>
+            <Navbar navFallback={navFallback} />
+            <Menu navFallback={navFallback.links} />
+          </MenuProvider>
+        </NextIntlClientProvider>
         {children}
       </body>
     </html>

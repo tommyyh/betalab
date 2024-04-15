@@ -1,10 +1,41 @@
 @import '../../../app/utils.scss';
 
-// Links
 .links {
-  display: none;
+  li {
+    position: relative;
+    padding: 0.21rem 0.92rem;
+    overflow-x: hidden;
+    white-space: nowrap;
+    
+    font-family: var(--eiko);
+    font-weight: 300;
+    list-style-type: none;
+    font-size: 0.725rem;
+    border-radius: 10rem;
+    transition: var(--theme-transition);
+    -webkit-text-stroke: bolderText(0.0135rem);
+    letter-spacing: 0.043rem;
+
+    a {
+      display: flex;
+      align-items: center;
+
+      color: var(--second);
+      text-decoration: none;
+    }
+
+    svg {
+      margin: 0.1rem 0 0 0.83rem;
+      transform: scale(1.4);
+
+      transition: var(--transition-slow);
+    }
+  }
 }
 
+.linksDesktop {
+  display: none;
+}
 
 
 // Desktop view
@@ -24,6 +55,9 @@
       overflow-x: hidden;
       white-space: nowrap;
       
+      font-family: var(--poppins);
+      -webkit-text-stroke: initial;
+      letter-spacing: initial;
       list-style-type: none;
       font-size: 0.725rem;
       font-weight: 400;
@@ -60,6 +94,7 @@
         position: absolute;
         margin: 0 0 0 0.42rem;
         right: -1.25rem;
+        transform: initial;
 
         transition: var(--transition-slow);
       }
@@ -68,6 +103,11 @@
         margin: 0;
       }
     }
+  }
+
+  // Show on desktop if this class
+  .linksDesktop {
+    display: flex;
   }
 
 }

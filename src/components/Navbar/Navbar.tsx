@@ -8,7 +8,7 @@ import { getTranslations } from 'next-intl/server';
 import Links from './Links/Links';
 import MenuIcon from './MenuIcon/MenuIcon';
 
-const Navbar = async () => {
+const Navbar = async ({ navFallback }: any) => {
   let l;
 
   // Necessary logic for cases where prefix is invalid
@@ -21,23 +21,12 @@ const Navbar = async () => {
   // Navbar is sibling to { children } in layout
   // So we check if the prefix is invalid, we have to prevent error to load 404
   const invalidPrefix = Object.keys(l).length === 0 && l.constructor === Object;
-  const fallbackLang = {
-    contact: 'Contact us',
-    email: 'info@betalab.cloud',
-    theme: 'Toggle theme',
-    links: {
-      home: 'Home',
-      work: 'Our Work',
-      services: 'Services',
-      contact: 'Contact Us',
-    },
-  };
 
   return (
     <>
       <nav className={style.nav}>
         {/* Main */}
-        <Main l={l} invalidPrefix={invalidPrefix} fallbackLang={fallbackLang} />
+        <Main l={l} invalidPrefix={invalidPrefix} fallbackLang={navFallback} />
 
         {/* Middle */}
         <div className={style.middleCont}>
@@ -55,7 +44,8 @@ const Navbar = async () => {
         <Links
           l={l}
           invalidPrefix={invalidPrefix}
-          fallbackLang={fallbackLang.links}
+          fallbackLang={navFallback}
+          desktop={true}
         />
 
         {/* Menu for mobile */}

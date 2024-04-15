@@ -1,17 +1,17 @@
-"use client";
+'use client';
 
-import React, { useRef } from "react";
-import style from "./project.module.scss";
-import LazyImage from "@/components/LazyImage/LazyImage";
-import { motion, useInView } from "framer-motion";
-import generalJson from "@/data/general.json";
-import Tags from "./Tags/Tags";
+import React, { useRef } from 'react';
+import style from './project.module.scss';
+import LazyImage from '@/components/LazyImage/LazyImage';
+import { motion, useInView } from 'framer-motion';
+import generalJson from '@/data/general.json';
+import Tags from './Tags/Tags';
 
 const Project = ({ ...props }) => {
   const div = useRef(null);
   const inView = useInView(div, {
     once: true,
-    margin: "-09% 0% -60% 0%",
+    margin: '-53% 0% -37% 0%',
   });
 
   return (
@@ -29,9 +29,9 @@ const Project = ({ ...props }) => {
         className={style.curtain}
         initial="hidden"
         viewport={{ once: true }}
-        whileInView={inView ? "visible" : ""}
+        whileInView={inView ? 'visible' : ''}
         transition={{
-          duration: 0.925,
+          duration: 0.9,
           ease: generalJson.imageAnimation,
         }}
         variants={{

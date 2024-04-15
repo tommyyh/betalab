@@ -6,6 +6,7 @@ import SmallArrowRight from '@/public/icons/small-arrow-right.svg';
 type PropsType = {
   l: any;
   invalidPrefix: boolean;
+  desktop?: boolean;
   fallbackLang: {
     home: string;
     work: string;
@@ -14,14 +15,16 @@ type PropsType = {
   };
 };
 
-const Links = ({ l, invalidPrefix, fallbackLang }: PropsType) => {
+const Links = ({ l, invalidPrefix, fallbackLang, desktop }: PropsType) => {
   const locale = invalidPrefix ? 'en' : ('' as 'en');
   const title = (word: string) => l(`links.${word}.title`);
   const linkTo = (word: string) => l(`links.${word}.link`);
 
   // Before rendering, check if prefix is valid -> if not -> load default english values
   return (
-    <ul className={style.links}>
+    <ul
+      className={desktop ? `${style.links} ${style.linksDesktop}` : style.links}
+    >
       <li data-cursor="pointer">
         <Link locale={locale} href={linkTo('home')}>
           {invalidPrefix ? fallbackLang.home : title('home')}

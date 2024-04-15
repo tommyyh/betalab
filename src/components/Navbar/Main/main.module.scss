@@ -22,7 +22,7 @@
   position: relative;
 
   border-radius: 50%;
-  background: rgb(186, 186, 186, 0.20);
+  background: var(--nav-items);
 
   &::before {
     @include blur;
