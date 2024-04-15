@@ -7,7 +7,9 @@
     "general": {
       "email": "info@betalab.cloud",
       "contact": "Contact us",
-      "theme": "Toggle theme"
+      "theme": "Toggle theme",
+      "menu": "Menu",
+      "close": "Close"
     },
     "links": {
       "contact": {

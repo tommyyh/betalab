@@ -53,17 +53,6 @@ export default function RootLayout({
 }: Readonly<PropsType>) {
   // @ts-ignore
   const navMessages = useMessages('nav');
-  const navFallback = {
-    contact: 'Contact us',
-    email: 'info@betalab.cloud',
-    theme: 'Toggle theme',
-    links: {
-      home: 'Home',
-      work: 'Our Work',
-      services: 'Services',
-      contact: 'Contact Us',
-    },
-  };
 
   return (
     <html lang={locale} className={`${eiko.variable} ${poppins.variable}`}>
@@ -74,8 +63,8 @@ export default function RootLayout({
         {/* Main */}
         <NextIntlClientProvider messages={navMessages as any}>
           <MenuProvider>
-            <Navbar navFallback={navFallback} />
-            <Menu navFallback={navFallback.links} />
+            <Navbar />
+            <Menu />
           </MenuProvider>
         </NextIntlClientProvider>
         {children}

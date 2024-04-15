@@ -1,11 +1,22 @@
 'use client';
 
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import style from './menuIcon.module.scss';
 import { MenuContext } from '@/components/Navbar/MenuContext/MenuContext';
+import { usePathname } from 'next/navigation';
 
-const MenuIcon = () => {
-  const { isOpen, toggleMenu }: any = useContext(MenuContext);
+type PropsType = {
+  menu: string;
+  close: string;
+};
+
+const MenuIcon = ({ menu, close }: PropsType) => {
+  const { isOpen, toggleMenu, closeMenu }: any = useContext(MenuContext);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    closeMenu();
+  }, [pathname]);
 
   return (
     <div className={style.menuCont}>
@@ -13,9 +24,9 @@ const MenuIcon = () => {
         className={isOpen ? `${style.menu} ${style.menuOpen}` : style.menu}
         onClick={toggleMenu}
       >
-        <span>Menu</span>
+        <span>{menu}</span>
         <span>
-          Close <div className={style.closeIcon}></div>
+          {close} <div className={style.closeIcon}></div>
         </span>
       </button>
     </div>

@@ -7,10 +7,27 @@
     "general": {
       "email": "info@betalab.cloud",
       "contact": "Napište nám",
-      "theme": "Přepnutí režimu"
+      "theme": "Přepnutí režimu",
+      "menu": "Menu",
+      "close": "Zavřít"
     },
     "links": {
-      "contact": "Napište nám"
+      "contact": {
+        "title": "Napište nám",
+        "link": "/contact"
+      },
+      "home": {
+        "title": "Home",
+        "link": "/"
+      },
+      "work": {
+        "title": "Naše Práce",
+        "link": "/work"
+      },
+      "services": {
+        "title": "Služby",
+        "link": "/"
+      }
     }
   },
   "home": {
@@ -81,6 +98,38 @@
           "feature": "+170% více zviditelnění",
           "title": "Organický marketing a lepší <span>zviditelnění zaručeno</span>",
           "text": "Společnosti, které se svěřily do našich rukou, zaznamenaly hned <span>po zhotovení obrovské přínosy. S novými webovými řešeními</span> zjistily, že se jim zvýšil prodej i viditelnost v digitálním světě."
+        }
+      }
+    },
+    "services": {
+      "1": {
+        "title": "Design",
+        "length": "5",
+        "list": {
+          "1": "Website design",
+          "2": "Animations",
+          "3": "Graphic design",
+          "4": "Website design",
+          "5": "Animations"
+        }
+      },
+      "2": {
+        "title": "Development",
+        "length": "3",
+        "list": {
+          "1": "Website design",
+          "2": "Animations",
+          "3": "Graphic design"
+        }
+      },
+      "3": {
+        "title": "Other",
+        "length": "4",
+        "list": {
+          "1": "Website design",
+          "2": "Animations",
+          "3": "Graphic design",
+          "4": "Website design"
         }
       }
     }

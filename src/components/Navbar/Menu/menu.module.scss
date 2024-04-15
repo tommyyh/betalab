@@ -16,9 +16,9 @@
   transform: rotateX(-90deg);
   padding: calc(var(--padding) + 0.2rem) calc(var(--padding) - 0.27rem);
   
-  background: rgb(30, 30, 30, 0.725);
+  background: var(--nav-menu);
   transition: var(--transition-slow-fast);
-  backdrop-filter: blur(var(--blur)) opacity(0);
+  backdrop-filter: blur(var(--nav-blur)) opacity(0);
   border-radius: 1.3rem;
   transform-origin: top;
   transition: var(--transition-menu);
@@ -28,7 +28,15 @@
 
     list-style-type: none;
     font-size: 1.5rem;
-    color: var(--primary);
+    
+    a {
+      color: var(--second);
+    }
+
+    svg path {
+      fill: var(--second);
+      transition: var(--theme-transition);
+    }
   }
 }
 
@@ -43,7 +51,7 @@
   .menu {
     transform: rotateX(0deg);
 
-    backdrop-filter: blur(var(--blur)) opacity(1);
+    backdrop-filter: blur(var(--nav-blur)) opacity(1);
     transition: var(--transition-menu-delay);
   }
 

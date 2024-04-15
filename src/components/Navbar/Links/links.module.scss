@@ -13,7 +13,7 @@
     font-size: 0.725rem;
     border-radius: 10rem;
     transition: var(--theme-transition);
-    -webkit-text-stroke: bolderText(0.0135rem);
+    -webkit-text-stroke: bolderText(var(--nav-menu-thickness));
     letter-spacing: 0.043rem;
 
     a {
@@ -65,6 +65,7 @@
       background: var(--items-darker);
       border: var(--border-hover);
       transition: var(--theme-transition);
+      -webkit-text-stroke: initial;
 
       &:hover {
         padding: 0.21rem 2.1rem 0.21rem 0.92rem;
