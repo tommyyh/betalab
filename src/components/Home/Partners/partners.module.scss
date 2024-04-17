@@ -1,0 +1,37 @@
+.partners {
+  display: flex;
+  flex-direction: column;
+  padding: 9.5rem 0 0 0;
+
+  h2 {
+    align-self: flex-end;
+    
+    margin: 0 var(--padding) 0 0;
+
+    font-size: 0.9rem;
+    font-weight: 300;
+    font-family: var(--poppins);
+  }
+}
+
+
+
+// Desktop
+@media all and (min-width: 1025px) {
+  .partners {
+    display: flex;
+    flex-direction: column;
+    padding: 12rem 0 0 0;
+  
+    h2 {
+      align-self: flex-end;
+      
+      margin: 0 var(--padding) 0 0;
+  
+      font-size: 1.315rem;
+      font-weight: 300;
+      font-family: var(--poppins);
+    }
+  }
+
+}

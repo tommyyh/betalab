@@ -25,6 +25,9 @@
   --projects-tags: #fff;
   --projects-tags-bg: rgb(0, 0, 0, 0.42);
 
+  --partners-fade-left: linear-gradient(to left, rgba(0, 0, 0, 0), #000);
+  --partners-fade-right: linear-gradient(to right, rgba(0, 0, 0, 0), #000);
+
   --cursor-work: rgb(255, 255, 255, 0.7);
 
   --scroll-background: #353540;
@@ -70,6 +73,9 @@ body[data-theme="light"] {
 
   --items: rgba(217, 217, 217, 0.6);
   --items-darker: rgba(217, 217, 217, 0.55);
+
+  --partners-fade-left: linear-gradient(to left, rgba(255, 255, 255, 0), #fff);
+  --partners-fade-right: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
 
   --scroll-background: #bab9b9;
   --scroll-hover: #919193;

@@ -1,0 +1,124 @@
+.carousel {
+  display: flex;
+  align-content: center;
+  overflow-x: hidden;
+
+  margin: 2.6rem 0 0 0;
+  position: relative;
+
+  svg {
+    transform: scale(0.7);
+
+    path, g {
+      fill: var(--second);
+      transition: var(--theme-transition);
+    }
+  }
+
+  // Fade in out
+  &::before, &::after {
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2.25rem;
+    position: absolute;
+    z-index: 5;
+
+    background: var(--partners-fade-left);
+  }
+  
+  &::after {
+    right: 0;
+    left: initial;
+
+    background: var(--partners-fade-right)
+  }
+}
+
+// Logo containers 2x
+.logos {
+  display: flex;
+  animation: 17s slide infinite linear;
+}
+
+
+
+// Animations
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+// Desktop
+@media all and (min-width: 1025px) {
+  .carousel {
+    display: flex;
+    align-content: center;
+    overflow-x: hidden;
+  
+    margin: 4.9rem 0 0 0;
+    position: relative;
+  
+    svg {
+      margin: 0 0 0 4.125rem;
+      transform: scale(0.95);
+  
+      path, g {
+        fill: var(--second);
+        transition: var(--theme-transition);
+      }
+    }
+  
+    // Fade in out
+    &::before, &::after {
+      content: '';
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 4rem;
+      position: absolute;
+      z-index: 5;
+  
+      background: var(--partners-fade-left);
+      pointer-events: none;
+    }
+    
+    &::after {
+      right: 0;
+      left: initial;
+  
+      background: var(--partners-fade-right)
+    }
+    
+    // Hover to stop
+    &:hover .logos {
+      animation-play-state: paused;
+    }
+  }
+  
+  // Logo containers 2x
+  .logos {
+    display: flex;
+    animation: 15.5s slide infinite linear;
+  }
+  
+  
+  
+  // Animations
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+}

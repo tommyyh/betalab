@@ -21,6 +21,11 @@
     font-weight: 300;
   }
 
+  svg path {
+    transition: var(--theme-transition);
+    fill: var(--second);
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -74,6 +79,11 @@
       letter-spacing: 0.0123rem;
       font-weight: 400;
       font-size: 0.794rem;
+    }
+
+    svg path {
+      transition: var(--theme-transition);
+      fill: var(--second);
     }
     
     &::before {
