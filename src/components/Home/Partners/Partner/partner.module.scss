@@ -1,0 +1,19 @@
+.partner {
+  position: relative;
+
+  img {
+    position: absolute;
+    width: 14.5rem;
+    height: 17rem;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    transition: ease 300ms;
+  }
+
+  &:hover {
+    img {
+      opacity: 1;
+    }
+  }
+}
