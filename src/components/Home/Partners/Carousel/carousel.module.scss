@@ -3,7 +3,6 @@
   align-content: center;
   overflow-x: hidden;
 
-  margin: 2.6rem 0 0 0;
   position: relative;
 
   svg {
@@ -61,10 +60,9 @@
   .carousel {
     display: flex;
     align-content: center;
-    overflow-x: hidden;
+    overflow-x: clip;
+    overflow-y: initial;
   
-    margin: 4.9rem 0 0 0;
-    height: 100rem;
     position: relative;
   
     svg {
@@ -107,7 +105,25 @@
   // Logo containers 2x
   .logos {
     display: flex;
-    animation: 15.5s slide infinite linear;
+    animation: 17s slide infinite linear;
+  }
+
+  .img {
+    position: absolute;
+    z-index: 1000;
+
+    transition: opacity 300ms ease;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 14.5rem;
+      height: 17rem;
+
+      transition: ease 300ms;
+      object-fit: cover;
+    }
   }
   
   
