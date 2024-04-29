@@ -19,42 +19,52 @@ const images = {
   '1': {
     src: Image1,
     alt: 'Partner website thumbnail',
+    href: 'https://www.google.com',
   },
   '2': {
     src: Image2,
     alt: 'Partner website thumbnail',
+    href: 'https://www.github.com',
   },
   '3': {
     src: Image1,
     alt: 'Partner website thumbnail',
+    href: 'https://www.betalab.vercel.app',
   },
   '4': {
     src: Image2,
     alt: 'Partner website thumbnail',
+    href: 'https://www.github.com',
   },
   '5': {
     src: Image1,
     alt: 'Partner website thumbnail',
+    href: 'https://www.google.com',
   },
   '6': {
     src: Image2,
     alt: 'Partner website thumbnail',
+    href: 'https://www.github.com',
   },
   '7': {
     src: Image1,
     alt: 'Partner website thumbnail',
+    href: 'https://www.google.com',
   },
   '8': {
     src: Image2,
     alt: 'Partner website thumbnail',
+    href: 'https://www.github.com',
   },
   '9': {
     src: Image1,
     alt: 'Partner website thumbnail',
+    href: 'https://www.google.com',
   },
   '10': {
     src: Image2,
     alt: 'Partner website thumbnail',
+    href: 'https://www.github.com',
   },
 };
 
@@ -106,16 +116,25 @@ const Carousel = ({}: PropsType) => {
         }
       >
         {Object.entries(images).map(([key, value]) => (
-          <Image
+          <a
             key={key}
-            src={value.src}
-            alt={value.alt}
-            data-type="svg"
-            data-cursor="pointer"
-            rawImg={true}
-            // @ts-ignore
-            style={active == key ? { opacity: 1 } : { opacity: 0 }}
-          />
+            href={value.href}
+            target="_blank"
+            style={
+              // @ts-ignore
+              active == key
+                ? { opacity: 1, pointerEvents: 'initial' }
+                : { opacity: 0, pointerEvents: 'none' }
+            }
+          >
+            <Image
+              src={value.src}
+              alt={value.alt}
+              data-type="svg"
+              data-cursor="pointer"
+              rawImg={true}
+            />
+          </a>
         ))}
       </div>
 
