@@ -10,7 +10,7 @@ type PropsType = {
 const Services = ({ l }: PropsType) => {
   const keys = ['1', '2', '3'] as const;
   return (
-    <section className={style.services}>
+    <section className={style.services} id="services">
       {keys.map((key) => (
         <Group key={key} index={key} l={l} />
       ))}
