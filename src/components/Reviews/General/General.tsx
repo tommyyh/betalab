@@ -4,7 +4,13 @@ import Previous from '@/public/icons/review-prev.svg';
 import Next from '@/public/icons/review-next.svg';
 import Rating from './Rating';
 
-const General = ({ setActiveReview, activeReview, reviewCount }: any) => {
+const General = ({
+  setActiveReview,
+  activeReview,
+  reviewCount,
+  author,
+  rating,
+}: any) => {
   const next = () => {
     if (activeReview >= reviewCount) return;
 
@@ -20,9 +26,9 @@ const General = ({ setActiveReview, activeReview, reviewCount }: any) => {
   return (
     <div className={style.general}>
       <div className={style.author}>
-        <Rating rating={4.4} />
+        <Rating rating={rating} />
 
-        <h4>James web - Telescope</h4>
+        <h4>{author}</h4>
       </div>
 
       {/* Switch between reviews */}

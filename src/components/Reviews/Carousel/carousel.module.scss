@@ -1,4 +1,24 @@
-.carousel {
-  display: flex;
-  overflow-x: hidden;
+// Reviews
+.review1, .review2, .review3 {
+  opacity: 0;
+  user-select: none;
+  transition: 300ms ease;
+}
+
+.list1 .review1 {
+  opacity: 100%;
+  user-select: initial;
+  z-index: 15;
+}
+
+.list2 .review2 {
+  opacity: 100%;
+  user-select: initial;
+  z-index: 15;
+}
+
+.list3 .review3 {
+  opacity: 100%;
+  user-select: initial;
+  z-index: 15;
 }

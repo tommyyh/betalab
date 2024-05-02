@@ -1,16 +1,14 @@
 @import '../../../app/utils.scss';
 
 .general {
-  display: flex;
-
-  padding: 3.9rem 0 0 0;
+  padding: 2.89rem 0 0 0;
 }
 
 .author {
   h4 {
-    margin: 1.35rem 0 0 0;
+    margin: 1rem 0 0 0;
 
-    font-size: 1.19rem;
+    font-size: 0.96rem;
     font-weight: 200;
     color: var(--second);
     font-family: var(--poppins);
@@ -36,7 +34,7 @@
 .controls {
   display: flex;
 
-  margin: -0.25rem 0 0 3.5rem;
+  margin: 1.44rem 0 0 0;
 }
 
 .prev, .next {
@@ -44,8 +42,8 @@
   align-items: center;
   justify-content: center;
 
-  width: 4.1rem;
-  height: 4.1rem;
+  width: 3.4rem;
+  height: 3.4rem;
   position: relative;
 
   background: var(--items-darker);
@@ -55,6 +53,7 @@
   
   svg {
     transition: var(--theme-transition);
+    transform: scale(0.9);
   }
   
   &::before {
@@ -73,4 +72,85 @@
 
 .next {
   margin: 0 0 0 0.67rem;
+}
+
+
+
+// Desktop
+@media all and (min-width: 1025px) {
+  .general {
+    display: flex;
+  
+    padding: 3.9rem 0 0 0;
+  }
+  
+  .author {
+    h4 {
+      margin: 1.35rem 0 0 0;
+  
+      font-size: 1.19rem;
+      font-weight: 200;
+      color: var(--second);
+      font-family: var(--poppins);
+    }
+  }
+  
+  // Rating
+  .rating {
+    display: flex;
+    align-items: center;
+  
+    div {
+      margin: 0 0.48rem 0 0;
+      width: 2.38rem;
+      height: 0.64rem;
+  
+      border: 0.04375rem solid var(--second);
+      border-radius: 5rem;
+    }
+  }
+  
+  // Controls
+  .controls {
+    display: flex;
+  
+    margin: -0.25rem 0 0 3.5rem;
+  }
+  
+  .prev, .next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 4.1rem;
+    height: 4.1rem;
+    position: relative;
+  
+    background: var(--items-darker);
+    border-radius: 50%;
+    border: 0.06rem solid transparent;
+    transition: var(--theme-transition);
+    
+    svg {
+      transition: var(--theme-transition);
+    }
+    
+    &::before {
+      @include blur;
+    }
+  
+    &:hover {
+      border: 0.06rem solid var(--second);
+      background: transparent;
+  
+      svg {
+        transform: scale(0.92);
+      }
+    }
+  }
+  
+  .next {
+    margin: 0 0 0 0.67rem;
+  }
+
 }

@@ -10,6 +10,10 @@ type PropsType = {
   setActiveReview: any;
   reviewCount: any;
   activeReview: any;
+  customClass: any;
+  text: string;
+  rating: number;
+  author: string;
 };
 
 const Review = ({
@@ -17,22 +21,24 @@ const Review = ({
   setActiveReview,
   activeReview,
   reviewCount,
+  customClass,
+  text,
+  rating,
+  author,
 }: PropsType) => {
   return (
-    <div className={style.review}>
+    <div className={`${style.review} ${customClass}`}>
       <div className={style.content}>
         <div className={style.text}>
-          <p>
-            We know getting sales isn’t easy without a good website in this new
-            digital era. But that’s why we’re here - to help you get more
-            clients, stand out from the crowd.
-          </p>
+          <p>{text}</p>
         </div>
 
         <General
           setActiveReview={setActiveReview}
           activeReview={activeReview}
           reviewCount={reviewCount}
+          rating={rating}
+          author={author}
         />
       </div>
 
