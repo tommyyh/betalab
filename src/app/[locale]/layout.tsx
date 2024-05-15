@@ -9,6 +9,7 @@ import { MenuProvider } from '@/components/Navbar/MenuContext/MenuContext';
 import Menu from '@/components/Navbar/Menu/Menu';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import Footer from '@/components/Footer/Footer';
 
 // Font types
 const poppins = Poppins({
@@ -67,7 +68,10 @@ export default function RootLayout({
             <Menu />
           </MenuProvider>
         </NextIntlClientProvider>
+
         {children}
+
+        <Footer />
       </body>
     </html>
   );

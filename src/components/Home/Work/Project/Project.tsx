@@ -3,9 +3,9 @@
 import React, { useRef } from 'react';
 import style from './project.module.scss';
 import LazyImage from '@/components/LazyImage/LazyImage';
-import { motion, useInView } from 'framer-motion';
-import generalJson from '@/data/general.json';
+import { useInView } from 'framer-motion';
 import Tags from './Tags/Tags';
+import AnimatedImg from '@/components/AnimatedImg/AnimatedImg';
 
 const Project = ({ ...props }) => {
   const div = useRef(null);
@@ -25,20 +25,7 @@ const Project = ({ ...props }) => {
       />
 
       {/* Emulate image animation for mobile - % headaches */}
-      <motion.div
-        className={style.curtain}
-        initial="hidden"
-        viewport={{ once: true }}
-        whileInView={inView ? 'visible' : ''}
-        transition={{
-          duration: 0.9,
-          ease: generalJson.imageAnimation,
-        }}
-        variants={{
-          visible: { scaleY: 0 },
-          hidden: { scaleY: 1 },
-        }}
-      ></motion.div>
+      <AnimatedImg div={div} />
 
       <Tags inView={inView} />
     </div>

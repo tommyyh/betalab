@@ -1,7 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useContext } from 'react';
 import SmallArrowRight from '@/public/icons/small-arrow-right.svg';
+import { MenuContext } from '../MenuContext/MenuContext';
 
 type PropsType = {
   title: string;
@@ -9,9 +10,12 @@ type PropsType = {
 };
 
 const LinkTo = ({ title, target }: PropsType) => {
-  const handleScroll = (e: any) => {
+  const { closeMenu }: any = useContext(MenuContext);
+
+  const handleScroll = () => {
     const element = document.getElementById(target);
 
+    closeMenu();
     element?.scrollIntoView({
       behavior: 'smooth',
     });

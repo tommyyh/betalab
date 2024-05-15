@@ -46,6 +46,8 @@
   // Sizing
   --blur: 1.42rem;
   --padding: 0.875rem;
+  --letter-p-1: 0.0125rem;
+  --letter-p-2: 0.01875rem;
   --letter-1: -0.0125rem;
   --letter-2: -0.01875rem;
   --letter-2-5: -0.02175rem;
@@ -53,6 +55,9 @@
   --letter-3-5: -0.03475rem;
 
   --benefits-blur: rgb(from var(--second) r g b / 0.055);
+
+  --footer-contact-bg: linear-gradient(to right, #5013c2, #9070e9);
+  --footer-btn-color: #6530D1;
 
   // Transitions
   --theme-transition: 250ms ease;

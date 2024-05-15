@@ -68,6 +68,20 @@
       transform: scale(0.92);
     }
   }
+
+  // Disabled
+  &:disabled, &[disabled] {
+    opacity: 50%;
+
+    &:hover {
+      border: 0.06rem solid transparent;
+      background: var(--items-darker);
+  
+      svg {
+        transform: scale(0.9);
+      }
+    }
+  }
 }
 
 .next {

@@ -1,0 +1,55 @@
+.footer {
+  margin: 39.25rem 0 0 0;
+}
+
+// Contact
+.contact {
+  display: flex;
+  align-items: center;
+
+  height: 4.94rem;
+  width: 82.5%;
+  padding: 0 0 0 var(--padding);
+
+  border-top-right-radius: 10rem;
+  border-bottom-right-radius: 10rem;
+  background: var(--footer-contact-bg);
+
+  h3 {
+    font-family: var(--poppins);
+    font-size: 1.16rem;
+    font-weight: 400;
+    color: var(--white);
+    letter-spacing: var(--letter-p-1);
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    padding: 0.295rem 1rem 0.295rem 1.1rem;
+    margin: 0 0 0 1.1rem;
+
+    font-size: 0.825rem;
+    font-weight: 500;
+    color: var(--footer-btn-color);
+    background: var(--white);
+    text-decoration: none;
+    border-radius: 10rem;
+    transition: var(--theme-transition);
+
+    svg {
+      margin: 0 0 0 0.33rem;
+    }
+
+    svg, path {
+      fill: var(--footer-btn-color);
+      transition: var(--theme-transition);
+    }
+
+    &:hover {
+      svg {
+        margin: 0 0 0 0.49rem;
+      }
+    }
+  }
+}

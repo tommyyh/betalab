@@ -4,6 +4,7 @@ import React from 'react';
 import style from './review.module.scss';
 import General from '../General/General';
 import Images from './Images';
+import Text from '@/components/Text/Text';
 
 type PropsType = {
   img: any;
@@ -30,7 +31,7 @@ const Review = ({
     <div className={`${style.review} ${customClass}`}>
       <div className={style.content}>
         <div className={style.text}>
-          <p>{text}</p>
+          <Text>{text}</Text>
         </div>
 
         <General

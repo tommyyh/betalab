@@ -1,0 +1,29 @@
+@import "../../app/utils.scss";
+
+// Animate
+.curtain {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform-origin: bottom;
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+}
+
+
+
+// Desktop
+@media all and (min-width: 1025px) {
+  // Animate
+  .curtain {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform-origin: bottom;
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+  }
+
+}

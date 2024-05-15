@@ -141,7 +141,31 @@
       "title": "Our trusted partners"
     },
     "reviews": {
-      "title": "What our clients said about us"
+      "title": "What our clients said about us",
+      "length": "3",
+      "list": {
+        "1": {
+          "text": "Just wanted to say a huge thanks to Tommy for his incredible work and vision with our website. He was very responsive and kept me up to date with the whole journey answering many questions along the way. He revolutionized the way we take bookings and had a huge influence on the success of how we now operate. Would and will use his services again in the future.",
+          "author": "Dr. Murtaza Sajid - Rimmington Pharmacy",
+          "rating": "4.8"
+        },
+        "2": {
+          "text": "I recommend working with Tommy. He is reliable and quick to learn new things. He's easy to work with. [EN Translation]",
+          "author": "Jan Lužecký - OnTee",
+          "rating": "4.2"
+        },
+        "3": {
+          "text": "Tommy is a guy that finds solutions, where they are needed the most. That's why working with him is a pleasure.",
+          "author": "Justus-Konrad Flade - JubefaGmbH",
+          "rating": "4.6"
+        }
+      }
+    },
+    "footer": {
+      "contact": {
+        "title": "Let’s make the next best project together",
+        "cta": "Start today"
+      }
     }
   }
 }

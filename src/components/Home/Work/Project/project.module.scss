@@ -7,17 +7,6 @@
   position: relative;
 }
 
-// Animate
-.curtain {
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform-origin: bottom;
-  width: 100%;
-  height: 100%;
-  background: var(--primary);
-}
-
 
 
 // Desktop
@@ -28,17 +17,6 @@
     position: relative;
     overflow: hidden;
     height: initial;
-  }
-  
-  // Animate
-  .curtain {
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform-origin: bottom;
-    width: 100%;
-    height: 100%;
-    background: var(--primary);
   }
 
 }
