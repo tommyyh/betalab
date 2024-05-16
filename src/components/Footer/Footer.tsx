@@ -3,10 +3,11 @@ import style from './footer.module.scss';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/navigation';
 import FooterArrow from '@/public/icons/footer-arrow.svg';
+import Links from './Links/Links';
+import Copyright from './Copyright';
 
 const Footer = async () => {
   const l = await getTranslations('home.footer');
-  const l2 = await getTranslations('nav');
 
   return (
     <footer className={style.footer}>
@@ -17,6 +18,10 @@ const Footer = async () => {
           Start today <FooterArrow />
         </Link>
       </div>
+
+      <Links l={l} />
+
+      <Copyright>{l('copyright')}</Copyright>
     </footer>
   );
 };

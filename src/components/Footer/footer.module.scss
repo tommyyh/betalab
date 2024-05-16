@@ -1,5 +1,16 @@
 .footer {
-  margin: 39.25rem 0 0 0;
+  margin: 39.25rem 0 2.66rem 0;
+
+  // Copyright
+  h6 {
+    padding: 2.5rem 0 0 var(--padding);
+
+    font-family: var(--poppins);
+    font-size: 0.91rem;
+    font-weight: 200;
+    color: var(--white);
+    letter-spacing: var(--letter-p-1);
+  }
 }
 
 // Contact

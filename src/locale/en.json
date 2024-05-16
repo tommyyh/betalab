@@ -165,6 +165,33 @@
       "contact": {
         "title": "Let’s make the next best project together",
         "cta": "Start today"
+      },
+      "copyright": "© 2024 Halo Lab. All rights reserved",
+      "links": {
+        "home": {
+          "title": "Home",
+          "link": "/"
+        },
+        "work": {
+          "title": "Our Work",
+          "link": "/work"
+        },
+        "services": {
+          "title": "Services",
+          "link": "services"
+        },
+        "clients": {
+          "title": "Our Client",
+          "link": "clients"
+        },
+        "contact": {
+          "title": "Contact Us",
+          "link": "/contact"
+        },
+        "privacy": {
+          "title": "Privacy & Policy",
+          "link": "/privacy-policy"
+        }
       }
     }
   }
