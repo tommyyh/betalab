@@ -55,7 +55,7 @@ export const sendMessage = async (prevState: any, data: FormData) => {
   }
 
   // Abort if fields aren't valid
-  if (!isValid || invalidFields[0]) return { invalidFields, status: 'error' };
+  if (!isValid || invalidFields[0]) return { invalidFields };
   
   // Verify connection
   try {

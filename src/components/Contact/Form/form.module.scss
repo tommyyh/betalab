@@ -38,3 +38,11 @@
 .success * {
   pointer-events: none;
 }
+
+// Server error
+.serverError {
+  margin: -1rem 0 -1rem 0;
+
+  color: var(--error);
+  font-size: 0.975rem;
+}

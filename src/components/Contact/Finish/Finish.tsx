@@ -55,7 +55,7 @@ const Finish = ({ l, data, setData, state }: PropsType) => {
         id={buttonClass}
         disabled={state === 'active' ? false : true}
       >
-        {state === 'active' ? (
+        {state === 'active' || state === 'error' ? (
           <>
             <div>{l.submit}</div>
             <div>{l.submit}</div>

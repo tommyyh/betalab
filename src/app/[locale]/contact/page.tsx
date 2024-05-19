@@ -50,6 +50,7 @@ const Contact = async () => {
     submit: formLang('submit'),
     loading: formLang('loading'),
     success: formLang('success'),
+    serverError: formLang('serverError'),
   };
 
   // Loop and append services to service object

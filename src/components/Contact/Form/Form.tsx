@@ -97,6 +97,8 @@ const Form = ({ l }: PropsType) => {
     // Handle response
     if (status === 'success') {
       setState('success');
+    } else if (status === 'error') {
+      setState('error');
     } else {
       setState('active');
     }
@@ -194,6 +196,9 @@ const Form = ({ l }: PropsType) => {
           state={state}
         />
       </div>
+      {state === 'error' && (
+        <p className={style.serverError}>{l.serverError}</p>
+      )}
 
       <Finish l={l} data={data} setData={setData} state={state} />
     </form>

@@ -246,7 +246,8 @@
       "newsletter": "Sign up to our newsletter",
       "submit": "Send inquiry",
       "loading": "Sending message",
-      "success": "Message received"
+      "success": "Message received",
+      "serverError": "Something went wrong, please contact us directly on our mail or try again later"
     }
   }
 }
