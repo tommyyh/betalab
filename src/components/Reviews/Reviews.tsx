@@ -7,7 +7,7 @@ import Title from '../Title/Text';
 
 type PropsType = {
   l: any;
-  scrollTrigger: boolean;
+  scrollTrigger?: boolean;
 };
 
 type ReviewsType = {
