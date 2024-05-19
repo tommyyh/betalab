@@ -7,6 +7,7 @@ import Title from '../Title/Text';
 
 type PropsType = {
   l: any;
+  scrollTrigger: boolean;
 };
 
 type ReviewsType = {
@@ -15,7 +16,7 @@ type ReviewsType = {
   rating: number;
 };
 
-const Reviews = ({ l }: PropsType) => {
+const Reviews = ({ l, scrollTrigger }: PropsType) => {
   const lang = 'reviews';
   const keys = Array.from(new Array(parseInt(l(`${lang}.length`))), (x, i) =>
     (i + 1).toString()
@@ -32,7 +33,7 @@ const Reviews = ({ l }: PropsType) => {
 
   return (
     <>
-      <Intersection />
+      <Intersection scrollTrigger={scrollTrigger} />
 
       <section className={style.reviews}>
         <h2>

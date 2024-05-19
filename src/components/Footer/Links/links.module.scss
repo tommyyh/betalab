@@ -1,20 +1,51 @@
 @import '../../../app/utils.scss';
 
 .links {
+  display: flex;
+  align-items: center;
+  justify-content: initial;
+  
+  position: relative;
+  overflow: scroll;
+  padding: 2.6rem var(--padding) 0 var(--padding);
+
   li {
     position: relative;
-    padding: 0.21rem 0.92rem;
+    padding: 0.21rem 1.07rem;
+    margin: 0 0 0 0.7rem;
+    min-width: 4.3rem;
     overflow-x: hidden;
+    flex: 0 0 auto;
     white-space: nowrap;
     
-    font-family: var(--eiko);
-    font-weight: 300;
+    font-family: var(--poppins);
+    -webkit-text-stroke: initial;
+    letter-spacing: initial;
     list-style-type: none;
-    font-size: 0.725rem;
+    font-size: 0.797rem;
+    font-weight: 400;
     border-radius: 10rem;
+    background: var(--items-darker);
+    border: var(--border-hover);
     transition: var(--theme-transition);
-    -webkit-text-stroke: bolderText(var(--nav-menu-thickness));
-    letter-spacing: 0.043rem;
+    -webkit-text-stroke: initial;
+
+    &:hover {
+      padding: 0.21rem 2.1rem 0.21rem 0.92rem;
+
+      border-color: var(--second);
+      background: transparent;
+
+      svg {
+        margin-left: initial;
+        right: 0.68rem;
+        transition-delay: 110ms;
+      }
+    }
+
+    &::before {
+      @include blur;
+    }
 
     a {
       display: flex;
@@ -25,34 +56,30 @@
     }
 
     svg {
-      margin: 0.1rem 0 0 0.83rem;
-      transform: scale(1.4);
+      position: absolute;
+      margin: 0 0 0 0.42rem;
+      right: -1.25rem;
+      transform: initial;
 
-      transition: var(--theme-transition);
+      transition: var(--transition-slow);
     }
 
-    &:hover {
-      svg {
-        margin-left: 1.1rem;
-      }
+    &:first-child {
+      margin: 0;
     }
   }
-}
-
-.linksDesktop {
-  display: none;
 }
 
 
 // Desktop view
 @media all and (min-width: 1025px) {
-  // Inverted -> Links
   .links {
     display: flex;
     align-items: center;
     justify-content: initial;
     
-    order: 1;
+    position: initial;
+    overflow: initial;
     padding: 2.6rem 0 0 var(--padding);
 
     li {
@@ -112,11 +139,6 @@
         margin: 0;
       }
     }
-  }
-
-  // Show on desktop if this class
-  .linksDesktop {
-    display: flex;
   }
 
 }

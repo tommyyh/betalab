@@ -59,6 +59,25 @@
   --footer-contact-bg: linear-gradient(to right, #5013c2, #9070e9);
   --footer-btn-color: #6530D1;
 
+  --facebook: #0865FE;
+  --instagram: radial-gradient(
+    circle farthest-corner at 28% 100%,
+    #fcdf8f 0%,
+    #fbd377 10%,
+    #fa8e37 22%,
+    #f73344 35%,
+    transparent 65%
+  ), linear-gradient(145deg, #3051f1 10%, #c92bb7 70%);
+  --linkedIn: #0A66C2;
+  --twitter: #24A4F2;
+  --tikTok: linear-gradient(to right, #08F2EB, #FF0855);
+
+  --input-text: #bbb;
+  --input-text-filled: #ffffff;
+  --input-border: #5B5B5B;
+
+  --error: #e75e5e;
+
   // Transitions
   --theme-transition: 250ms ease;
   --theme-transition2: 310ms ease;
@@ -68,6 +87,9 @@
   --transition-slow: 150ms ease;
   --transition-menu: 410ms cubic-bezier(0.64, 0.36, 0, 0.96);
   --transition-menu-delay: 410ms cubic-bezier(0.64, 0.36, 0, 0.96), backdrop-filter 475ms cubic-bezier(0.64, 0.36, 0, 0.96) 440ms;
+  --checkbox-transition: 55ms ease;
+  --tick-transition: 62ms ease;
+  --form-transition: 450ms ease;
 }
 
 // Themes
@@ -119,6 +141,23 @@ h6 {
 
 a {
   transition: var(--theme-transition);
+}
+
+// Remove background from forms on google auto-complete
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  border-bottom: 0.06rem solid var(--input-border);
+  -webkit-text-fill-color: var(--input-text-filled);
+  -webkit-box-shadow: 0 0 0px 1000px var(--primary) inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 // Desktop view

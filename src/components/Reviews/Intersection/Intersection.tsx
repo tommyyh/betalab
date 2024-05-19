@@ -7,7 +7,11 @@ import Image1 from '@/public/home/intersection/1.png';
 import Image2 from '@/public/home/intersection/2.png';
 import AnimatedImg from '@/components/AnimatedImg/AnimatedImg';
 
-const Intersection = () => {
+type PropsType = {
+  scrollTrigger?: boolean;
+};
+
+const Intersection = ({ scrollTrigger }: PropsType) => {
   const div1 = useRef(null);
   const div2 = useRef(null);
 
@@ -22,7 +26,7 @@ const Intersection = () => {
           rawImg
         />
 
-        <AnimatedImg div={div1} />
+        <AnimatedImg div={div1} scrollTrigger={scrollTrigger} />
       </div>
 
       <div className={style.img} ref={div2}>
@@ -34,7 +38,7 @@ const Intersection = () => {
           rawImg
         />
 
-        <AnimatedImg div={div2} />
+        <AnimatedImg div={div2} scrollTrigger={scrollTrigger} />
       </div>
     </div>
   );

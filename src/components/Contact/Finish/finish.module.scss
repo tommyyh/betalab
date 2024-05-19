@@ -1,0 +1,194 @@
+$btnHeight: 2.2rem;
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 4.9rem 0 0 0;
+
+  transition: var(--form-transition);
+
+  // Submit
+  button {
+    position: relative;
+    overflow-y: hidden;
+    padding: 0 1.29rem;
+    max-height: $btnHeight;
+    height: $btnHeight;
+
+    border-radius: 5rem;
+    background: var(--items-darker);
+    color: var(--second);
+    font-family: var(--poppins);
+    border: 0.06rem solid transparent;
+    font-size: 0.85rem;
+    transition: var(--theme-transition);
+    
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      min-height: $btnHeight;
+
+      transition: var(--theme-transition);
+    }
+
+    &:hover {
+      background: transparent;
+      border-color: var(--second);
+
+      div:first-child {
+        margin: -$btnHeight 0 0 0;
+      }
+    }
+  }
+}
+
+// Pending
+#pending {
+  display: flex;
+  align-items: center;
+
+  background: var(--accent1);
+  pointer-events: none;
+  
+  &:hover {
+    background: var(--accent1);
+    border-color: transparent;
+
+    div:first-child {
+      margin: initial;
+    }
+  }
+}
+
+.loader { // Loading icon
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.82rem;
+  height: 0.81rem;
+  margin: 0 0 0 0.62rem;
+
+  background: var(--white);
+  border-radius: 4rem;
+}
+
+.dot {
+  height: 0.25rem;
+  width: 0.25rem;
+  margin: -0.2rem 0 0 0;
+
+  background: var(--accent1);
+  border-radius: 50%;
+  animation: bounce 0.6s infinite ease-in-out;
+
+  &:nth-child(1) {
+    margin: -0.2rem 0 0 -0.1rem;
+  }
+
+  &:nth-child(2) {
+    margin: -0.2rem 0.11rem 0 0.099rem;
+  }
+}
+
+// Newsletter
+.newsletter {
+  display: flex;
+  align-items: center;
+
+  transition: var(--form-transition);
+  opacity: 1;
+  pointer-events: initial;
+
+  input {
+    width: 0.94rem;
+    height: 0.94rem;
+
+    background: transparent;
+    border: 0.06rem solid var(--input-border);
+  }
+
+  label {
+    margin: 0.09rem 0 0 0.78rem;
+
+    font-size: 0.82rem;
+    font-weight: 300;
+    color: var(--input-text);
+    font-family: var(--poppins);
+    user-select: none;
+    transition: var(--theme-transition);
+  }
+
+  &:hover {
+    label {
+      color: var(--input-text-filled);
+    }
+  }
+}
+
+// Pending newsletter state
+.newsletterPending {
+  opacity: 0.4;
+  pointer-events: none;
+  transition: var(--form-transition);
+}
+
+// Success CONTAINER
+.inputSuccess {
+  margin: 2rem 0 0 0;
+
+  .newsletter {
+    opacity: 0;
+    visibility: none;
+    pointer-events: none;
+  }
+}
+
+#buttonSuccess { // Button success state
+  display: flex;
+  align-items: center;
+
+  pointer-events: none;
+  background: var(--accent1);
+}
+
+.iconSuccess { // Success icon
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1rem;
+  height: 1rem;
+  margin: 0 0 0 0.6rem;
+
+  background: var(--white);
+  border-radius: 50%;
+}
+
+
+
+// Dot animation
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0.125rem);
+  }
+}
+
+// Stagger dots
+.dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.3s;
+}

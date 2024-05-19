@@ -1,0 +1,88 @@
+.socials {
+  display: flex;
+  align-items: center;
+
+  margin: 4.7rem 0 0 0;
+}
+
+// Social
+.social {
+  display: flex;
+
+  width: 2.75rem;
+  height: 2.75rem;
+  position: relative;
+  overflow-x: hidden;
+  margin: 0 0.67rem 0 0;
+
+  border-radius: 50%;
+  border: 0.06rem solid var(--second);
+  transition: 500ms ease;
+
+  svg {
+    transform: scale(1.42);
+  }
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: scale(0);
+
+    border-radius: 50%;
+    transition: var(--transition1);
+  }
+
+  // Svg wrapper & icon
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 100%;
+    min-height: 100%;
+
+    transition: var(--transition1);
+  }
+
+  .icon1 {
+    svg, path {
+      fill: var(--second);
+    }
+  }
+
+  // Hover
+  &:hover {
+    border: 0.06rem solid transparent;
+
+    .icon1 {
+      margin: 0 0 0 -100%;
+    }
+
+    &::before {
+      transform: scale(1);
+    }
+  }
+}
+
+// Colors
+.facebook::before {
+  background: var(--facebook);
+}
+
+.instagram::before {
+  background: var(--instagram); 
+}
+
+.linkedIn::before {
+  background: var(--linkedIn);
+}
+
+.twitter::before {
+  background: var(--twitter);
+}
+
+.tikTok::before {
+  background: var(--tikTok);
+}

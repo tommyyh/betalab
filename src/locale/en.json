@@ -194,5 +194,59 @@
         }
       }
     }
+  },
+  "contact": {
+    "landing": {
+      "title": "<span>Let’s make the</span> next big thing",
+      "mail": "info@betalab.cloud",
+      "tel": "+420 797 602 438",
+      "note": "We reply within 24h"
+    },
+    "form": {
+      "name": {
+        "label": "Your name*",
+        "placeholder": "David Spencer",
+        "error": "Please enter your full name"
+      },
+      "email": {
+        "label": "Email address*",
+        "placeholder": "davidspencer@gmail.com",
+        "error": "Please enter a properly formatted email address"
+      },
+      "prefix": {
+        "placeholder": "+420",
+        "error": "Please enter a valid prefix number"
+      },
+      "tel": {
+        "label": "Phone number*",
+        "placeholder": "797 602 438",
+        "error": "Please provide a valid phone number"
+      },
+      "service": {
+        "label": "Service*",
+        "length": "6",
+        "list": {
+          "1": "Web design",
+          "2": "Web development",
+          "3": "Web redesign",
+          "4": "Admin dashboard",
+          "5": "CRM Software",
+          "6": "Other"
+        }
+      },
+      "budget": {
+        "label": "Preferred budget",
+        "placeholder": "Your ideal budget"
+      },
+      "msg": {
+        "label": "Your message*",
+        "placeholder": "I want to create a new...",
+        "error": "Please provide a details of your project. Keep it concise (3500 characters max)"
+      },
+      "newsletter": "Sign up to our newsletter",
+      "submit": "Send inquiry",
+      "loading": "Sending message",
+      "success": "Message received"
+    }
   }
 }

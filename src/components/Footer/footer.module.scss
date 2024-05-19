@@ -1,5 +1,5 @@
 .footer {
-  margin: 39.25rem 0 2.66rem 0;
+  margin: 38.5rem 0 2.75rem 0;
 
   // Copyright
   h6 {
@@ -15,11 +15,12 @@
 
 // Contact
 .contact {
-  display: flex;
+  display: grid;
+  grid-template-columns: 55% 45%;
   align-items: center;
 
   height: 4.94rem;
-  width: 82.5%;
+  width: 91%;
   padding: 0 0 0 var(--padding);
 
   border-top-right-radius: 10rem;
@@ -28,7 +29,8 @@
 
   h3 {
     font-family: var(--poppins);
-    font-size: 1.16rem;
+    font-size: 0.89rem;
+    line-height: 133%;
     font-weight: 400;
     color: var(--white);
     letter-spacing: var(--letter-p-1);
@@ -37,10 +39,13 @@
   a {
     display: flex;
     align-items: center;
-    padding: 0.295rem 1rem 0.295rem 1.1rem;
-    margin: 0 0 0 1.1rem;
+    width: fit-content;
+    white-space: nowrap;
+    justify-self: flex-end;
+    padding: 0.295rem 0.8rem 0.295rem 1.1rem;
+    margin: 0 1.52rem 0 0;
 
-    font-size: 0.825rem;
+    font-size: 0.72rem;
     font-weight: 500;
     color: var(--footer-btn-color);
     background: var(--white);
@@ -63,4 +68,74 @@
       }
     }
   }
+}
+
+@media all and (min-width: 1025px) {
+  .footer {
+    margin: 39.25rem 0 2.66rem 0;
+  
+    // Copyright
+    h6 {
+      padding: 2.5rem 0 0 var(--padding);
+  
+      font-family: var(--poppins);
+      font-size: 0.91rem;
+      font-weight: 200;
+      color: var(--white);
+      letter-spacing: var(--letter-p-1);
+    }
+  }
+  
+  // Contact
+  .contact {
+    display: flex;
+    align-items: center;
+  
+    height: 4.94rem;
+    width: 82.5%;
+    padding: 0 0 0 var(--padding);
+  
+    border-top-right-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    background: var(--footer-contact-bg);
+  
+    h3 {
+      font-family: var(--poppins);
+      font-size: 1.16rem;
+      font-weight: 400;
+      color: var(--white);
+      letter-spacing: var(--letter-p-1);
+    }
+  
+    a {
+      display: flex;
+      align-items: center;
+      padding: 0.295rem 1rem 0.295rem 1.1rem;
+      margin: 0 0 0 1.1rem;
+  
+      font-size: 0.825rem;
+      font-weight: 500;
+      color: var(--footer-btn-color);
+      background: var(--white);
+      text-decoration: none;
+      border-radius: 10rem;
+      transition: var(--theme-transition);
+  
+      svg {
+        margin: 0 0 0 0.33rem;
+      }
+  
+      svg, path {
+        fill: var(--footer-btn-color);
+        transition: var(--theme-transition);
+      }
+  
+      &:hover {
+        svg {
+          margin: 0 0 0 0.49rem;
+        }
+      }
+    }
+  }
+
 }
