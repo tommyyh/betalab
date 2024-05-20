@@ -1,8 +1,8 @@
 // Validate name
 export const validateName = (name: string) => {
-  return String(name)
-    .toLowerCase()
-    .match(/^[a-z]([\-'\s]?[a-z]+)*$/);
+  const length = name.length > 0;
+
+  return length;
 };
 
 // Validate email
