@@ -15,6 +15,7 @@ type PropsType = {
   validationFunction?: any;
   setData: any;
   state: string;
+  textarea?: boolean;
 };
 
 const Input = ({
@@ -28,6 +29,7 @@ const Input = ({
   setData,
   validationFunction,
   state,
+  textarea = false,
 }: PropsType) => {
   const [timer, setTimer] = useState<NodeJS.Timeout | null>(null);
   const [success, setSuccess] = useState(false);
@@ -60,7 +62,9 @@ const Input = ({
     }));
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { value } = e.target;
 
     if (timer) clearTimeout(timer);
@@ -99,16 +103,32 @@ const Input = ({
   return (
     <div className={className} data-cursor="pointer">
       <label htmlFor={customId}>{label}</label>
-      <div className={`${success ? style.success : ''} ${style.cont}`}>
-        <input
-          type={type}
-          placeholder={placeholder}
-          name={name}
-          id={customId}
-          value={data[name].value}
-          onChange={handleChange}
-          onBlur={handleBlur}
-        />
+      <div
+        className={`${success ? style.success : ''} ${
+          textarea ? style.textareaCont : ''
+        } ${style.cont}`}
+      >
+        {!textarea ? (
+          <input
+            type={type}
+            placeholder={placeholder}
+            name={name}
+            id={customId}
+            value={data[name].value}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          />
+        ) : (
+          <textarea
+            placeholder={placeholder}
+            name={name}
+            id={customId}
+            value={data[name].value}
+            onChange={handleChange}
+            onBlur={handleBlur}
+          ></textarea>
+        )}
+
         <Tick />
       </div>
 

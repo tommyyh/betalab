@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState } from 'react';
 import style from './form.module.scss';
-import Input from '../Input/Input';
-import Finish from '../Finish/Finish';
+import Input from './Input/Input';
+import Finish from './Finish/Finish';
 import Select from '@/components/Select/Select';
 import { sendMessage } from '@/actions/sendMessage';
 import {
@@ -11,7 +11,7 @@ import {
   validateName,
   validateMsg,
 } from '@/helper/dataValidation';
-import Tel from '../Tel/Tel';
+import Tel from './Tel/Tel';
 
 type PropsType = {
   l: any;
@@ -194,6 +194,7 @@ const Form = ({ l }: PropsType) => {
           setData={setData}
           validationFunction={validateMsg}
           state={state}
+          textarea={true}
         />
       </div>
       {state === 'error' && (

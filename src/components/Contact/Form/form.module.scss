@@ -1,23 +1,5 @@
 .form {
-  margin: 0.78rem 0 0 0;
-}
-
-// Two inputs in a column
-.double {
-  display: grid;
-  grid-template-columns: 47.75% 47.75%;
-  
-  justify-content: space-between;
-  align-items: start;
-}
-
-// Three inputs in a column
-.triple {
-  display: grid;
-  grid-template-columns: 30.4% 30.4% 30.4%;
-  
-  justify-content: space-between;
-  align-items: start;
+  margin: 5.78rem 0 0 0;
 }
 
 // Active form
@@ -45,4 +27,59 @@
 
   color: var(--error);
   font-size: 0.975rem;
+}
+
+
+
+// Desktop
+@media all and (min-width: 1025px) {
+  .form {
+    margin: 0.78rem 0 0 0;
+  }
+
+  // Two inputs in a column
+  .double {
+    display: grid;
+    grid-template-columns: 47.75% 47.75%;
+    
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  // Three inputs in a column
+  .triple {
+    display: grid;
+    grid-template-columns: 30.4% 30.4% 30.4%;
+    
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  // Active form
+  .formActive {
+    opacity: 1;
+    pointer-events: initial;
+    transition: var(--form-transition);
+  }
+
+  // Pending
+  .formPending {
+    opacity: 0.4;
+    pointer-events: none;
+    transition: var(--form-transition);
+  }
+
+  // Success
+  .success * {
+    pointer-events: none;
+  }
+
+  // Server error
+  .serverError {
+    margin: -1rem 0 -1rem 0;
+
+    color: var(--error);
+    font-size: 0.975rem;
+  }
+
 }

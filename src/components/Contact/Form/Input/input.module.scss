@@ -1,0 +1,268 @@
+.input {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  margin: 0 0 2.2rem 0;
+  transition: var(--form-transition);
+  
+  label {
+    color: var(--input-text);
+    font-size: 0.725rem;
+  }
+
+  // Error message
+  p {
+    margin: 0.87rem 0 0 0;
+
+    color: var(--error);
+    font-size: 0.92rem;
+  }
+}
+
+// Container
+.cont {
+  display: flex;
+
+  position: relative;
+
+  svg {
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+
+    pointer-events: none;
+    opacity: 0;
+    transition: var(--theme-transition);
+  }
+}
+
+.textareaCont {
+  svg {
+    top: 1.75rem;
+  }
+}
+
+// Input
+.input input, .input textarea {
+  width: 100%;
+  height: 3.1rem;
+  position: relative;
+
+  font-size: 0.935rem;
+  border: none;
+  border-bottom: 0.06rem solid var(--input-border);
+  color: var(--input-text-filled);
+  background: transparent;
+  font-family: var(--poppins);
+  outline: none;
+  font-weight: 300;
+  letter-spacing: var(--letter-p-1);
+  transition: var(--tick-transition);
+
+  &::placeholder {
+    color: var(--input-text);
+    opacity: 0.88;
+    transition: var(--theme-transition);
+    font-weight: 300;
+  }
+
+  &:focus {
+    border-bottom: 0.06rem solid var(--accent1);
+  }
+
+  &:hover::placeholder {
+    color: var(--input-text-filled);
+    opacity: 0.8;
+  }
+}
+
+.input textarea {
+  height: 8.25rem;
+  margin: 1rem 0 0 0;
+  padding: 0 2.7rem 0 0;
+  overflow-x: hidden;
+  resize: none;
+}
+
+// Error
+.error {
+  input, textarea {
+    border-color: var(--error);
+  }
+}
+
+// Success
+.success {
+  svg {
+    opacity: 1;
+    pointer-events: initial;
+  }
+}
+
+.inputSuccess {
+  margin: 0 0 1.4rem 0;
+
+  input, textarea {
+    border-color: var(--primary);
+    color: var(--input-text-filled);
+    
+    &::placeholder {
+      color: var(--input-text-filled);
+      opacity: 1;
+    }
+  }
+
+  svg {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+
+
+// Desktop
+@media all and (min-width: 1025px) {
+  .input {
+    display: flex;
+    flex-direction: column;
+  
+    width: 100%;
+    margin: 0 0 2.42rem 0;
+    transition: var(--form-transition);
+    
+    label {
+      color: var(--input-text);
+      font-size: 0.78125rem;
+    }
+  
+    // Error message
+    p {
+      margin: 0.87rem 0 0 0;
+  
+      color: var(--error);
+      font-size: 0.92rem;
+    }
+  }
+  
+  // Container
+  .cont {
+    display: flex;
+  
+    position: relative;
+  
+    svg {
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+  
+      pointer-events: none;
+      opacity: 0;
+      transition: var(--theme-transition);
+    }
+  }
+
+  .textareaCont {
+    svg {
+      top: 1.8rem;
+      right: 0rem;
+    }
+  }
+  
+  // Input
+  .input input, .input textarea {
+    width: 100%;
+    height: 3.27rem;
+    position: relative;
+  
+    font-size: 1rem;
+    border: none;
+    border-bottom: 0.06rem solid var(--input-border);
+    color: var(--input-text-filled);
+    background: transparent;
+    font-family: var(--poppins);
+    outline: none;
+    font-weight: 300;
+    letter-spacing: var(--letter-p-1);
+    transition: var(--tick-transition);
+  
+    &::placeholder {
+      color: var(--input-text);
+      opacity: 0.88;
+      transition: var(--theme-transition);
+      font-weight: 300;
+    }
+  
+    &:focus {
+      border-bottom: 0.06rem solid var(--accent1);
+    }
+  
+    &:hover::placeholder {
+      color: var(--input-text-filled);
+      opacity: 0.8;
+    }
+  }
+  
+  .input textarea {
+    height: 8.25rem;
+    margin: 1rem 0 0 0;
+    padding: 0 2.7rem 0 0;
+    overflow-x: hidden;
+    resize: none;
+
+    &::-webkit-scrollbar {
+      width: calc(var(--scroll-width) - 0.13rem); // Whole width
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: initial; // Make the track invisible
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: var(--scroll-background); // Scrollbar thumb
+      border-radius: 20rem;
+      cursor: default;
+  
+      &:hover {
+        background: var(--scroll-hover);
+      }
+    }
+  }
+  
+  // Error
+  .error {
+    input, textarea {
+      border-color: var(--error);
+    }
+  }
+  
+  // Success
+  .success {
+    svg {
+      opacity: 1;
+      pointer-events: initial;
+    }
+  }
+  
+  .inputSuccess {
+    margin: 0 0 1.4rem 0;
+  
+    input, textarea {
+      border-color: var(--primary);
+      color: var(--input-text-filled);
+      
+      &::placeholder {
+        color: var(--input-text-filled);
+        opacity: 1;
+      }
+    }
+  
+    svg {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  
+}
