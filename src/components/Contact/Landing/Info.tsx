@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactArrow from '@/public/icons/contact-arrow.svg';
+import Item from './Item/Item';
 
 type PropsType = {
   lang: any;
@@ -10,24 +10,13 @@ const Info = ({ lang }: PropsType) => {
 
   return (
     <ul>
-      <li>
-        <a href={`mailto:${l('mail')}`}>
-          <ContactArrow />
-          {l('mail')}
-        </a>
-      </li>
-      <li>
-        <a href={`tel:${l('tel').replaceAll(' ', '')}`}>
-          <ContactArrow />
-          {l('tel')}
-        </a>
-      </li>
-      <li>
-        <a href={`mailto:${l('mail')}`}>
-          <ContactArrow />
-          {l('note')}
-        </a>
-      </li>
+      <Item href={`mailto:${l('mail')}`} text={l('mail')} index={1} />
+      <Item
+        href={`tel:${l('tel').replaceAll(' ', '')}`}
+        text={l('tel')}
+        index={2}
+      />
+      <Item href={`mailto:${l('mail')}`} text={l('note')} index={3} />
     </ul>
   );
 };

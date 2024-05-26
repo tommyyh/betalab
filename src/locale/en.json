@@ -166,7 +166,7 @@
         "title": "Let’s make the next best project together",
         "cta": "Start today"
       },
-      "copyright": "© 2024 Halo Lab. All rights reserved",
+      "copyright": "© 2024 Betalab. All rights reserved",
       "links": {
         "home": {
           "title": "Home",
@@ -197,7 +197,10 @@
   },
   "contact": {
     "landing": {
-      "title": "<span>Let’s make the</span> next big thing",
+      "title": {
+        "1": "Let’s make the ",
+        "2": "next big thing"
+      },
       "mail": "info@betalab.cloud",
       "tel": "+420 797 602 438",
       "note": "We reply within 24h"
@@ -241,7 +244,7 @@
       "msg": {
         "label": "Your message*",
         "placeholder": "I want to create a new...",
-        "error": "Please provide a details of your project. Keep it concise (3500 characters max)"
+        "error": "Please provide a details of your project. Keep it concise (4000 characters max)"
       },
       "newsletter": "Sign up to our newsletter",
       "submit": "Send inquiry",

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import style from './input.module.scss';
 import Tick from '@/public/icons/tick.svg';
+import { motion } from 'framer-motion';
 
 type PropsType = {
   label: string;
@@ -15,6 +16,7 @@ type PropsType = {
   validationFunction?: any;
   setData: any;
   state: string;
+  index: number;
   textarea?: boolean;
 };
 
@@ -29,6 +31,7 @@ const Input = ({
   setData,
   validationFunction,
   state,
+  index,
   textarea = false,
 }: PropsType) => {
   const [timer, setTimer] = useState<NodeJS.Timeout | null>(null);
@@ -101,7 +104,15 @@ const Input = ({
   }
 
   return (
-    <div className={className} data-cursor="pointer">
+    <motion.div
+      className={className}
+      data-cursor="pointer"
+      initial={{ opacity: '0%' }}
+      animate={{ opacity: '100%' }}
+      transition={{ duration: 0.725, delay: 0.072 * (index * 0.69) }}
+      custom={index}
+      key={index}
+    >
       <label htmlFor={customId}>{label}</label>
       <div
         className={`${success ? style.success : ''} ${
@@ -133,7 +144,7 @@ const Input = ({
       </div>
 
       {data[name].error && <p>{data[name].error}</p>}
-    </div>
+    </motion.div>
   );
 };
 

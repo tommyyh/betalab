@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import style from './tel.module.scss';
 import { validatePrefix, validateTel } from '@/helper/dataValidation';
 import Tick from '@/public/icons/tick.svg';
+import { motion } from 'framer-motion';
 
 type PropsType = {
   label: string;
@@ -19,6 +20,7 @@ type PropsType = {
   data: any;
   setData: any;
   state: string;
+  index: number;
 };
 
 const Tel = ({
@@ -35,6 +37,7 @@ const Tel = ({
   prefixName,
   prefixPlaceholder,
   state,
+  index,
 }: PropsType) => {
   const [timer, setTimer] = useState<NodeJS.Timeout | null>(null);
   const [success, setSuccess] = useState(false);
@@ -120,11 +123,16 @@ const Tel = ({
   }
 
   return (
-    <div
+    <motion.div
       className={`${style.input} ${
         state === 'success' ? style.inputSuccess : ''
       }`}
       data-cursor="pointer"
+      initial={{ opacity: '0%' }}
+      animate={{ opacity: '100%' }}
+      transition={{ duration: 0.725, delay: 0.072 * (index * 0.69) }}
+      custom={index}
+      key={index}
     >
       <label htmlFor={customId}>{label}</label>
 
@@ -158,7 +166,7 @@ const Tel = ({
 
       {/* Error */}
       {showError && <p>{showError}</p>}
-    </div>
+    </motion.div>
   );
 };
 

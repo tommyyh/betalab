@@ -2,6 +2,7 @@
 
 import React from 'react';
 import style from './select.module.scss';
+import { motion } from 'framer-motion';
 
 type PropsType = {
   label: string;
@@ -11,6 +12,7 @@ type PropsType = {
   setData: any;
   options: any;
   state: string;
+  index: number;
 };
 
 const Select = ({
@@ -21,13 +23,19 @@ const Select = ({
   setData,
   options,
   state,
+  index,
 }: PropsType) => {
   return (
-    <div
+    <motion.div
       className={`${style.select} ${
         state === 'success' ? style.inputSuccess : ''
       }`}
       data-cursor="pointer"
+      initial={{ opacity: '0%' }}
+      animate={{ opacity: '100%' }}
+      transition={{ duration: 0.725, delay: 0.072 * (index * 0.69) }}
+      custom={index}
+      key={index}
     >
       <label htmlFor={customId}>{label}</label>
       <select
@@ -44,7 +52,7 @@ const Select = ({
           </option>
         ))}
       </select>
-    </div>
+    </motion.div>
   );
 };
 

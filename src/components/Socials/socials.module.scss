@@ -92,6 +92,11 @@
   }
 }
 
+// Container for animations
+.iconCont {
+  overflow: hidden;
+}
+
 // Colors
 .facebook::before {
   background: var(--facebook);
@@ -209,6 +214,11 @@
         transform: scale(1);
       }
     }
+  }
+
+  // Container for animations
+  .iconCont {
+    overflow: hidden;
   }
   
   // Colors

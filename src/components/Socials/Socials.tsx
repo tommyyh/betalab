@@ -8,6 +8,7 @@ import LinkedIn from '@/public/icons/socials/linkedin-in.svg';
 import TikTok from '@/public/icons/socials/tiktok.svg';
 import TikTokHover from '@/public/icons/socials/tiktokHover.svg';
 import Twitter from '@/public/icons/socials/twitter.svg';
+import Social from './Social';
 
 const Socials = () => {
   const [activeIcon, setActiveIcon] = useState(0);
@@ -33,89 +34,65 @@ const Socials = () => {
   return (
     <div className={style.socials}>
       {/* Facebook */}
-      <a
-        href="https://www.instagram.com"
-        target="_blank"
-        className={`${style.social} ${
-          activeIcon === 1 ? style.socialActive : ''
-        } ${style.facebook}`}
-        data-cursor="pointer"
-      >
-        <div className={`${style.icon} ${style.icon1}`}>
-          <Facebook />
-        </div>
-        <div className={style.icon}>
-          <Facebook />
-        </div>
-      </a>
+      <div className={style.iconCont}>
+        <Social
+          href="https://www.instagram.com"
+          customClass={`${style.social} ${
+            activeIcon === 1 ? style.socialActive : ''
+          } ${style.facebook}`}
+          Icon={Facebook}
+          index={1}
+        />
+      </div>
 
       {/* Instagram */}
-      <a
-        href="https://www.instagram.com"
-        target="_blank"
-        className={`${style.social} ${
-          activeIcon === 2 ? style.socialActive : ''
-        } ${style.instagram}`}
-        data-cursor="pointer"
-      >
-        <div className={`${style.icon} ${style.icon1}`}>
-          <Instagram />
-        </div>
-        <div className={style.icon}>
-          <Instagram />
-        </div>
-      </a>
+      <div className={style.iconCont}>
+        <Social
+          href="https://www.instagram.com"
+          customClass={`${style.social} ${
+            activeIcon === 2 ? style.socialActive : ''
+          } ${style.instagram}`}
+          Icon={Instagram}
+          index={2}
+        />
+      </div>
 
       {/* LinkedIn */}
-      <a
-        href="https://www.instagram.com"
-        target="_blank"
-        className={`${style.social} ${
-          activeIcon === 3 ? style.socialActive : ''
-        } ${style.linkedIn}`}
-        data-cursor="pointer"
-      >
-        <div className={`${style.icon} ${style.icon1}`}>
-          <LinkedIn />
-        </div>
-        <div className={style.icon}>
-          <LinkedIn />
-        </div>
-      </a>
+      <div className={style.iconCont}>
+        <Social
+          href="https://www.instagram.com"
+          customClass={`${style.social} ${
+            activeIcon === 3 ? style.socialActive : ''
+          } ${style.linkedIn}`}
+          Icon={LinkedIn}
+          index={3}
+        />
+      </div>
 
       {/* Twitter */}
-      <a
-        href="https://www.instagram.com"
-        target="_blank"
-        className={`${style.social} ${
-          activeIcon === 4 ? style.socialActive : ''
-        } ${style.twitter}`}
-        data-cursor="pointer"
-      >
-        <div className={`${style.icon} ${style.icon1}`}>
-          <Twitter />
-        </div>
-        <div className={style.icon}>
-          <Twitter />
-        </div>
-      </a>
+      <div className={style.iconCont}>
+        <Social
+          href="https://www.instagram.com"
+          customClass={`${style.social} ${
+            activeIcon === 4 ? style.socialActive : ''
+          } ${style.twitter}`}
+          Icon={Twitter}
+          index={4}
+        />
+      </div>
 
       {/* TikTok */}
-      <a
-        href="https://www.instagram.com"
-        target="_blank"
-        className={`${style.social} ${
-          activeIcon === 5 ? style.socialActive : ''
-        } ${style.tikTok}`}
-        data-cursor="pointer"
-      >
-        <div className={`${style.icon} ${style.icon1}`}>
-          <TikTok />
-        </div>
-        <div className={style.icon}>
-          <TikTokHover />
-        </div>
-      </a>
+      <div className={style.iconCont}>
+        <Social
+          href="https://www.instagram.com"
+          customClass={`${style.social} ${
+            activeIcon === 5 ? style.socialActive : ''
+          } ${style.tikTok}`}
+          Icon={TikTok}
+          index={5}
+          Icon2={TikTokHover}
+        />
+      </div>
     </div>
   );
 };

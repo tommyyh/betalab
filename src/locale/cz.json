@@ -141,7 +141,116 @@
       "title": "Naši spokojení klienti"
     },
     "reviews": {
-      "title": "Co o nás klienti říkají"
+      "title": "Co o nás řekli naši klienti",
+      "length": "3",
+      "list": {
+        "1": {
+          "text": "Chtěl bych Betalab poděkovat za jejich neuvěřitelnou práci a vizi s naší webovou stránkou. Velmi ochotně reagoval a průběžně mě informoval o celé cestě a odpovídal na mnoho otázek. Změnil cestu, jakým přijímáme rezervace, a měl obrovský vliv na úspěch toho, jak nyní fungujeme. Jeho služeb bychom využili a využijeme i v budoucnu. [EN Original]",
+          "author": "Dr. Murtaza Sajid - Rimmington Pharmacy",
+          "rating": "4.8"
+        },
+        "2": {
+          "text": "Spolupráci s Betalab doporučuji. Jsou spolehlivý a rychle se pomůžous s novými věcmi. Snadno se s nimi pracuje.",
+          "author": "Jan Lužecký - OnTee",
+          "rating": "4.2"
+        },
+        "3": {
+          "text": "Betalab je společnost, která nachází řešení tam, kde je jich nejvíce potřeba. Proto je s nimi radost pracovat. [EN Original]",
+          "author": "Justus-Konrad Flade - JubefaGmbH",
+          "rating": "4.6"
+        }
+      }
+    },
+    "footer": {
+      "contact": {
+        "title": "Pojďme společně vytvořit další úspěšný projekt",
+        "cta": "Začněte dnes"
+      },
+      "copyright": "© 2024 Betalab. Všechna práva vyhrazena",
+      "links": {
+        "home": {
+          "title": "Home",
+          "link": "/"
+        },
+        "work": {
+          "title": "Naše Práce",
+          "link": "/work"
+        },
+        "services": {
+          "title": "Služby",
+          "link": "services"
+        },
+        "clients": {
+          "title": "Naši klienti",
+          "link": "clients"
+        },
+        "contact": {
+          "title": "Napište nám",
+          "link": "/contact"
+        },
+        "privacy": {
+          "title": "Privacy & Policy",
+          "link": "/privacy-policy"
+        }
+      }
+    }
+  },
+  "contact": {
+    "landing": {
+      "title": {
+        "1": "Vytvořme spolu ",
+        "2": "úspěšný projekt"
+      },
+      "mail": "info@betalab.cloud",
+      "tel": "+420 797 602 438",
+      "note": "Odpovídáme do 24h"
+    },
+    "form": {
+      "name": {
+        "label": "Celé jméno*",
+        "placeholder": "David Spencer",
+        "error": "Zadejte prosím své celé jméno"
+      },
+      "email": {
+        "label": "Email*",
+        "placeholder": "davidspencer@gmail.com",
+        "error": "Zadejte prosím platnou e-mailovou adresu"
+      },
+      "prefix": {
+        "placeholder": "+420",
+        "error": "Zadejte prosím platný telefonní kód"
+      },
+      "tel": {
+        "label": "Telefon*",
+        "placeholder": "797 602 438",
+        "error": "Zadejte prosím platné telefonní číslo"
+      },
+      "service": {
+        "label": "Služba*",
+        "length": "6",
+        "list": {
+          "1": "Web design",
+          "2": "Web development",
+          "3": "Web redesign",
+          "4": "Admin dashboard",
+          "5": "CRM Software",
+          "6": "Other"
+        }
+      },
+      "budget": {
+        "label": "Orientační rozpočet",
+        "placeholder": "Váš přibližný rozpočet"
+      },
+      "msg": {
+        "label": "Zpráva*",
+        "placeholder": "Chtěl bych vytvořit novou...",
+        "error": "Uveďte prosím podrobnosti o svém projektu. Buďte struční (max. 4000 znaků)."
+      },
+      "newsletter": "Přihlaste se k odběru naších novinek",
+      "submit": "Odeslat zprávu",
+      "loading": "Zpráva se odesílá",
+      "success": "Zpráva byla odeslána",
+      "serverError": "Něco se pokazilo, kontaktujte nás prosím přímo na našem e-mailu nebo to zkuste později."
     }
   }
 }

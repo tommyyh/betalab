@@ -4,6 +4,7 @@ import React from 'react';
 import style from './finish.module.scss';
 import Checkbox from '@/components/Checkbox/Checkbox';
 import ContactSuccess from '@/public/icons/contactSuccess.svg';
+import { motion } from 'framer-motion';
 
 type PropsType = {
   l: any;
@@ -32,13 +33,18 @@ const Finish = ({ l, data, setData, state }: PropsType) => {
         state === 'success' ? style.inputSuccess : ''
       }`}
     >
-      <div
+      <motion.div
         className={
           state === 'pending'
             ? `${style.newsletter} ${style.newsletterPending}`
             : style.newsletter
         }
         data-cursor="pointer"
+        initial={{ opacity: '0%' }}
+        animate={{ opacity: '100%' }}
+        transition={{ duration: 0.6, delay: 0.072 * (7 * 0.65) }}
+        custom={7}
+        key={7}
       >
         <Checkbox
           checked={data.newsletter.value}
@@ -48,12 +54,17 @@ const Finish = ({ l, data, setData, state }: PropsType) => {
           labelId="formCheckbox"
         />
         <label htmlFor="formCheckbox">{l.newsletter}</label>
-      </div>
+      </motion.div>
 
-      <button
+      <motion.button
         type="submit"
         id={buttonClass}
         disabled={state === 'active' ? false : true}
+        initial={{ opacity: '0%' }}
+        animate={{ opacity: '100%' }}
+        transition={{ duration: 0.725, delay: 0.072 * (8 * 0.69) }}
+        custom={8}
+        key={8}
       >
         {state === 'active' || state === 'error' ? (
           <>
@@ -76,7 +87,7 @@ const Finish = ({ l, data, setData, state }: PropsType) => {
             )}
           </>
         )}
-      </button>
+      </motion.button>
     </div>
   );
 };

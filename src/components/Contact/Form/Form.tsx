@@ -127,6 +127,7 @@ const Form = ({ l }: PropsType) => {
             setData={setData}
             validationFunction={validateName}
             state={state}
+            index={1}
           />
 
           <Input
@@ -140,6 +141,7 @@ const Form = ({ l }: PropsType) => {
             setData={setData}
             validationFunction={validateEmail}
             state={state}
+            index={2}
           />
         </div>
 
@@ -159,6 +161,7 @@ const Form = ({ l }: PropsType) => {
             data={data}
             setData={setData}
             state={state}
+            index={3}
           />
           <Input
             type="text"
@@ -170,6 +173,7 @@ const Form = ({ l }: PropsType) => {
             setData={setData}
             validationFunction={(budget: any) => true} // No validation
             state={state}
+            index={4}
           />
 
           <Select
@@ -180,6 +184,7 @@ const Form = ({ l }: PropsType) => {
             setData={setData}
             options={l.service.services}
             state={state}
+            index={5}
           />
         </div>
 
@@ -195,6 +200,7 @@ const Form = ({ l }: PropsType) => {
           validationFunction={validateMsg}
           state={state}
           textarea={true}
+          index={6}
         />
       </div>
       {state === 'error' && (

@@ -15,7 +15,7 @@ const Footer = async () => {
         <h3>{l('contact.title')}</h3>
 
         <Link href={'/contact'}>
-          Start today <FooterArrow />
+          {l('contact.cta')} <FooterArrow />
         </Link>
       </div>
 
