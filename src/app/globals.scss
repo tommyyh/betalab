@@ -14,7 +14,7 @@
   --black: #000;
   --white: #fff;
 
-  --nav-items: rgb(50, 50, 50, 0.6);
+  --nav-items: rgb(50, 50, 50, 0.5);
   --nav-menu: rgb(30, 30, 30, 0.725);
   --nav-menu-thickness: 0.0135rem;
   --nav-blur: 1rem;
@@ -67,17 +67,17 @@
     #fa8e37 22%,
     #f73344 35%,
     transparent 65%
-  ), linear-gradient(145deg, #3051f1 10%, #c92bb7 70%);
+    ), linear-gradient(145deg, #3051f1 10%, #c92bb7 70%);
   --linkedIn: #0A66C2;
   --twitter: #24A4F2;
   --tikTok: linear-gradient(to right, #08F2EB, #FF0855);
-
+  
   --input-text: #adadad;
   --input-text-filled: #ffffff;
   --input-border: #414141;
-
+  
   --error: #e75e5e;
-
+  
   // Transitions
   --theme-transition: 250ms ease;
   --theme-transition2: 310ms ease;

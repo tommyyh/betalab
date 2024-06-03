@@ -1,0 +1,74 @@
+.links {
+  margin: 1.76rem 0 0 0;
+  overflow-x: auto;
+
+  div {
+    display: flex;
+
+    li {
+      margin: 0 0.76rem 0 0;
+    }
+
+    &:last-child {
+      margin: 0.95rem 0 0 1.67rem;
+    }
+  }
+
+  // Scrollbar
+  &::-webkit-scrollbar {
+    width: var(--scroll-width); // Whole width
+  }
+
+  &::-webkit-scrollbar-track {
+    background: initial; // Make the track invisible
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--scroll-background); // Scrollbar thumb
+    border-radius: 20rem;
+    cursor: default;
+
+    &:hover {
+      background: var(--scroll-hover);
+    }
+  }
+}
+
+// Links
+.link {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.17rem 1.2rem;
+
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--second);
+  text-decoration: none;
+  transition: var(--transition-slow-fast);
+  background: var(--nav-items);
+  backdrop-filter: blur(var(--blur));
+  border-radius: 50rem;
+  border: 0.06rem solid transparent;
+
+  svg {
+    margin: 0 0 0 0.3rem;
+    transform: scale(0.45) rotate(45deg);
+
+    transition: var(--transition-slow-fast);
+
+    path {
+      fill: var(--second);
+    }
+  }
+
+  &:hover {
+    background: transparent;
+    border: 0.06rem solid var(--second);
+
+    svg {
+      transition: transform var(--transition-slow-fast);
+      transform: scale(0.45) rotate(0deg);
+    }
+  }
+}

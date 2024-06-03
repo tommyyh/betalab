@@ -2,9 +2,6 @@ import React from 'react';
 import style from './work.module.scss';
 
 const Work = ({ pointer }: any) => {
-  const pathname = window.location.pathname.split('/')[1];
-  let title = pathname === 'en' ? 'View work' : 'Zobrazit práci';
-
   return (
     <span
       className={`
@@ -12,7 +9,7 @@ const Work = ({ pointer }: any) => {
           ${style.work}
         `}
     >
-      {!title ? 'View work' : title}
+      {'View work'}
     </span>
   );
 };

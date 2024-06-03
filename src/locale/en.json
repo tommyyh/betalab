@@ -195,6 +195,62 @@
       }
     }
   },
+  "work": {
+    "landing": {
+      "title": "Our Innovative Work",
+      "length": "6",
+      "navigation": {
+        "1": {
+          "title": "Adonio Sneakers",
+          "id": "workAdonio"
+        },
+        "2": {
+          "title": "Rimmington Pharmacy",
+          "id": "workRimmington"
+        },
+        "3": {
+          "title": "Adonio Sneakers",
+          "id": "workAdonio2"
+        },
+        "4": {
+          "title": "Rimmington Pharmacy",
+          "id": "workRimmington2"
+        },
+        "5": {
+          "title": "Adonio Sneakers",
+          "id": "workAdonio3"
+        },
+        "6": {
+          "title": "Rimmington Pharmacy",
+          "id": "workRimmington3"
+        }
+      }
+    },
+    "projects": {
+      "length": "3",
+      "cta": "Visit website",
+      "list": {
+        "1": {
+          "title": "Adonio sneaker E-shop",
+          "text": "Companies who put trust in our hands, saw huge benefits right after deployment. With their new web solutions they found an increase in both sales and exposure in the digital world.",
+          "link": "https://www.adonio.cz/",
+          "id": "workAdonio"
+        },
+        "2": {
+          "title": "Adonio sneaker E-shop",
+          "text": "Companies who put trust in our hands, saw huge benefits right after deployment. With their new web solutions they found an increase in both sales and exposure in the digital world.",
+          "link": "https://www.adonio.cz/",
+          "id": "workRimmington"
+        },
+        "3": {
+          "title": "Adonio sneaker E-shop",
+          "text": "Companies who put trust in our hands, saw huge benefits right after deployment. With their new web solutions they found an increase in both sales and exposure in the digital world.",
+          "link": "https://www.adonio.cz/",
+          "id": "workAdonio2"
+        }
+      }
+    }
+  },
   "contact": {
     "landing": {
       "title": {

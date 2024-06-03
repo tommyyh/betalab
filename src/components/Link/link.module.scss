@@ -1,3 +1,5 @@
+@import '../../app/utils.scss';
+
 .link {
   display: flex;
   align-items: center;
@@ -9,16 +11,19 @@
   font-weight: 400;
   color: var(--second);
   text-decoration: none;
-
+  transition: var(--transition-slow-fast);
+  
   svg {
     margin: -0.135rem 0 0 0.45rem;
     transform: scale(0.44);
-
+    
+    transition: var(--transition-slow-fast);
+    
     path {
       fill: var(--second);
     }
   }
-
+  
   &::before {
     content: '';
     position: absolute;
@@ -30,6 +35,24 @@
     background: var(--nav-items);
     backdrop-filter: blur(var(--blur));
     border-radius: 50rem;
+    transition: var(--transition-slow-fast);
+    border: 0.06rem solid transparent;
+    border-left-color: transparent;
+  }
+
+  // Hover
+  &:hover {
+    &::before {
+      width: 8.25% + 89%;
+      
+      border: 0.06rem solid secondVariation(0.725);
+      border-left-color: transparent;
+      background: transparent;
+    }
+
+    svg {
+      transform: scale(0.41) rotate(45deg);
+    }
   }
 }
 
@@ -48,10 +71,10 @@
     padding: 0.75rem 0;
   
     font-size: 1.035rem;
-    font-weight: 400;
+    font-weight: 300;
     color: var(--second);
     text-decoration: none;
-    letter-spacing: var(--letter-2);
+    letter-spacing: initial;
     transition: var(--transition-slow-fast);
   
     svg {
@@ -77,12 +100,18 @@
       backdrop-filter: blur(var(--blur));
       border-radius: 50rem;
       transition: var(--transition-slow-fast);
+      border: 0.06rem solid transparent;
+      border-left-color: transparent;
     }
 
     // Hover
     &:hover {
       &::before {
         width: $bg-width + 89%;
+
+        border: 0.06rem solid secondVariation(0.725);
+        border-left-color: transparent;
+        background: transparent;
       }
 
       svg {

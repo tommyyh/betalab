@@ -9,12 +9,14 @@ type PropsType = {
   children: string;
   customClass?: any;
   animateRightAway?: boolean;
+  stagger?: number;
 };
 
 const Title = ({
   children,
   customClass,
   animateRightAway = false,
+  stagger,
 }: PropsType) => {
   const description = useRef(null);
   const isInView = useInView(description);
@@ -47,7 +49,10 @@ const Title = ({
             <motion.span
               initial={{ y: '100%' }}
               animate={{ y: '0%' }}
-              transition={{ duration: 0.5, delay: 0.02 * index }}
+              transition={{
+                duration: 0.5,
+                delay: (stagger ? stagger : 0.02) * index,
+              }}
               custom={index}
               key={index}
             >
