@@ -36,6 +36,7 @@ const Projects = ({ lang }: PropsType) => {
     <main className={style.projects}>
       {projects.map((project: any, index: number) => (
         <Project
+          key={index}
           title={project.title}
           text={project.text}
           link={project.link}

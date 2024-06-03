@@ -17,50 +17,73 @@ const Project = ({ title, text, link, image, index, id }: PropsType) => {
 
   return (
     // If its even -> change layout
-    <div
-      className={
-        isEven ? `${style.project} ${style.projectEven}` : style.project
-      }
-      id={id}
-    >
-      {isEven ? (
-        <>
-          <div className={style.content}>
-            <h3>{title}</h3>
-            <div className={style.link}>
-              <Link href={link} blank={true}>
-                Visit website
-              </Link>
+    <>
+      <div
+        className={
+          isEven
+            ? `${style.project} ${style.projectEven} ${style.desktop}`
+            : `${style.project} ${style.desktop}`
+        }
+        id={id}
+      >
+        {isEven ? (
+          <>
+            <div className={style.content}>
+              <h3>{title}</h3>
+              <div className={style.link}>
+                <Link href={link} blank={true}>
+                  Visit website
+                </Link>
+              </div>
+              <p>{text}</p>
             </div>
-            <p>{text}</p>
-          </div>
 
-          <LazyImage
-            src={image}
-            customClass={style.imageCont}
-            data-cursor="work"
-          />
-        </>
-      ) : (
-        <>
-          <LazyImage
-            src={image}
-            customClass={style.imageCont}
-            data-cursor="work"
-          />
+            <LazyImage
+              src={image}
+              customClass={style.imageCont}
+              data-cursor="work"
+            />
+          </>
+        ) : (
+          <>
+            <LazyImage
+              src={image}
+              customClass={style.imageCont}
+              data-cursor="work"
+            />
 
-          <div className={style.content}>
-            <h3>{title}</h3>
-            <div className={style.link}>
-              <Link href={link} blank={true}>
-                Visit website
-              </Link>
+            <div className={style.content}>
+              <h3>{title}</h3>
+              <div className={style.link}>
+                <Link href={link} blank={true}>
+                  Visit website
+                </Link>
+              </div>
+              <p>{text}</p>
             </div>
-            <p>{text}</p>
+          </>
+        )}
+      </div>
+
+      {/* Mobile */}
+      <div className={`${style.project} ${style.mobile}`} id={id}>
+        <div className={style.content}>
+          <h3>{title}</h3>
+          <div className={style.link}>
+            <Link href={link} blank={true}>
+              Visit website
+            </Link>
           </div>
-        </>
-      )}
-    </div>
+          <p>{text}</p>
+        </div>
+
+        <LazyImage
+          src={image}
+          customClass={style.imageCont}
+          data-cursor="work"
+        />
+      </div>
+    </>
   );
 };
 

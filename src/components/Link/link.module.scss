@@ -8,7 +8,8 @@
   width: fit-content;
 
   font-size: 0.875rem;
-  font-weight: 400;
+  letter-spacing: var(--letter-1-p);
+  font-weight: 300;
   color: var(--second);
   text-decoration: none;
   transition: var(--transition-slow-fast);
@@ -29,7 +30,7 @@
     position: absolute;
     right: -0.57rem;
     width: 72%;
-    height: 1.81rem;
+    height: 1.6rem;
     z-index: -1;
     
     background: var(--nav-items);
