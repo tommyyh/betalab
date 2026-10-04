@@ -1,6 +1,6 @@
 {
   "welcome": {
-    "welcome": "Betalab · Vedoucí webová agentura",
+    "welcome": "Lumen Digital · Vedoucí webová agentura",
     "contact": "Kontakt"
   },
   "nav": {
@@ -38,8 +38,8 @@
     "landing": {
       "title": {
         "1": "Získejte více tržeb",
-        "2": "a klientů pomocí",
-        "3": "našich webových řešení"
+        "2": "a klientů díky",
+        "3": "aplikacím & webům na míru"
       },
       "cta": "Naše řešení",
       "text": "Už několik let pomáháme mnoha firmám zvýšit jejich zisk a získat více klientů díky našim digitálním řešením na míru, která vám 100% zaručí vaše požadované výsledky."
@@ -145,17 +145,17 @@
       "length": "3",
       "list": {
         "1": {
-          "text": "Chtěl bych Betalab poděkovat za jejich neuvěřitelnou práci a vizi s naší webovou stránkou. Velmi ochotně reagoval a průběžně mě informoval o celé cestě a odpovídal na mnoho otázek. Změnil cestu, jakým přijímáme rezervace, a měl obrovský vliv na úspěch toho, jak nyní fungujeme. Jeho služeb bychom využili a využijeme i v budoucnu. [EN Original]",
+          "text": "Chtěl bych Lumen Digital poděkovat za jejich neuvěřitelnou práci a vizi s naší webovou stránkou. Velmi ochotně reagoval a průběžně mě informoval o celé cestě a odpovídal na mnoho otázek. Změnil cestu, jakým přijímáme rezervace, a měl obrovský vliv na úspěch toho, jak nyní fungujeme. Jeho služeb bychom využili a využijeme i v budoucnu. [EN Original]",
           "author": "Dr. Murtaza Sajid - Rimmington Pharmacy",
           "rating": "4.8"
         },
         "2": {
-          "text": "Spolupráci s Betalab doporučuji. Jsou spolehlivý a rychle se pomůžous s novými věcmi. Snadno se s nimi pracuje.",
+          "text": "Spolupráci s Lumen Digital doporučuji. Jsou spolehlivý a rychle se pomůžous s novými věcmi. Snadno se s nimi pracuje.",
           "author": "Jan Lužecký - OnTee",
           "rating": "4.2"
         },
         "3": {
-          "text": "Betalab je společnost, která nachází řešení tam, kde je jich nejvíce potřeba. Proto je s nimi radost pracovat. [EN Original]",
+          "text": "Lumen Digital je společnost, která nachází řešení tam, kde je jich nejvíce potřeba. Proto je s nimi radost pracovat. [EN Original]",
           "author": "Justus-Konrad Flade - JubefaGmbH",
           "rating": "4.6"
         }
@@ -166,7 +166,7 @@
         "title": "Pojďme společně vytvořit další úspěšný projekt",
         "cta": "Začněte dnes"
       },
-      "copyright": "© 2024 Betalab. Všechna práva vyhrazena",
+      "copyright": "© 2024 Lumen Digital. Všechna práva vyhrazena",
       "links": {
         "home": {
           "title": "Home",

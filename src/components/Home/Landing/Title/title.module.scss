@@ -3,4 +3,8 @@
 
   position: relative;
   overflow: hidden;
+
+  // Room for descenders (g, p, y) without changing line spacing
+  padding-bottom: 0.2em;
+  margin-bottom: -0.2em;
 }

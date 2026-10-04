@@ -1,6 +1,6 @@
 {
   "welcome": {
-    "welcome": "Betalab · Leading web agency",
+    "welcome": "Lumen Digital · Leading web agency",
     "contact": "Contact us"
   },
   "nav": {
@@ -37,9 +37,9 @@
   "home": {
     "landing": {
       "title": {
-        "1": "Streamline your",
-        "2": "business sales",
-        "3": "with our web solutions"
+        "1": "Websites and apps",
+        "2": "that turn your",
+        "3": "visitors into paying clients"
       },
       "cta": "Our solution",
       "text": "For many years, we’ve helped numerous businesses increase their profit & gain more clients with our tailored digital solutions, that will 100% guarantee your desired results."
@@ -166,7 +166,7 @@
         "title": "Let’s make the next best project together",
         "cta": "Start today"
       },
-      "copyright": "© 2024 Betalab. All rights reserved",
+      "copyright": "© 2024 Lumen Digital. All rights reserved",
       "links": {
         "home": {
           "title": "Home",

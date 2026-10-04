@@ -14,6 +14,9 @@
   --black: #000;
   --white: #fff;
 
+  --logo-text: #EDEDF0;
+  --logo-mark: #FFE6A6;
+
   --nav-items: rgb(50, 50, 50, 0.5);
   --nav-menu: rgb(30, 30, 30, 0.725);
   --nav-menu-thickness: 0.0135rem;
@@ -96,6 +99,9 @@
 body[data-theme="light"] {
   --primary: #fff;
   --second: #000;
+
+  --logo-text: #0E0F13;
+  --logo-mark: #C98A12;
 
   --nav-items: rgba(217, 217, 217, 0.6);
   --nav-menu: rgb(238, 238, 238, 0.7);

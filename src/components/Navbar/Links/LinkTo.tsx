@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import SmallArrowRight from '@/public/icons/small-arrow-right.svg';
 import { MenuContext } from '../MenuContext/MenuContext';
 

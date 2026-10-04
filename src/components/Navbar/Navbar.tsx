@@ -2,7 +2,8 @@ import { Link } from '@/navigation';
 import React from 'react';
 import style from './navbar.module.scss';
 
-import Logo from '@/public/nav/logo.svg';
+// Colors are overridden per theme in navbar.module.scss
+import Logo from '@/public/brand/logo/lumen-logo-on-dark.svg';
 import Main from './Main/Main';
 import { getTranslations } from 'next-intl/server';
 import Links from './Links/Links';

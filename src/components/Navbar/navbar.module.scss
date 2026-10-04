@@ -23,11 +23,20 @@
   justify-content: center;
 
   svg {
+    height: 1.8rem;
+    width: auto;
     transform: scale(0.97);
   }
 
-  path {
-    fill: var(--second);
+  // Wordmark
+  svg > path {
+    fill: var(--logo-text);
+    transition: var(--theme-transition);
+  }
+
+  // Sparkle mark
+  svg g {
+    fill: var(--logo-mark);
     transition: var(--theme-transition);
   }
 }
@@ -65,12 +74,7 @@
     padding: 0.65rem;
 
     svg {
-      transform: scale(0.97);
-    }
-
-    path {
-      fill: var(--second);
-      transition: var(--theme-transition);
+      height: 2rem;
     }
   }
 

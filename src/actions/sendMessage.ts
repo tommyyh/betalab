@@ -69,7 +69,7 @@ export const sendMessage = async (prevState: any, data: FormData) => {
     await transport.sendMail({
       from: SMTP_PASS,
       to: EMAIL_TO,
-      subject: `Betalab Inquiry: ${service} (${budget})`,
+      subject: `Lumen Digital Inquiry: ${service} (${budget})`,
       text: `Name: ${name}\n Email: ${email}\n Phone number: ${prefix} ${tel}\n Budget: ${budget}\n Service: ${service}\n Newsletter: ${newsletter}\n\n Message: ${msg}`
     })
 
