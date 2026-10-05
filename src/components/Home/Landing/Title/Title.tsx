@@ -18,7 +18,7 @@ const Span = ({ text, index }: any) => {
   return (
     <div className={style.line}>
       <motion.span
-        initial={{ y: '125%' }}
+        initial={{ y: '200%' }}
         animate={{ y: '0%' }}
         transition={{ duration: 0.55, delay: 0.125 * index }}
         custom={index}

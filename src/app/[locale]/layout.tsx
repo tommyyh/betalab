@@ -1,8 +1,7 @@
 import type { Metadata } from 'next';
-import { Poppins } from 'next/font/google';
+import { Newsreader, Poppins } from 'next/font/google';
 import '../globals.scss';
 import Navbar from '@/components/Navbar/Navbar';
-import localFont from 'next/font/local';
 import Cursor from '@/components/Cursor/Cursor';
 import SmoothScroll from '@/components/SmoothScroll/SmoothScroll';
 import { MenuProvider } from '@/components/Navbar/MenuContext/MenuContext';
@@ -18,20 +17,11 @@ const poppins = Poppins({
   variable: '--poppins',
   display: 'swap',
 });
-const eiko = localFont({
-  src: [
-    {
-      path: '../../public/font/eiko-thin.ttf',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: '../../public/font/eiko-medium.ttf',
-      weight: '500',
-      style: 'normal',
-    },
-  ],
-  variable: '--eiko',
+const newsreader = Newsreader({
+  subsets: ['latin', 'latin-ext'],
+  style: ['normal'],
+  axes: ['opsz'],
+  variable: '--newsreader',
   display: 'swap',
 });
 
@@ -56,7 +46,7 @@ export default function RootLayout({
   const navMessages = useMessages('nav');
 
   return (
-    <html lang={locale} className={`${eiko.variable} ${poppins.variable}`}>
+    <html lang={locale} className={`${newsreader.variable} ${poppins.variable}`}>
       <body>
         <Cursor />
         <SmoothScroll />

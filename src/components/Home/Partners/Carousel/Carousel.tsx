@@ -3,7 +3,17 @@
 import React, { useRef, useState } from 'react';
 import style from './carousel.module.scss';
 import Partner from '../Partner/Partner';
-import PartnerSvg from '@/public/home/partners/israsfaren.svg';
+import Logo1 from '@/public/home/partners/1.svg';
+import Logo2 from '@/public/home/partners/2.svg';
+import Logo3 from '@/public/home/partners/3.png';
+import Logo4 from '@/public/home/partners/4.png';
+import Logo5 from '@/public/home/partners/5.png';
+import Logo6 from '@/public/home/partners/6.png';
+import Logo7 from '@/public/home/partners/7.png';
+import Logo8 from '@/public/home/partners/8.png';
+import Logo9 from '@/public/home/partners/9.svg';
+import Logo10 from '@/public/home/partners/10.png';
+import Logo11 from '@/public/home/partners/11.svg';
 import Image1 from '@/public/home/landing/thumbnail.png';
 import Image2 from '@/public/home/work/2.png';
 import Image from '@/components/LazyImage/LazyImage';
@@ -15,58 +25,20 @@ const roundNum = (num: any) => {
   return +(Math.round(num + 'e+3') + 'e-3');
 };
 
-const images = {
-  '1': {
-    src: Image1,
-    alt: 'Partner website thumbnail',
-    href: 'https://www.google.com',
-  },
-  '2': {
-    src: Image2,
-    alt: 'Partner website thumbnail',
-    href: 'https://www.github.com',
-  },
-  '3': {
-    src: Image1,
-    alt: 'Partner website thumbnail',
-    href: 'https://www.betalab.vercel.app',
-  },
-  '4': {
-    src: Image2,
-    alt: 'Partner website thumbnail',
-    href: 'https://www.github.com',
-  },
-  '5': {
-    src: Image1,
-    alt: 'Partner website thumbnail',
-    href: 'https://www.google.com',
-  },
-  '6': {
-    src: Image2,
-    alt: 'Partner website thumbnail',
-    href: 'https://www.github.com',
-  },
-  '7': {
-    src: Image1,
-    alt: 'Partner website thumbnail',
-    href: 'https://www.google.com',
-  },
-  '8': {
-    src: Image2,
-    alt: 'Partner website thumbnail',
-    href: 'https://www.github.com',
-  },
-  '9': {
-    src: Image1,
-    alt: 'Partner website thumbnail',
-    href: 'https://www.google.com',
-  },
-  '10': {
-    src: Image2,
-    alt: 'Partner website thumbnail',
-    href: 'https://www.github.com',
-  },
-};
+// Order = display order. Hover previews and links are placeholders for now
+const partners = [
+  { name: 'Fler', logo: Logo1, preview: Image1, href: '' },
+  { name: 'Israsfaren', logo: Logo2, preview: Image2, href: '' },
+  { name: 'Solar Norway', logo: Logo3, preview: Image1, href: '' },
+  { name: 'Ontee', logo: Logo4, preview: Image2, href: '' },
+  { name: "Rimmington's", logo: Logo5, preview: Image1, href: '' },
+  { name: 'Adonio', logo: Logo6, preview: Image2, href: '' },
+  { name: 'Oslo Yacht Charter', logo: Logo7, preview: Image1, href: '' },
+  { name: 'Advertising Big', logo: Logo8, preview: Image2, href: '' },
+  { name: 'Somatic Terapi', logo: Logo9, preview: Image1, href: '' },
+  { name: 'Jubefa', logo: Logo10, preview: Image2, href: '' },
+  { name: 'Komfort AS', logo: Logo11, preview: Image1, href: '' },
+];
 
 const Carousel = ({}: PropsType) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -115,21 +87,19 @@ const Carousel = ({}: PropsType) => {
               }
         }
       >
-        {Object.entries(images).map(([key, value]) => (
+        {partners.map((partner, i) => (
           <a
-            key={key}
-            href={value.href}
+            key={partner.name}
             target="_blank"
             style={
-              // @ts-ignore
-              active == key
+              active == i + 1
                 ? { opacity: 1, pointerEvents: 'initial' }
                 : { opacity: 0, pointerEvents: 'none' }
             }
           >
             <Image
-              src={value.src}
-              alt={value.alt}
+              src={partner.preview}
+              alt={`${partner.name} website thumbnail`}
               data-type="svg"
               data-cursor="pointer"
               rawImg={true}
@@ -139,32 +109,22 @@ const Carousel = ({}: PropsType) => {
       </div>
 
       <div className={style.logos} ref={divRef}>
-        <div ref={partnerRef}>
-          <Partner Icon={PartnerSvg} />
-        </div>
-        <Partner Icon={PartnerSvg} />
-        <Partner Icon={PartnerSvg} />
-        <Partner Icon={PartnerSvg} />
-        <Partner Icon={PartnerSvg} />
-        <Partner Icon={PartnerSvg} />
-        <Partner Icon={PartnerSvg} />
-        <Partner Icon={PartnerSvg} />
-        <Partner Icon={PartnerSvg} />
-        <Partner Icon={PartnerSvg} />
+        {partners.map((partner, i) =>
+          i === 0 ? (
+            <div key={partner.name} ref={partnerRef}>
+              <Partner logo={partner.logo} name={partner.name} />
+            </div>
+          ) : (
+            <Partner key={partner.name} logo={partner.logo} name={partner.name} />
+          )
+        )}
       </div>
 
       {/* Duplicate */}
-      <div className={style.logos}>
-        <Partner Icon={PartnerSvg} />
-        <Partner Icon={PartnerSvg} />
-        <Partner Icon={PartnerSvg} />
-        <Partner Icon={PartnerSvg} />
-        <Partner Icon={PartnerSvg} />
-        <Partner Icon={PartnerSvg} />
-        <Partner Icon={PartnerSvg} />
-        <Partner Icon={PartnerSvg} />
-        <Partner Icon={PartnerSvg} />
-        <Partner Icon={PartnerSvg} />
+      <div className={style.logos} aria-hidden="true">
+        {partners.map((partner) => (
+          <Partner key={partner.name} logo={partner.logo} name={partner.name} />
+        ))}
       </div>
     </div>
   );

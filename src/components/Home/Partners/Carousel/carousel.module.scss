@@ -5,13 +5,12 @@
 
   position: relative;
 
-  svg {
+  // Transform to black and white
+  .logos :is(svg, img) {
     transform: scale(0.7);
 
-    path, g {
-      fill: var(--second);
-      transition: var(--theme-transition);
-    }
+    transition: filter var(--theme-transition);
+    filter: brightness(0) invert(1);
   }
 
   // Fade in out
@@ -35,9 +34,15 @@
   }
 }
 
+// Logos: any color → black (light mode)
+:global(body[data-theme='light']) .carousel .logos :is(svg, img) {
+  filter: brightness(0);
+}
+
 // Logo containers 2x
 .logos {
   display: flex;
+  align-items: center;
   animation: 17s slide infinite linear;
 }
 
@@ -69,14 +74,9 @@
   
     position: relative;
   
-    svg {
+    .logos :is(svg, img) {
       margin: 0 0 0 4.125rem;
       transform: scale(0.95);
-  
-      path, g {
-        fill: var(--second);
-        transition: var(--theme-transition);
-      }
     }
   
     // Fade in out
@@ -109,6 +109,7 @@
   // Logo containers 2x
   .logos {
     display: flex;
+    align-items: center;
     animation: 17s slide infinite linear;
   }
 

@@ -11,11 +11,11 @@
   h1 {
     margin: 0 0 1.65rem 0;
 
-    font-size: 2.4rem;
-    line-height: 102%;
-    letter-spacing: -0.069rem;
+    font-size: 2.2rem;
+    font-weight: 250;
+    line-height: 88%;
+    letter-spacing: -0.03rem;
     white-space: nowrap;
-    -webkit-text-stroke: bolderText(0.08rem);
 
     span {
       display: block;
@@ -46,9 +46,10 @@
     h1 {
       margin: 0 2.35rem 0 0.81rem;
   
-      font-size: font(4.83vw, 4.86rem, 5.86rem);
-      line-height: 93.5%;
-      letter-spacing: -0.14rem;
+      font-size: font(4.6vw, 4.62rem, 5.57rem);
+      font-weight: 250;
+      line-height: 89%;
+      letter-spacing: -0.07rem;
       white-space: nowrap;
       -webkit-text-stroke: bolderText(0.03rem);
       transition: font-size 0ms;
