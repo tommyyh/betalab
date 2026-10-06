@@ -9,6 +9,7 @@ import Menu from '@/components/Navbar/Menu/Menu';
 import { NextIntlClientProvider, useMessages } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import Footer from '@/components/Footer/Footer';
+import PageTransition from '@/components/PageTransition/PageTransition';
 
 // Font types
 const poppins = Poppins({
@@ -50,6 +51,7 @@ export default function RootLayout({
       <body>
         <Cursor />
         <SmoothScroll />
+        <PageTransition />
 
         {/* Main */}
         <NextIntlClientProvider messages={navMessages as any}>

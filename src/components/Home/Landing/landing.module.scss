@@ -11,7 +11,9 @@
   h1 {
     margin: 0 0 1.65rem 0;
 
-    font-size: 2.2rem;
+    // Shrinks on narrow phones to fit
+    --title-fit: 11.2; // CZ "aplikacím & webům na míru" ≈ 10.97em
+    font-size: min(2.2rem, calc((100vw - 1.75rem) / var(--title-fit)));
     font-weight: 250;
     line-height: 88%;
     letter-spacing: -0.03rem;
@@ -25,6 +27,11 @@
   p {
     display: none;
   }
+}
+
+// English headline is shorter, so it can be bigger on narrow phones
+:global(html[lang='en']) .content h1 {
+  --title-fit: 10.25; // "visitors into paying clients" ≈ 10.03em
 }
 
 

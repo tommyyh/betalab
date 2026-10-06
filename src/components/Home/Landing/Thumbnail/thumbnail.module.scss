@@ -6,6 +6,21 @@
   position: relative;
 }
 
+// Phones get their own image
+.mobile {
+  display: none;
+}
+
+@media all and (max-width: 569px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+}
+
 
 // Desktop view
 @media all and (min-width: 1025px) {

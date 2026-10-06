@@ -1,0 +1,18 @@
+// Page change curtain, animated from PageTransition.tsx
+.panel {
+  position: fixed;
+  inset: 0;
+  z-index: 99999; // Above everything except the cursor
+  transform: translateY(-100%); // Resting position, above the screen
+  pointer-events: none;
+  will-change: transform;
+}
+
+// Trailing wave: page color with a touch of the text color (lighter on dark, darker on light)
+.back {
+  background: color-mix(in srgb, var(--second) 7%, var(--primary));
+}
+
+.front {
+  background: var(--primary);
+}
